@@ -57,7 +57,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
-  const post = getPostContent(params.slug);
+  const post = await getPostContent(params.slug);
 
   if (!post) {
     return {
@@ -101,7 +101,9 @@ export async function generateMetadata({
   };
 }
 
-export default function GeneralPostPage(props: { params: { slug: string } }) {
+export default async function GeneralPostPage(props: {
+  params: { slug: string };
+}) {
   const slug = props.params.slug;
   const post = getPostContent(slug);
 
