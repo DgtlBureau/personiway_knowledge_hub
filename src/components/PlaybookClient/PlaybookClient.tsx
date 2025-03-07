@@ -1,7 +1,7 @@
 'use client';
 
-import { underscopeReverter } from '@/src/utils/formatter/underscopeFormatter';
 import { Post } from '@/src/types/types';
+import { underscopeReverter } from '@/src/utils/formatter/underscopeFormatter';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { Pagination } from '../Pagination/Pagination';
@@ -53,11 +53,13 @@ export const PlaybookClient = ({ data }: IArticle) => {
     });
 
     const tagFilteredData = subCategoryFilteredData.filter((item) => {
-      if (!tag) return item;
+      if (!tag?.length) return item;
       if (!item.tag) return false;
-      return item.tag
-        .toLowerCase()
-        .includes(underscopeReverter(tag).toLowerCase());
+      return item.tag.map((el) =>
+        el.toLowerCase().includes(underscopeReverter(tag).toLowerCase()),
+      );
+      // .toLowerCase()
+      // .includes(underscopeReverter(tag).toLowerCase());
     });
 
     const searchQueryFilterData = tagFilteredData.filter((item) => {
@@ -76,21 +78,21 @@ export const PlaybookClient = ({ data }: IArticle) => {
 
   return (
     <div className='w-full'>
-      <div className='flex flex-col gap-[24px] tablet:gap-[40px] laptop-big:flex-row laptop-big:gap-[30px]'>
+      <div className='tablet:gap-[40px] laptop-big:flex-row laptop-big:gap-[30px] flex flex-col gap-[24px]'>
         <div className='flex w-full items-center'>
           {currentPosts.length !== 0 ? (
             <ul>
-              {currentPosts.map((item) => (
+              {currentPosts.map((item, idx) => (
                 <li
-                  key={item.slug}
-                  className='border-b-[1px] border-main-disabled p-[40px_0] first:pt-0'
+                  key={idx}
+                  className='border-main-disabled border-b-[1px] p-[40px_0] first:pt-0'
                 >
                   <PlaybookCard data={item} />
                 </li>
               ))}
             </ul>
           ) : (
-            <p className='ml-[80px] font-unbound text-[28px] text-text-dark'>
+            <p className='font-unbound text-text-dark ml-[80px] text-[28px]'>
               Sorry, there is no data for your request
             </p>
           )}

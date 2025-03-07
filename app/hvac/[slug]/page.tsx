@@ -1,20 +1,17 @@
-import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
 import { BASE_URL } from '@/src/alias';
+import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
 import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
-import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
+import { getGeneralMetadata } from '@/src/utils/getGeneralMetadata';
 import { ideaMarking } from '@/src/utils/ideaMarking/IdeaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
-import { postsSorting } from '@/src/utils/postsSorting';
-import { DateTime } from 'luxon';
 import fs from 'fs';
 import matter from 'gray-matter';
+import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
 import path from 'path';
 import styles from './Post.module.css';
-
-const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 
 const findMarkdownFile = (dir: string, slug: string): string | null => {
   const files = fs.readdirSync(dir);
@@ -32,7 +29,7 @@ const findMarkdownFile = (dir: string, slug: string): string | null => {
 };
 
 const getPostContent = (slug: string) => {
-  const folder = 'src/blog/insights/';
+  const folder = 'src/blog/hvac/';
   const file = findMarkdownFile(folder, slug);
 
   if (file) {
@@ -50,13 +47,8 @@ const getPostContent = (slug: string) => {
   }
 };
 
-const getAllPosts = () => {
-  const postMetadata = getInsightsMetadata();
-  return postsSorting(postMetadata);
-};
-
 export const generateStaticParams = async () => {
-  const posts = getInsightsMetadata();
+  const posts = getGeneralMetadata();
   return posts.map((post) => ({ slug: post.slug }));
 };
 
@@ -65,7 +57,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
-  const post = getPostContent(params.slug);
+  const post = await getPostContent(params.slug);
 
   if (!post) {
     return {
@@ -76,7 +68,6 @@ export async function generateMetadata({
 
   const cleanTitle = cleanMetaTitle(post.data.title);
   const { tag } = post.data;
-  const keywords = tag.split(',');
 
   const title = contentTrimming(cleanTitle, 105);
   const description = contentTrimming(post.data.description, 155);
@@ -90,28 +81,32 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `${BASE_URL}/blog/insights/${params.slug}`,
+      canonical: `${BASE_URL}/hvac/${params.slug}`,
     },
     openGraph: {
       type: 'article',
       locale: 'en_US',
-      siteName: 'BrightByte.com',
+      siteName: 'personiway.com',
       ...openGraphImage,
       title,
       description,
-      url: `${BASE_URL}/blog/insights/${params.slug}`,
+      url: `${BASE_URL}/hvac/${params.slug}`,
       article: {
         publishedTime: publishedDateISO,
         modifiedTime: publishedDateISO,
         AuthorInfo: post.data.authorImage ? [post.data.authorImage] : null,
       },
     },
-    keywords,
+    keywords: tag,
   };
 }
 
-export default function InsightsPostPage(props: { params: { slug: string } }) {
-  const slug = props.params.slug;
+export default async function GeneralPostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const slug = params.slug;
   const post = getPostContent(slug);
 
   if (!post) {
@@ -120,8 +115,7 @@ export default function InsightsPostPage(props: { params: { slug: string } }) {
 
   const date = formattedDate(post.data.date);
 
-  const { tag, title, authorName, authorImage, downloadLink, readingTime } =
-    post.data;
+  const { title, authorName, authorImage, readingTime } = post.data;
   const image = post.data.image
     ? post.data.image
     : '/assets/images/banner/default_img.webp';
@@ -166,7 +160,8 @@ export default function InsightsPostPage(props: { params: { slug: string } }) {
       <div
         className='tablet:h-[302px] laptop:h-[342px] absolute top-0 left-0 h-[150px] w-full bg-cover bg-center bg-no-repeat opacity-[40%]'
         style={{
-          backgroundImage: `url(${URL + image})`,
+          // backgroundImage: `url(${URL + image})`,
+          backgroundImage: `url(${image})`,
           zIndex: '-1',
         }}
       ></div>

@@ -14,12 +14,12 @@ export const PlaybookHeading = () => {
 
   return (
     <div>
-      <h2 className='w-full text-center font-unbound text-[24px] uppercase leading-[1.16] tablet:text-[45px] tablet:leading-[1] laptop-big:text-start laptop-big:text-[45px]'>
+      <h2 className='font-unbound tablet:text-[45px] tablet:leading-[1] laptop-big:text-start laptop-big:text-[45px] w-full text-center text-[24px] leading-[1.16] uppercase'>
         {pathTitle}{' '}
-        <span className='text-[18px] leading-[1.3] text-main-blue tablet:text-[20px] tablet:leading-[1.2]'>
+        <span className='text-main-blue tablet:text-[20px] tablet:leading-[1.2] text-[18px] leading-[1.3]'>
           {subCategory && `/ ${underscopeReverter(subCategory)}`}
         </span>{' '}
-        <span className='text-[18px] leading-[1.3] text-main-blue tablet:text-[20px] tablet:leading-[1.2]'>
+        <span className='text-main-blue tablet:text-[20px] tablet:leading-[1.2] text-[18px] leading-[1.3]'>
           {tag && `/ ${underscopeReverter(tag)}`}
         </span>
       </h2>

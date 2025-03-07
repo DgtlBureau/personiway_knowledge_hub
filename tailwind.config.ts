@@ -39,7 +39,7 @@ const config: Config = {
         'desktop-banner':
           "url('/assets/images/banner/desktop_main_banner.png')",
       },
-    typography: {
+      typography: {
         DEFAULT: {
           css: {
             h1: { color: '#010C2C' },
