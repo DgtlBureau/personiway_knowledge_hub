@@ -10,7 +10,7 @@ export interface Case {
   date: string | null | undefined;
   category: string;
   subCategory: string | undefined | null;
-  tag: string;
+  tag: string[];
   slug: string;
   image: string;
   authorName: string;
@@ -33,7 +33,7 @@ const getMarkdownFiles = (dir: string): string[] => {
 };
 
 export const getGeneralMetadata = (): Post[] => {
-  const markdownFiles = getMarkdownFiles('src/blog/general');
+  const markdownFiles = getMarkdownFiles('src/blog/hvac');
 
   const posts = markdownFiles.map((filePath: string): Post => {
     const fileContent = fs.readFileSync(filePath, 'utf8');

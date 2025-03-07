@@ -9,7 +9,7 @@ interface Post {
   subCategory: string | null | undefined;
   slug: string;
   date: string;
-  tag: string | undefined;
+  tag: string[];
   authorName: string;
   authorImage: string;
   downloadLink?: string | undefined;

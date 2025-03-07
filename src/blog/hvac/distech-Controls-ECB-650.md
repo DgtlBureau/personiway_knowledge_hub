@@ -1,12 +1,12 @@
 ---
 title: 'Distech Controls ECB-650'
 description: 'The Distech Controls ECB-650 is a microprocessor-based programmable controller designed to manage large-sized Air Handling Units (AHUs) and medium to large plant applications. It features 16 universal inputs (UIs) and 12 universal outputs (UOs), offering flexibility for various HVAC configurations.'
-image: '/assets/images/posts/general/ecb-600-1.webp'
+image: 'https://www.cochranesupply.com/media/catalog/product/cache/f6904101c3845fe6dc5a7e82c9b4e95f/e/c/ecb-650.jpg'
 date: '2025-03-07'
 readingTime: ''
-category: 'general'
+category: 'HVAC'
 subCategory: 'Building Automation & Controls'
-tag: 'Distech Controls, ECB-650, BACnet Controller, Programmable Controller, HVAC Control, Air Handling Unit, Plant Applications, Building Automation'
+tag: ["Distech Controls", "ECB-650", "BACnet Controller", "Programmable Controller", "HVAC Control", "Air Handling Unit", "Plant Applications", "Building Automation"]
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
@@ -20,7 +20,6 @@ As a **BACnet Advanced Application Controller (B-AAC)**, it supports **seamless 
 ---
 
 ## **Key Features**
-
 - 16 universal inputs, including 4 for fast pulse counting and metering applications
 - 12 universal outputs
 - Expandable I/O capabilities with up to 2 ECx modules for a total of 40 inputs and 36 outputs
@@ -35,7 +34,6 @@ As a **BACnet Advanced Application Controller (B-AAC)**, it supports **seamless 
 ---
 
 ## **Technical Specifications**
-
 - **Communication Protocol:** BACnet MS/TP
 - **Max Expandability:** 40 inputs / 36 outputs (via ECx modules)
 - **Display:** Integrated LCD with live graphics
@@ -43,23 +41,20 @@ As a **BACnet Advanced Application Controller (B-AAC)**, it supports **seamless 
 - **Compliance:** BTL-listed BACnet B-AAC
 
 ## **Applications**
-
 - **Air Handling Units (AHUs)**
 - **HVAC Control Systems**
 - **Large Plant Applications**
 - **Smart Building Automation**
 
 ## **Resources**
-
 - 📄 **Datasheet**: [Download PDF](https://downloads.onesight.solutions/Distech/ECB/ECB-600.pdf)
 - 🏢 **Official Manufacturer**: [Distech Controls](https://www.distech-controls.com)
 - 📷 **Product Image**:  
-  ![Distech Controls ECB-650](https://onesight.solutions/wp-content/uploads/2022/01/ecb-600-1.jpg)
+  ![Distech Controls ECB-650](https://www.cochranesupply.com/media/catalog/product/cache/f6904101c3845fe6dc5a7e82c9b4e95f/e/c/ecb-650.jpg)
 
 ---
 
 ## **Synonyms & Related Terms**
-
 - **ECB-650 Controller**
 - **Distech ECB-650**
 - **BACnet Programmable Controller**
@@ -69,7 +64,6 @@ As a **BACnet Advanced Application Controller (B-AAC)**, it supports **seamless 
 ---
 
 ## **Conclusion**
-
 The **Distech Controls ECB-650** is a **versatile and advanced BACnet controller** designed for **HVAC professionals** looking for **high-efficiency building automation solutions**. With **real-time monitoring, expandability, and wireless capability**, it is a key component in **modern HVAC networks**.
 
 For further details, visit the **[official Distech Controls website](https://www.distech-controls.com)**.

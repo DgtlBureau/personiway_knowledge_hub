@@ -5,9 +5,33 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.svg$/i,
       use: ['@svgr/webpack'],
-    });
-    return config;
+    })
+    return config
   },
-};
+  experimental: {
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'onesight.solutions',
+        pathname: '/wp-content/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.cochranesupply.com',
+        pathname: '/media/catalog/product/**',
+      },
+    ],
+  },
+}
 
-export default nextConfig;
+export default nextConfig

@@ -1,8 +1,38 @@
-import { CategoryComponent } from '@/src/components/PlaybookClient/CategoryComponent/CategoryComponent';
+import { BASE_URL } from '@/src/alias';
 import { PlaybookHeading } from '@/src/components/PlaybookClient/PlaybookHeading/PlaybookHeading';
 import { Section } from '@/src/components/shared/Section/Section';
+import { contentTrimming } from '@/src/utils/contentTrimming';
 import { getAllArticles } from '@/src/utils/getAllArticles';
+import { openGraphImage } from '@/src/utils/openGraphParams';
+import { pageMetadata } from '@/src/utils/pageMetadata';
+import { Metadata } from 'next';
 import { Suspense } from 'react';
+
+const title = pageMetadata.blog.title;
+const description = contentTrimming(pageMetadata.blog.description, 155);
+const keywords = pageMetadata.blog.keywords;
+
+export const metadata: Metadata = {
+  title,
+  description,
+  metadataBase: new URL(BASE_URL),
+  icons: {
+    icon: '/assets/images/info/main_meta.png',
+  },
+  alternates: {
+    canonical: new URL(`${BASE_URL}/hvac`),
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'personiway.com',
+    ...openGraphImage,
+    title,
+    description,
+    url: `${BASE_URL}/hvac`,
+  },
+  keywords,
+};
 
 export default function PlaybookLayout({
   children,

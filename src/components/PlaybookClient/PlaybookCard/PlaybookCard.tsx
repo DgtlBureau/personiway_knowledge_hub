@@ -24,9 +24,9 @@ export const PlaybookCard = ({ data }: IArticleProps) => {
   const allSearchParams = `${subCategory ? `sub-category=${subCategory}&` : ''}`;
 
   const formatedDate = formattedDate(data.date);
-  const tags = data.tag
-    ? data.tag.split(',').filter((tag) => tag.trim() !== '')
-    : [];
+  const tags = data.tag;
+  // ? data.tag.split(',').filter((tag) => tag.trim() !== '')
+  // : [];
 
   return (
     <div className='group laptop:flex-row flex flex-col gap-[40px]'>
@@ -36,8 +36,8 @@ export const PlaybookCard = ({ data }: IArticleProps) => {
       >
         <Image
           src={data.image || defaultImg}
-          width={549}
-          height={308}
+          width={1098}
+          height={616}
           alt={data.title}
           className='h-full w-full object-cover object-center duration-300'
           quality={80}

@@ -1,20 +1,17 @@
 export const pageMetadata = {
   blog: {
-    title:
-      'Bright Byte Playbook – Insights & Strategies for Sports, Business, and Digital Product Launches',
+    title: 'HVAC Controllers & Automation Knowledge Hub | PersoniWay',
     description:
-      "Explore the latest practices and ideas in sports, business, investments, and digital product development with Bright Byte's expertise",
+      'Explore our extensive collection of HVAC controllers, automation solutions, and integration guides. The PersoniWay Knowledge Hub provides detailed insights into BACnet controllers, VAV systems, and smart building automation',
     keywords: [
-      'Sports IT Solutions',
-      'Investment Strategies',
-      'Portfolio management',
-      'Business Innovation',
-      'IT Consultancy',
-      'Custom Software Development',
-      'Tech Advisory',
-      'Digital Transformation',
-      'Product Development',
-      'Miami Development Studio',
+      'HVAC Controllers',
+      'Building Automation',
+      'BACnet Solutions',
+      'VAV Control',
+      'Programmable Controllers',
+      'PersoniWay Knowledge Hub',
+      'Distech controls',
+      'Honeywell',
     ],
   },
 };

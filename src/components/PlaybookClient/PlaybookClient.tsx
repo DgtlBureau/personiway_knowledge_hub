@@ -53,11 +53,13 @@ export const PlaybookClient = ({ data }: IArticle) => {
     });
 
     const tagFilteredData = subCategoryFilteredData.filter((item) => {
-      if (!tag) return item;
+      if (!tag?.length) return item;
       if (!item.tag) return false;
-      return item.tag
-        .toLowerCase()
-        .includes(underscopeReverter(tag).toLowerCase());
+      return item.tag.map((el) =>
+        el.toLowerCase().includes(underscopeReverter(tag).toLowerCase()),
+      );
+      // .toLowerCase()
+      // .includes(underscopeReverter(tag).toLowerCase());
     });
 
     const searchQueryFilterData = tagFilteredData.filter((item) => {

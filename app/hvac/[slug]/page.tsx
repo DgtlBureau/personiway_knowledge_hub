@@ -32,7 +32,7 @@ const findMarkdownFile = (dir: string, slug: string): string | null => {
 };
 
 const getPostContent = (slug: string) => {
-  const folder = 'src/blog/general/';
+  const folder = 'src/blog/hvac/';
   const file = findMarkdownFile(folder, slug);
 
   if (file) {
@@ -76,7 +76,7 @@ export async function generateMetadata({
 
   const cleanTitle = cleanMetaTitle(post.data.title);
   const { tag } = post.data;
-  const keywords = tag.split(',');
+  // const keywords = tag.split(',');
 
   const title = contentTrimming(cleanTitle, 105);
   const description = contentTrimming(post.data.description, 155);
@@ -90,27 +90,27 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `${BASE_URL}/blog/insights/${params.slug}`,
+      canonical: `${BASE_URL}/hvac/${params.slug}`,
     },
     openGraph: {
       type: 'article',
       locale: 'en_US',
-      siteName: 'BrightByte.com',
+      siteName: 'personiway.com',
       ...openGraphImage,
       title,
       description,
-      url: `${BASE_URL}/blog/insights/${params.slug}`,
+      url: `${BASE_URL}/hvac/${params.slug}`,
       article: {
         publishedTime: publishedDateISO,
         modifiedTime: publishedDateISO,
         AuthorInfo: post.data.authorImage ? [post.data.authorImage] : null,
       },
     },
-    keywords,
+    keywords: tag,
   };
 }
 
-export default function InsightsPostPage(props: { params: { slug: string } }) {
+export default function GeneralPostPage(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const post = getPostContent(slug);
 
@@ -166,7 +166,8 @@ export default function InsightsPostPage(props: { params: { slug: string } }) {
       <div
         className='tablet:h-[302px] laptop:h-[342px] absolute top-0 left-0 h-[150px] w-full bg-cover bg-center bg-no-repeat opacity-[40%]'
         style={{
-          backgroundImage: `url(${URL + image})`,
+          // backgroundImage: `url(${URL + image})`,
+          backgroundImage: `url(${image})`,
           zIndex: '-1',
         }}
       ></div>
