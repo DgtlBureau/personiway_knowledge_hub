@@ -2,7 +2,6 @@ import { BASE_URL } from '@/src/alias';
 import { PlaybookHeading } from '@/src/components/PlaybookClient/PlaybookHeading/PlaybookHeading';
 import { Section } from '@/src/components/shared/Section/Section';
 import { contentTrimming } from '@/src/utils/contentTrimming';
-import { getAllArticles } from '@/src/utils/getAllArticles';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Metadata } from 'next';
@@ -39,8 +38,6 @@ export default function PlaybookLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const data = getAllArticles();
-
   return (
     <Section
       id='playbook'
@@ -52,9 +49,6 @@ export default function PlaybookLayout({
           <PlaybookHeading />
         </Suspense>
         <div className='tablet:mt-[40px] tablet:gap-[40px] laptop-big:mt-[80px] laptop-big:flex-row laptop-big:gap-[30px] mt-[24px] flex flex-col gap-[24px]'>
-          {/* <Suspense>
-            <CategoryComponent category={data} />
-          </Suspense> */}
           {children}
         </div>
       </div>

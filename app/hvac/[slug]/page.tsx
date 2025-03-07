@@ -6,15 +6,12 @@ import { formattedDate } from '@/src/utils/formattedDate';
 import { getGeneralMetadata } from '@/src/utils/getGeneralMetadata';
 import { ideaMarking } from '@/src/utils/ideaMarking/IdeaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
-import { postsSorting } from '@/src/utils/postsSorting';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
 import path from 'path';
 import styles from './Post.module.css';
-
-const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 
 const findMarkdownFile = (dir: string, slug: string): string | null => {
   const files = fs.readdirSync(dir);
@@ -50,11 +47,6 @@ const getPostContent = (slug: string) => {
   }
 };
 
-const getAllPosts = () => {
-  const postMetadata = getGeneralMetadata();
-  return postsSorting(postMetadata);
-};
-
 export const generateStaticParams = async () => {
   const posts = getGeneralMetadata();
   return posts.map((post) => ({ slug: post.slug }));
@@ -76,7 +68,6 @@ export async function generateMetadata({
 
   const cleanTitle = cleanMetaTitle(post.data.title);
   const { tag } = post.data;
-  // const keywords = tag.split(',');
 
   const title = contentTrimming(cleanTitle, 105);
   const description = contentTrimming(post.data.description, 155);
@@ -120,8 +111,7 @@ export default function GeneralPostPage(props: { params: { slug: string } }) {
 
   const date = formattedDate(post.data.date);
 
-  const { tag, title, authorName, authorImage, downloadLink, readingTime } =
-    post.data;
+  const { title, authorName, authorImage, readingTime } = post.data;
   const image = post.data.image
     ? post.data.image
     : '/assets/images/banner/default_img.webp';
