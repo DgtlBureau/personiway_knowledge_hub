@@ -2,18 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import cn from 'classnames';
 import './globals.css';
-
-
-
-// const geistSans = Geist({
-//   variable: '--font-geist-sans',
-//   subsets: ['latin'],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: '--font-geist-mono',
-//   subsets: ['latin'],
-// });
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -64,13 +53,53 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   const bodyClassname = cn(Unbound.variable, Proxima.variable);
 
   return (
     <html lang='en'>
+      <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
+        <style>
+          {`* {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+              }
+
+            :root {
+              --bg-color: #090215;
+              font-size: 14px;
+              scroll-behavior: smooth;
+            }
+  
+            h1,h2,h3,h4,h5,h6,ul,ol,li,p,a {
+              margin: 0;
+              padding: 0;
+        }`}
+        </style>
+
+        <Script
+          strategy='afterInteractive'
+          src={`https://www.googletagmanager.com/gtag/js?id=G-NFC8VWC03X`}
+        />
+        <Script
+          id='google-analytics'
+          strategy='afterInteractive'
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-NFC8VWC03X', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+      </head>
       <body
-        className={`${bodyClassname} m-[0] flex flex-col bg-main-bg text-white`}
+        className={`bg-main-bg m-[0] flex flex-col text-white ${bodyClassname}`}
       >
         <main className='flex flex-col gap-[60px] overflow-hidden'>
           {children}

@@ -3,7 +3,6 @@ import { BASE_URL } from '@/src/alias';
 import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
-import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
 import { ideaMarking } from '@/src/utils/ideaMarking/IdeaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { postsSorting } from '@/src/utils/postsSorting';
@@ -13,6 +12,7 @@ import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
 import path from 'path';
 import styles from './Post.module.css';
+import { getGeneralMetadata } from '@/src/utils/getGeneralMetadata';
 
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 
@@ -32,7 +32,7 @@ const findMarkdownFile = (dir: string, slug: string): string | null => {
 };
 
 const getPostContent = (slug: string) => {
-  const folder = 'src/blog/insights/';
+  const folder = 'src/blog/general/';
   const file = findMarkdownFile(folder, slug);
 
   if (file) {
@@ -51,12 +51,12 @@ const getPostContent = (slug: string) => {
 };
 
 const getAllPosts = () => {
-  const postMetadata = getInsightsMetadata();
+  const postMetadata = getGeneralMetadata();
   return postsSorting(postMetadata);
 };
 
 export const generateStaticParams = async () => {
-  const posts = getInsightsMetadata();
+  const posts = getGeneralMetadata();
   return posts.map((post) => ({ slug: post.slug }));
 };
 

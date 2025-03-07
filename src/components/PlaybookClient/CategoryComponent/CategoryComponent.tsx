@@ -38,7 +38,7 @@ export const CategoryComponent = ({ category }: ICategory) => {
     [category],
   );
   const insightsCategory = useMemo(
-    () => getUniqueArticlesSubCategory(category, 'insights'),
+    () => getUniqueArticlesSubCategory(category, 'hvac'),
     [category],
   );
 
@@ -51,7 +51,7 @@ export const CategoryComponent = ({ category }: ICategory) => {
       return;
     }
     query.set('search-query', inputValue);
-    router.push(`/playbook?${query.toString()}`);
+    router.push(`/?${query.toString()}`);
   }, [inputValue, router]);
 
   useEffect(() => {
@@ -63,15 +63,15 @@ export const CategoryComponent = ({ category }: ICategory) => {
   }, [pathname, searchQuery]);
 
   return (
-    <div className='flex w-full flex-col gap-[12px] tablet:flex-row tablet:items-end tablet:gap-[64px] laptop-big:w-[30%] laptop-big:flex-col laptop-big:items-start laptop-big:gap-[10px]'>
-      <div className='relative w-full laptop-big:w-full'>
+    <div className='tablet:flex-row tablet:items-end tablet:gap-[64px] laptop-big:w-[30%] laptop-big:flex-col laptop-big:items-start laptop-big:gap-[10px] flex w-full flex-col gap-[12px]'>
+      <div className='laptop-big:w-full relative w-full'>
         <input
           placeholder='Search article'
           value={inputValue}
-          className='w-full border-b-[1px] border-main-blue py-[10px] text-[12px] outline-none tablet:text-[16px]'
+          className='border-main-blue tablet:text-[16px] w-full border-b-[1px] py-[10px] text-[12px] outline-none'
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <SearchImage className='absolute right-0 top-[50%] w-[16px] translate-y-[-50%] fill-main-blue' />
+        {/* <SearchImage className='absolute right-0 top-[50%] w-[16px] translate-y-[-50%] fill-main-blue' /> */}
       </div>
       <div className='flex flex-col items-start'>
         {articlesCategory && articlesCategory.length !== 0 && (
