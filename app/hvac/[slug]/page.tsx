@@ -101,10 +101,12 @@ export async function generateMetadata({
   };
 }
 
-export default async function GeneralPostPage(props: {
+export default async function GeneralPostPage({
+  params,
+}: {
   params: { slug: string };
 }) {
-  const slug = props.params.slug;
+  const slug = params.slug;
   const post = getPostContent(slug);
 
   if (!post) {
