@@ -1,6 +1,4 @@
-import { getExpertiseMetadata } from './getExpertiseMetadata';
 import { getGeneralMetadata } from './getGeneralMetadata';
-import { getInsightsMetadata } from './getInsightsMetadata';
 import { postsSorting } from './postsSorting';
 
 // const expertiseArticles = getExpertiseMetadata();

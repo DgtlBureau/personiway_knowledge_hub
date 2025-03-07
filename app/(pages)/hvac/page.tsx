@@ -1,12 +1,12 @@
-import { PlaybookClient } from '@/src/components/PlaybookClient/PlaybookClient';
 import { BASE_URL } from '@/src/alias';
+import { PlaybookClient } from '@/src/components/PlaybookClient/PlaybookClient';
 import { contentTrimming } from '@/src/utils/contentTrimming';
+import { getGeneralMetadata } from '@/src/utils/getGeneralMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { postsSorting } from '@/src/utils/postsSorting';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
-import { getGeneralMetadata } from '@/src/utils/getGeneralMetadata';
 
 const title = pageMetadata.blog.title;
 const description = contentTrimming(pageMetadata.blog.description, 155);

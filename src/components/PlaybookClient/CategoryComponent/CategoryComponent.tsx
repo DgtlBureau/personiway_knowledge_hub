@@ -1,6 +1,5 @@
 'use client';
 
-import SearchImage from '@/public/assets/images/icons/search.svg';
 import { Post } from '@/src/types/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';

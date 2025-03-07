@@ -1,12 +1,12 @@
 'use client';
 
 import defaultImg from '@/public/assets/images/banner/default_insights.webp';
+import { Post } from '@/src/types/types';
 import { formattedDate } from '@/src/utils/formattedDate';
 import {
-  underscopeFormatter,
-  underscopeReverter,
+    underscopeFormatter,
+    underscopeReverter
 } from '@/src/utils/formatter/underscopeFormatter';
-import { Post } from '@/src/types/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';

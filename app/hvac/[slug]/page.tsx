@@ -1,18 +1,18 @@
-import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
 import { BASE_URL } from '@/src/alias';
+import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
 import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
+import { getGeneralMetadata } from '@/src/utils/getGeneralMetadata';
 import { ideaMarking } from '@/src/utils/ideaMarking/IdeaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { postsSorting } from '@/src/utils/postsSorting';
-import { DateTime } from 'luxon';
 import fs from 'fs';
 import matter from 'gray-matter';
+import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
 import path from 'path';
 import styles from './Post.module.css';
-import { getGeneralMetadata } from '@/src/utils/getGeneralMetadata';
 
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 

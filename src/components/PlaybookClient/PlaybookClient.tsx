@@ -1,7 +1,7 @@
 'use client';
 
-import { underscopeReverter } from '@/src/utils/formatter/underscopeFormatter';
 import { Post } from '@/src/types/types';
+import { underscopeReverter } from '@/src/utils/formatter/underscopeFormatter';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { Pagination } from '../Pagination/Pagination';
