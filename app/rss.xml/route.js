@@ -1,24 +1,17 @@
-import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata'
 import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata'
 import { DateTime } from 'luxon'
 import { NextResponse } from 'next/server'
 import RSS from 'rss'
 
-const expertises = getExpertiseMetadata('src/expertise')
 const insights = getInsightsMetadata()
-const expertiseData = expertises.map((item) => {
-  return {
-    dirName: 'expertise',
-    ...item,
-  }
-})
+
 const insightsData = insights.map((item) => {
   return {
     dirName: 'insights',
     ...item,
   }
 })
-const allData = [...expertiseData, ...insightsData]
+const allData = [...insightsData]
 
 export async function GET() {
   const feed = new RSS({
