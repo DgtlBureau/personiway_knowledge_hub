@@ -2,17 +2,11 @@
 title: 'Distech Controls ECB-VAV'
 description: 'The ECB-VAV Series are microprocessor-based programmable variable air volume (VAV) controllers designed to control any VAV box.'
 image: 'https://onesight.solutions/wp-content/uploads/2022/11/ECB-VAV.png'
-date: '2025-03-07'
+date: '07-03-2025'
 readingTime: ''
-category: 'general'
-subCategory: 'hvac'
-tags:
-  [
-    'Programmable Controller',
-    'BACnet MS/TP',
-    'VAV Control',
-    'Building Automation',
-  ]
+category: 'HVAC'
+subCategory: 'VAV Control System'
+tag: 'Programmable Controller,BACnet MS/TP,VAV Control,Building Automation'
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---

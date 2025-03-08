@@ -30,10 +30,10 @@ export const PlaybookCategory = ({ category }: ICategoryProps) => {
         <ul className='flex flex-col gap-[4px]'>
           <li className=''>
             <Link
-              href='/hvac'
-              className={`font-proxima text-[16px] capitalize leading-[1.8] ${pathname === '/hvac' ? 'font-bold' : ''}`}
+              href='/'
+              className={`font-proxima text-[16px] capitalize leading-[1.8] ${pathname === '/' ? 'font-bold' : ''}`}
             >
-              hvac
+              all
             </Link>
           </li>
           {category.map((item) => (
@@ -42,7 +42,7 @@ export const PlaybookCategory = ({ category }: ICategoryProps) => {
               className='flex flex-col items-start gap-[2px]'
             >
               <Link
-                href={`/hvac/${item.category}${item.subCategory.length > 1 ? '?' : `?sub-category=${paramsCorrect(item.subCategory[0]).toLowerCase()}`}`}
+                href={`/${item.category}${item.subCategory.length > 1 ? '?' : `?sub-category=${paramsCorrect(item.subCategory[0]).toLowerCase()}`}`}
                 className={`font-proxima text-[16px] capitalize duration-300 ${pathname.includes(item.category.trim().toLowerCase()) ? 'font-bold' : ''}`}
               >
                 {item.category}
@@ -55,7 +55,7 @@ export const PlaybookCategory = ({ category }: ICategoryProps) => {
                       className={`font-proxima text-[16px] leading-[1.8] duration-300 ${el && subCategory && subCategory === underscopeFormatter(el.trim().toLowerCase()) ? 'font-bold' : ''}`}
                     >
                       <Link
-                        href={`/hvac/${item.category}?sub-category=${underscopeFormatter(el).toLowerCase()}`}
+                        href={`/${item.category}?sub-category=${encodeURIComponent(underscopeFormatter(el).toLowerCase())}`}
                         className='relative'
                       >
                         {el}

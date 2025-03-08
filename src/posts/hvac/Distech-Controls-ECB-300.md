@@ -2,12 +2,11 @@
 title: 'Distech Controls ECB-300'
 description: 'The ECB-300 Series are microprocessor-based programmable controllers designed to control equipment such as air handling units, chillers, boilers, pumps, and cooling towers.'
 image: 'https://onesight.solutions/wp-content/uploads/2022/11/ECB-300.png'
-date: '2025-03-07'
+date: '07-03-2025'
 readingTime: ''
-category: 'general'
-subCategory: 'hvac'
-tags:
-  ['Programmable Controller', 'BACnet', 'HVAC Control', 'Building Automation']
+category: 'HVAC'
+subCategory: 'HVAC Control System'
+tag: 'Programmable Controller,BACnet,HVAC Control,Building Automation'
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---

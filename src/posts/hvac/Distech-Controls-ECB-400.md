@@ -4,15 +4,9 @@ description: 'The ECB-400 Series are microprocessor-based controllers designed f
 image: 'https://onesight.solutions/wp-content/uploads/2022/11/ECB-400.png'
 date: '2025-03-07'
 readingTime: ''
-category: 'general'
-subCategory: 'hvac'
-tags:
-  [
-    'Programmable Controller',
-    'BACnet MS/TP',
-    'HVAC Automation',
-    'Building Controls',
-  ]
+category: 'HVAC'
+subCategory: 'HVAC Control System'
+tag: 'Programmable Controller,BACnet MS/TP,HVAC Automation,Building Controls'
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---

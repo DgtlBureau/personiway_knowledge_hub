@@ -33,25 +33,23 @@ export const CategoryComponent = ({ category }: ICategory) => {
   const searchParams = useSearchParams();
   const searchQuery = searchParams.get('search-query');
 
-  // const expertiseCategory = useMemo(
-  //   () => getUniqueArticlesSubCategory(category, 'expertise'),
-  //   [category],
-  // );
   const insightsCategory = useMemo(
-    () => getUniqueArticlesSubCategory(category, 'general'),
+    () => getUniqueArticlesSubCategory(category, 'hvac'),
     [category],
   );
 
   const articlesCategory = [insightsCategory];
 
   useEffect(() => {
-    const query = new URLSearchParams();
+    const query = new URLSearchParams(window.location.search);
+
     if (inputValue === '') {
-      query.set('search-query', '');
-      return;
+      query.delete('search-query');
+    } else {
+      query.set('search-query', inputValue);
     }
-    query.set('search-query', inputValue);
-    router.push(`/hvac?${query.toString()}`);
+
+    router.push(`/?${query.toString()}`, { scroll: false });
   }, [inputValue, router]);
 
   useEffect(() => {

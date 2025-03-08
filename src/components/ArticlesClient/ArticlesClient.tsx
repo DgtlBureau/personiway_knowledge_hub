@@ -104,8 +104,8 @@ export const ArticlesClient = ({ data }: IArticle) => {
 
     const tagFolteredData = subCategoryFilteredData.filter((item) => {
       if (selectedTag.toLowerCase() === '') return true;
-      if (!item.tag.length) return false;
-      return item.tag.includes(selectedTag.toLowerCase());
+      if (!item.tag) return false;
+      return item.tag.toLowerCase().includes(selectedTag.toLowerCase());
     });
     setFilteredData(tagFolteredData);
   }, [selectedCategory, data, selectedSubCategiry, selectedTag]);

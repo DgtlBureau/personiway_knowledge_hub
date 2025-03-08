@@ -100,7 +100,11 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
+        <link
+          rel='icon'
+          href='/assets/images/favicon/favicon.png'
+          sizes='any'
+        />
         <style>
           {`* {
                 box-sizing: border-box;
@@ -121,14 +125,14 @@ export default function RootLayout({
         </style>
         <Script
           async
-          src='https://www.googletagmanager.com/gtag/js?id=G-NFC8VWC03X'
+          src='https://www.googletagmanager.com/gtag/js?id=G-0PFJQ22253'
         ></Script>
         <Script id='google-analytics' strategy='afterInteractive'>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-NFC8VWC03X');
+            gtag('config', 'G-0PFJQ22253');
           `}
         </Script>
       </head>
