@@ -28,7 +28,7 @@ export const Pagination = ({
   const isPrevtDisable = currentPage !== 1;
 
   return (
-    <div className='laptop-big:ml-[calc(50%_-_30%_-_30px)] laptop-big:justify-normal flex w-full items-center justify-center gap-[4px]'>
+    <div className='flex w-full items-center justify-center gap-[4px] laptop-big:ml-[calc(50%_-_30%_-_30px)] laptop-big:justify-normal'>
       <button
         type='button'
         onClick={prevPage}
@@ -36,10 +36,10 @@ export const Pagination = ({
         disabled={!isPrevtDisable}
       >
         <Arrow
-          className={`fill-text-dark h-[auto] w-[20px] rotate-[180deg] ${isPrevtDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
+          className={`h-[auto] w-[20px] rotate-[180deg] fill-text-dark ${isPrevtDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
         />
         <span
-          className={`tablet:text-[18px] text-[14px] leading-[1.3] ${isPrevtDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
+          className={`text-[14px] leading-[1.3] tablet:text-[18px] ${isPrevtDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
         >
           Back
         </span>
@@ -50,7 +50,7 @@ export const Pagination = ({
             <li key={item}>
               <button
                 type='button'
-                className={`bg-btn-col text-text-dark tablet:text-[18px] h-[48px] rounded-[8px] px-[16px] py-[12px] text-[14px] ${currentPage === item && 'bg-white'}`}
+                className={`h-[48px] rounded-[8px] bg-btn-col px-[16px] py-[12px] text-[14px] text-text-dark tablet:text-[18px] ${currentPage === item && 'bg-white'}`}
                 onClick={() => paginate(item)}
               >
                 {item}
@@ -66,12 +66,12 @@ export const Pagination = ({
         disabled={!isNextDisable}
       >
         <span
-          className={`tablet:text-[18px] text-[14px] leading-[1.3] ${isNextDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
+          className={`text-[14px] leading-[1.3] tablet:text-[18px] ${isNextDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
         >
           Next
         </span>
         <Arrow
-          className={`fill-text-dark w-[20px] ${isNextDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
+          className={`w-[20px] fill-text-dark ${isNextDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
         />
       </button>
     </div>

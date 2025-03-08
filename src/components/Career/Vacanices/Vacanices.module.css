@@ -1,0 +1,26 @@
+.solvingList {
+  width: 100%;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.solvingList > * {
+  scroll-snap-align: start;
+}
+
+.vacanciesGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 20px;
+}
+
+.vacanciesGrid .swiper-slide {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1440px) {
+  .vacanciesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

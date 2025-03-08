@@ -12,10 +12,10 @@ export const Section = ({
     <section
       className={twMerge(
         classNames(
-          'tablet:py-[60px] desktop:py-[80px] relative py-[40px]',
+          'relative py-[40px] tablet:py-[60px] desktop:py-[80px]',
           className,
           {
-            'text-dark bg-white': light,
+            'bg-white text-dark': light,
           },
         ),
       )}

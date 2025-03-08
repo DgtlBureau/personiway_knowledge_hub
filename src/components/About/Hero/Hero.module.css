@@ -1,0 +1,125 @@
+.mainContainer {
+  position: relative;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  background: url('/assets/images/about/bg_hero.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.mainContainer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: 2;
+}
+
+.title {
+  margin-top: 21px;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+.titleSpan {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--main-white);
+}
+
+.handbookWrapper {
+  margin-top: 40px;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  max-width: 652px;
+  height: 222px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: url('/assets/images/main/hero-solutions-bg.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 5;
+}
+
+.handbookTitle {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.handbookDescr {
+  margin: 12px 0 40px 0;
+  display: block;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.linkBox {
+  width: fit-content;
+  height: 26px;
+}
+
+@media (min-width: 768px) {
+  .mainContainer {
+    padding: 40px;
+  }
+
+  .title {
+    margin-top: 24px;
+    font-size: 60px;
+  }
+
+  .handbookWrapper {
+    margin-top: 60px;
+  }
+
+  .handbookDescr {
+    width: 422px;
+  }
+
+  .linkBox {
+    margin-top: auto;
+    height: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mainContainer {
+    padding: 138px 60px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 100px;
+  }
+
+  .handbookWrapper {
+    margin: 0;
+    max-width: 560px;
+    height: 262px;
+  }
+
+  .handbookDescr {
+    margin: 12px 0 75px 0;
+  }
+
+  .linkBox {
+    align-items: end;
+    justify-content: end;
+  }
+}

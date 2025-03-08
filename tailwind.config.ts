@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss';
-// import { PluginAPI } from 'tailwindcss/types/config';
+import { PluginAPI } from 'tailwindcss/types/config';
 
 const config: Config = {
   content: [
@@ -9,6 +9,7 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/tw-elements-react/dist/js/**/*.js',
   ],
+  safelist: ['animate-slide-in', 'animate-fade-in', 'animate-fade-out'],
   theme: {
     extend: {
       boxShadow: {
@@ -39,19 +40,33 @@ const config: Config = {
         'desktop-banner':
           "url('/assets/images/banner/desktop_main_banner.png')",
       },
-      typography: {
+      typography: ({ theme }: { theme: PluginAPI['theme'] }) => ({
         DEFAULT: {
           css: {
-            h1: { color: '#010C2C' },
-            h2: { color: '#010C2C' },
-            h3: { color: '#010C2C' },
-            h4: { color: '#010C2C' },
-            h5: { color: '#010C2C' },
-            h6: { color: '#494949' },
-            strong: { color: '#010C2C' },
+            h1: {
+              color: theme('colors.text-dark'),
+            },
+            h2: {
+              color: theme('colors.text-dark'),
+            },
+            h3: {
+              color: theme('colors.text-dark'),
+            },
+            h4: {
+              color: theme('colors.text-dark'),
+            },
+            h5: {
+              color: theme('colors.text-dark'),
+            },
+            h6: {
+              color: theme('colors.main-gray'),
+            },
+            strong: {
+              color: theme('colors.text-dark'),
+            },
           },
         },
-      },
+      }),
       fontFamily: {
         manrope: ['Manrope', 'sans-serif'],
         bebas: ['Bebas Neue', 'sans-serif'],

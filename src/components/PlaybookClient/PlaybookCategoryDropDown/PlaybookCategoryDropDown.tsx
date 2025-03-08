@@ -53,25 +53,25 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
         type='button'
         name='categoriesBtn'
         onClick={() => setIsCategoryOpen(!isCategoryOpen)}
-        className='font-proxima flex appearance-none items-center gap-[8px] text-[12px] leading-[1.6] outline-none'
+        className='flex appearance-none items-center gap-[8px] font-proxima text-[12px] leading-[1.6] outline-none'
       >
         Categories:{' '}
         {pathname && pathnameArr.length === 1 ? (
-          <span className='text-main-blue leading-[1.3] font-bold capitalize'>
+          <span className='font-bold capitalize leading-[1.3] text-main-blue'>
             playbook
           </span>
         ) : pathnameArr.length === 2 && !subCategory ? (
-          <span className='text-main-blue leading-[1.3] font-bold capitalize'>
+          <span className='font-bold capitalize leading-[1.3] text-main-blue'>
             {pathnameArr[1]}
           </span>
         ) : (
-          <span className='text-main-blue leading-[1.3] font-bold capitalize'>
+          <span className='font-bold capitalize leading-[1.3] text-main-blue'>
             {underscopeReverter(subCategory)}
           </span>
         )}
       </button>
       <div
-        className={`tablet:left-[auto] tablet:right-0 absolute left-[70px] z-[20] min-w-[171px] overflow-hidden rounded-[12px] bg-white transition-all duration-300 ease-in-out`}
+        className={`absolute left-[70px] z-[20] min-w-[171px] overflow-hidden rounded-[12px] bg-white transition-all duration-300 ease-in-out tablet:left-[auto] tablet:right-0`}
         style={{
           boxShadow: '0px 11.11px 44.46px 0px rgba(12, 16, 24, 0.12)',
           top: `${categoryContainer.current ? categoryContainer.current.offsetHeight + 11 + 'px' : '0'}`,
@@ -79,16 +79,16 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
         }}
       >
         <ul
-          className={`font-proxima flex flex-col gap-[10px] overflow-hidden p-[4px] capitalize`}
+          className={`flex flex-col gap-[10px] overflow-hidden p-[4px] font-proxima capitalize`}
         >
           <li className={`relative`}>
             <Link
               href='/playbook'
-              className={`block w-full rounded-[8px] p-[12px_16px] text-left text-[14px] leading-[1.4] text-[#525760] capitalize hover:bg-[#f5f5f6] ${pathnameArr.length === 1 ? 'bg-[#f5f5f6] font-bold' : ''}`}
+              className={`block w-full rounded-[8px] p-[12px_16px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${pathnameArr.length === 1 ? 'bg-[#f5f5f6] font-bold' : ''}`}
             >
               playbook
             </Link>
-            <span className='bg-main-disabled absolute bottom-[-5px] block h-[2px] w-full translate-y-[50%]' />
+            <span className='absolute bottom-[-5px] block h-[2px] w-full translate-y-[50%] bg-main-disabled' />
           </li>
           {categories.map((item) => (
             <li
@@ -97,7 +97,7 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
             >
               <Link
                 href={`/playbook/${item.category}${item.subCategory.length > 1 ? '' : `?sub-category=${underscopeFormatter(item.subCategory[0]).toLowerCase()}`}`}
-                className={`relative w-full rounded-[8px] p-[12px_16px] text-left text-[14px] leading-[1.4] text-[#525760] capitalize hover:bg-[#f5f5f6] ${pathnameArr.includes(item.category.trim().toLowerCase()) ? 'bg-[#f5f5f6] font-bold' : ''} `}
+                className={`relative w-full rounded-[8px] p-[12px_16px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${pathnameArr.includes(item.category.trim().toLowerCase()) ? 'bg-[#f5f5f6] font-bold' : ''} `}
               >
                 {item.category}
               </Link>
@@ -106,14 +106,14 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
                   <li key={el} className={`flex flex-col gap-[2px]`}>
                     <Link
                       href={`/playbook/${item.category}?sub-category=${underscopeFormatter(el).toLowerCase()}`}
-                      className={`w-full rounded-[8px] p-[12px_26px] text-left text-[14px] leading-[1.4] text-[#525760] capitalize hover:bg-[#f5f5f6] ${el && subCategory && underscopeReverter(subCategory).toLowerCase() === el.trim().toLowerCase() ? 'bg-[#f5f5f6] font-bold' : ''}`}
+                      className={`w-full rounded-[8px] p-[12px_26px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${el && subCategory && underscopeReverter(subCategory).toLowerCase() === el.trim().toLowerCase() ? 'bg-[#f5f5f6] font-bold' : ''}`}
                     >
                       {el}
                     </Link>
                   </li>
                 ))}
               </ul>
-              <span className='bg-main-disabled absolute bottom-[-5px] left-0 block h-[2px] w-full translate-y-[50%]' />
+              <span className='absolute bottom-[-5px] left-0 block h-[2px] w-full translate-y-[50%] bg-main-disabled' />
             </li>
           ))}
         </ul>

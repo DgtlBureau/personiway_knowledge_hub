@@ -1,0 +1,98 @@
+.menuWrapper {
+  padding: 22px 10px 100px;
+  position: fixed;
+  top: 100;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background-color: var(--main-white);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  overscroll-behavior: contain;
+}
+
+.dark {
+  background-color: var(--primary);
+}
+
+.light {
+  background-color: var(--main-white);
+}
+
+.active {
+  left: 0;
+  opacity: 1;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  z-index: 35;
+  overflow: auto;
+}
+
+.listWrapper {
+  width: 100%;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.menuLink {
+  font-size: 16px;
+  line-height: 1.87;
+}
+
+.menuLink.dark {
+  color: var(--main-white);
+}
+
+.menuLink.light {
+  color: var(--text-dark);
+}
+
+.contactWrapper {
+  padding-bottom: 40px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactBtn {
+  width: 162px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #7cffcd;
+  border-radius: 6px;
+}
+
+.contactBtn.dark {
+  color: var(--main-white);
+}
+
+.contactBtn.light {
+  color: var(--text-dark);
+}
+
+@media (min-width: 768px) {
+  .menuWeapper {
+    padding: 22px 40px 60px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .menuWeapper {
+    display: none;
+  }
+}

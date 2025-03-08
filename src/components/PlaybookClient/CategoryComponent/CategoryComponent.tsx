@@ -1,6 +1,7 @@
 'use client';
 
-import { Post } from '@/src/types/types';
+import SearchImage from '@/public/assets/images/icons/search.svg';
+import { Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { Suspense, useEffect, useMemo, useState } from 'react';
@@ -32,16 +33,16 @@ export const CategoryComponent = ({ category }: ICategory) => {
   const searchParams = useSearchParams();
   const searchQuery = searchParams.get('search-query');
 
-  const expertiseCategory = useMemo(
-    () => getUniqueArticlesSubCategory(category, 'expertise'),
-    [category],
-  );
+  // const expertiseCategory = useMemo(
+  //   () => getUniqueArticlesSubCategory(category, 'expertise'),
+  //   [category],
+  // );
   const insightsCategory = useMemo(
-    () => getUniqueArticlesSubCategory(category, 'hvac'),
+    () => getUniqueArticlesSubCategory(category, 'general'),
     [category],
   );
 
-  const articlesCategory = [expertiseCategory, insightsCategory];
+  const articlesCategory = [insightsCategory];
 
   useEffect(() => {
     const query = new URLSearchParams();
@@ -50,7 +51,7 @@ export const CategoryComponent = ({ category }: ICategory) => {
       return;
     }
     query.set('search-query', inputValue);
-    router.push(`/?${query.toString()}`);
+    router.push(`/playbook?${query.toString()}`);
   }, [inputValue, router]);
 
   useEffect(() => {
@@ -62,15 +63,15 @@ export const CategoryComponent = ({ category }: ICategory) => {
   }, [pathname, searchQuery]);
 
   return (
-    <div className='tablet:flex-row tablet:items-end tablet:gap-[64px] laptop-big:w-[30%] laptop-big:flex-col laptop-big:items-start laptop-big:gap-[10px] flex w-full flex-col gap-[12px]'>
-      <div className='laptop-big:w-full relative w-full'>
+    <div className='flex w-full flex-col gap-[12px] tablet:flex-row tablet:items-end tablet:gap-[64px] laptop-big:w-[30%] laptop-big:flex-col laptop-big:items-start laptop-big:gap-[10px]'>
+      <div className='relative w-full laptop-big:w-full'>
         <input
           placeholder='Search article'
           value={inputValue}
-          className='border-main-blue tablet:text-[16px] w-full border-b-[1px] py-[10px] text-[12px] outline-none'
+          className='w-full border-b-[1px] border-main-blue py-[10px] text-[12px] outline-none tablet:text-[16px]'
           onChange={(e) => setInputValue(e.target.value)}
         />
-        {/* <SearchImage className='absolute right-0 top-[50%] w-[16px] translate-y-[-50%] fill-main-blue' /> */}
+        <SearchImage className='absolute right-0 top-[50%] w-[16px] translate-y-[-50%] fill-main-blue' />
       </div>
       <div className='flex flex-col items-start'>
         {articlesCategory && articlesCategory.length !== 0 && (

@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Редактирование markdown
 
-## Getting Started
+https://dillinger.io
 
-First, run the development server:
+## Инструкция по добавлению статьи (insights):
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1.  Для загрузки статьи необходимо зайти в репозиторий https://github.com/DgtlBureau/zarubin_site, перейти по следующим директориям : src/posts
+    ![Инструкция c описанием директории](/public/assets/images/instruction/instruction-1.jpg)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.  В разделе posts справа нажать на “Add file”, и выбрать “Upload files” что бы загрузить необходимые файлы с расширением .md . После выбора откроется окно в котором нужно будет нажать на “choose your files” и выбрать файлы. Так же нужно будет поставить отметку на “Commit directly to the main branch.”
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    ![Инструкция по добавлению файла](/public/assets/images/instruction/instruction-2.jpg)
+    ![Инструкция по загрузке файла](/public/assets/images/instruction/instruction-3.jpg)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3.  Картинка которая будет использоваться в файле должна лежать в директории public/assets/images/post. В файле который загружается в posts должен быть прописан путь к изображению следующим образом: ‘assets/images/post/<image_name>.png’
 
-## Learn More
+    ![Инструкция по загрузке файла](/public/assets/images/instruction/instruction-3_1.webp)
 
-To learn more about Next.js, take a look at the following resources:
+        ВАЖНО: имя файла картинки не должно содержать пробелы. Вместо пробелов использовать “-” или “\_”
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4.  Файл который загружается в posts должен быть размечен согласно Markdown разметке. Так же необходимо что бы были следующие поля в шапке: title, description, image, date.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ![Инструкция по заголовкам](/public/assets/images/instruction/instruction_4.webp)
 
-## Deploy on Vercel
+    1. titlt: Обязательное поле заголовка поста
+    2. description: Обязательное поля для описания поста
+    3. image: Путь с указанием где лежит файл фотографии
+    4. date: Дата статьи в формате "15-05-2024"
+    5. readingTime: Поле для примерного времени прочтения (не обязательное)
+    6. category: Категория статьи (Insights, Expertise) (обязательное поле)
+    7. subCategory: Тип статьи (Notes, It service и т.д.)
+    8. tag: Обязательное поле для обозначения категории поста ("Product", "Expertise", "Best Practice" и т.д.)
+    9. authorName: Поле для указания Ф.И. автора статьи ("Vitaliy Zarubin"). (обязательное поле для категории Insights)
+    10. authorImage: Обязательное поле для типа "Notest" и "Research". Для остальных так же можно указать ("")
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+        ОБРАТИТЕ ВНИМАНИЕ: Заголовки обернуты в специальные символы ("---"). Это необходимо для того что бы получать необходимые данные при считывании md. файла
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5.  Для того что-бы поменять фотографию автора, неодходимо поместить или указать (если фото уже имеется в директории) путь нужной фотографии и дописать информацию об авторе: ‘assets/images/author/<image_name>.png/jpg....’
+    ![Инструкция по добавлению фото автора](/public/assets/images/instruction/instruction-5.jpg)
+
+6.  Хэштеги которые будут в конце поста необходило обернуть в специальный тег: <font color='#0088cc'>....</font>
+    ![Инструкция по добавлению фото автора](/public/assets/images/instruction/instruction-6.jpg)
+
+Инструкция по разметке Markdown файлов есть на следующих источниках: https://gist.github.com/Jekins/2bf2d0638163f1294637,
+https://doka.guide/tools/markdown,
+
+В качестве шаблона можно использовать любую статью и изменив в ней необходимое содержимое согласно пунктам перечисленных выше!!!
+
+Thu Apr 25 20:15:54 UTC 2024
+
+## Инструкция по добавления статей (expertise):
+
+Загрузка статей по expertise осуществляется аналогичным образом как и insights, за исключением путей где находятся файлы
+
+1. Для загрузки статьи необходимо зайти в репозиторий https://github.com/DgtlBureau/zarubin_site, перейти по следующим директориям : src/expertise
+   ![Инструкция c описанием директории](/public/assets/images/instruction/instruction-expertise-1.webp)
+
+2. Выбрать или создать новую папку для подкатегории: src/expertise/(some_category)
+   ![Инструкция c описанием поддиректории](/public/assets/images/instruction/instruction-expertise-2.webp)
+
+3. Далее аналогично инструкции insights с пункта №2
+
+## Инструкция по добавлению кейсов:
+
+1.  Для загрузки кейса необходимо зайти в репозиторий https://github.com/DgtlBureau/zarubin_site, перейти по следующим директориям : src/cases
+
+    ![Инструкция c описанием директории](/public/assets/images/instruction/instruction_case-1.webp)
+
+2.  В разделе cases справа нажать на “Add file”, и выбрать “Upload files” что бы загрузить необходимые файлы с расширением .md . После выбора откроется окно в котором нужно будет нажать на “choose your files” и выбрать файлы. Так же нужно будет поставить отметку на “Commit directly to the main branch.”
+
+    ![Инструкция по добавлению файла](/public/assets/images/instruction/instruction_case-2.webp)
+    ![Инструкция по загрузке файла](/public/assets/images/instruction/instruction_case-2-2.webp)
+
+3.  Картинка которая будет использоваться в файле должна лежать в директории public/assets/images/case. В файле который загружается в cases должен быть прописан путь к изображению следующим образом: ‘assets/images/case/<image_name>.(расширение файла)’. Путь к картинкам должен быть указан в квадратных скобках. Если картинок несколько то указывать их нужно через запятую.
+
+    ![Инструкция по указанию пути капринки](/public/assets/images/instruction/instruction_case-3.webp)
+    ![Инструкция по указанию пути капринки](/public/assets/images/instruction/instruction_case-3-2.webp)
+
+4.  Файл который загружается в cases должен быть размечен согласно Markdown разметке. Так же необходимо что бы были следующие поля в шапке: title, industries, tag, images.
+
+    ![Инструкция по заголовкам](/public/assets/images/instruction/instruction_4.jpg)
+
+    1. titlt: Обязательное поле заголовка кейса
+    2. description: Обязательное поле для краткого описания кейса
+    3. industries: Обязательное полe с массивом тегов
+    4. tag: обязательное поле с указанием названия кейса
+    5. instruments: Массив с указанием применяемых инструментов ('flutter', 'figma', 'react', 'php', 'go', 'ruby')
+    6. logo: логотип кейса
+    7. logo_hover: логотип кейса при ховере (если логотип остается тот же то прописываем ту же ссылку что и для logo)
+    8. bannerImage: основное изображение для карточки кейса (обязательное поле)
+    9. images: массив с изображениями, которые будут добавлены в описании
+
+       ОБРАТИТЕ ВНИМАНИЕ: Заголовки обернуты в специальные символы ("---"). Это необходимо для того что бы получать необходимые данные при считывании md. файла. И все поля заключены в ковычки.
+
+В качестве шаблона можно использовать любой пост изменив в нем необходимое содержимое согласно пунктам перечисленных выше!!!
+
+## Инструкция по добавлению и изменению контента слайдов на главной странице:
+
+![Изображение секции слайда на главной](/public/assets/images/instruction/main-page/slide/main-slide-view.webp)
+
+1.  Для загрузки или редактировании слайдов на главной странице необходимо зайти в репозиторий https://github.com/DgtlBureau/zarubin_site, перейти по следующим директориям : src/main/banner_slides
+
+![Инструкция по переходу в директорию слайдов](/public/assets/images/instruction/main-page/slide/instruction-slide-1.webp)
+
+2. Для добавления нового файла необходимо справа свержу нажать на "Add file" и выбрать:
+
+   - "Create new file" (если необходимо создать в самом github)
+   - "Upload files" (для загрузки готового файла с расширением .md)
+
+3. Если загружаем готовый файл, то нам необходимо выбрать "Upload files" после чего сделать следующие действия:
+
+   - Для загрузки файла нажать на "choose your file" или перетащить файл в данную область (после чего ниже будет видно сам файл)
+   - После того как мы загрузили файл в поле "Commit changes" написать коммит (добавить заголовок к тому какое действие сделано. Описывать коммит ниже не обязательно)
+   - Убедиться что выбрано "Commit directly to the main branch."
+   - Нажать на кнопку "Commit changes"
+
+   ![Инструкция по загрузке файла](/public/assets/images/instruction/main-page/slide/instruction-slide-6.webp)
+
+4. В загружаемых файлах должна содержаться следующая информация (title, image, link, linkName):
+
+   ![Инструкция по загрузке файла](/public/assets/images/instruction/main-page/slide/instruction-slide-2.webp)
+
+   1. titlt: Обязательное поле заголовка слфйда (Это обязательное поле)
+   2. image: путь к картинке (путь указывается со знака слешь "/" и начинается с assets а не с public. Поле так же является обязательным)
+   3. link: путь к данному разделу (при указании пути так же необходимо в начале указать знак слеша "/". Путь не должен содержать главный домен. Если не нужен переход куда либо то оставляем это поле просто пустым '')
+   4. linkName: название для кнопки (так же если не указываем ссылку то оставляем поле пустым '')
+
+      ОБРАТИТЕ ВНИМАНИЕ: Заголовки обернуты в специальные символы ("---"). Это необходимо для того что бы получать необходимые данные при считывании md. файла. И все поля заключены в ковычки.
+
+      В качестве шаблона можно использовать любой пост изменив в нем необходимое содержимое согласно пунктам перечисленных выше!!!
+
+   Фотографии слайдов загружать в следующую директорию: /public/assets/images/main/heroSlide
+   ![Директория с фото для слайдов](/public/assets/images/instruction/main-page/slide/instruction-slide-5.webp)
+
+5. При изменении файла в самом github необходимо сделать следующие действия:
+
+   1. Перейти к нужному файлу
+   2. Справа выбрать иконку с изображением ручки
+      ![Инструкция по загрузке файла](/public/assets/images/instruction/main-page/slide/instruction-slide-3.webp)
+   3. Произвести необходимое редактирование
+   4. После внесения правок справа кликнуть на кнопку "Commit changes..."
+   5. В открывшемся окне сделать следующее:
+      - Дать заголовок коммиту или оставить тот что был автоматически предложен
+      - Убедиться что выбрано "Commit directly to the main branch"
+      - Нажать на "Commit changes"
+        ![Инструкция по загрузке файла](/public/assets/images/instruction/main-page/slide/instruction-slide-7.webp)
