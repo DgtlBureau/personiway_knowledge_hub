@@ -10,7 +10,7 @@ export const PlaybookHeading = () => {
   const tag = searchParams.get('tag');
 
   const pathnameArr = pathname.split('/').filter((item) => item !== '');
-  const pathTitle = pathnameArr.length < 2 ? 'havc' : pathnameArr[1];
+  const pathTitle = pathnameArr.length < 2 ? 'hvac' : pathnameArr[1];
 
   return (
     <div>

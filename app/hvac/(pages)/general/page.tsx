@@ -8,9 +8,9 @@ import { postsSorting } from '@/src/utils/postsSorting';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
 
-const title = pageMetadata.insights.title;
-const description = contentTrimming(pageMetadata.insights.description, 155);
-const keywords = pageMetadata.insights.keywords;
+const title = pageMetadata.main.title;
+const description = contentTrimming(pageMetadata.main.description, 155);
+const keywords = pageMetadata.main.keywords;
 
 export const metadata: Metadata = {
   title,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     types: {
       'application/rss+xml': [
         {
-          title: 'Bright Byte Insights',
+          title: 'Personiway Hvac',
           url: `${BASE_URL}/hvac/general/rss`,
         },
       ],
