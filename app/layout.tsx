@@ -1,9 +1,9 @@
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
 import { BASE_URL } from '@/src/utils/alias';
-import { getArticlesList } from '@/src/utils/articlesMenu';
+// import { getArticlesList } from '@/src/utils/articlesMenu';
 import { contentTrimming } from '@/src/utils/contentTrimming';
-import { getAllArticles } from '@/src/utils/getAllArticles';
+// import { getAllArticles } from '@/src/utils/getAllArticles';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import classNames from 'classnames';
@@ -14,8 +14,8 @@ import React from 'react';
 import 'swiper/css';
 import './globals.css';
 
-const expertiseSubMenu = getArticlesList('expertise');
-const playbookMetaData = getAllArticles();
+// const expertiseSubMenu = getArticlesList('expertise');
+// const playbookMetaData = getAllArticles();
 
 const title = pageMetadata.main.title;
 const description = contentTrimming(pageMetadata.main.description, 155);
@@ -134,8 +134,8 @@ export default function RootLayout({
       </head>
       <body className={`flex flex-col bg-main-bg text-white ${bodyClassname}`}>
         <Header
-          expertiseSubmenu={expertiseSubMenu}
-          expertiseMetadata={playbookMetaData}
+        // expertiseSubmenu={expertiseSubMenu}
+        // expertiseMetadata={playbookMetaData}
         />
         <main className='flex flex-col gap-[60px] overflow-hidden'>
           {children}
