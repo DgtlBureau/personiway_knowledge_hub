@@ -8,12 +8,6 @@ const config = {
     priority: 1.0,
     sitemapSize: 5000,
 
-    additionalPaths: async () => {
-        const staticPages = [
-            '/',
-        ]
-    }
-
 }
 
 export default config
