@@ -50,7 +50,7 @@ const nextConfig = {
     return [
       {
         source: '/(.*)',
-        destination: 'https://thebrightbyte.com/:path*',
+        destination: 'https://hub.personiway.com/:path*',
         permanent: true,
         has: [
           {

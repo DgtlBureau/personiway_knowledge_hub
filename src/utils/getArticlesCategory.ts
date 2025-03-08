@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 import path from 'path';
 
 export const getArticlesCategory = () => {
-  const folder = `src/playbook/`;
+  const folder = `src/hvac/`;
 
   const categories = fs
     .readdirSync(folder, { withFileTypes: true })

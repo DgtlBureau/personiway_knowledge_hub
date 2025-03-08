@@ -3,29 +3,26 @@
 // import { ContactUsBtn } from '@/src/ui-kit/LeagueLink/ContactUsBtn';
 // import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
 import { menuListLayer } from '@/src/utils/menuListLayer';
-import { ISubmenu, Post } from '@/src/utils/types';
-import useMediaQuery from '@/src/utils/useMediaQuery';
-import dynamic from 'next/dynamic';
+// import { ISubmenu, Post } from '@/src/utils/types';
+// import useMediaQuery from '@/src/utils/useMediaQuery';
+// import dynamic from 'next/dynamic';
 import { useState } from 'react';
 
 import { MainList } from '../NavList/MainList';
 import { Container } from '../shared/Container/Container';
 
-const DynamicExpertiseMenu = dynamic(() =>
-  import('../Expertise/ExpertiseSubMenu/ExpertiseSubMenu').then(
-    (mod) => mod.ExpertiseSubMenu,
-  ),
-);
+// const DynamicExpertiseMenu = dynamic(() =>
+//   import('../Expertise/ExpertiseSubMenu/ExpertiseSubMenu').then(
+//     (mod) => mod.ExpertiseSubMenu,
+//   ),
+// );
 
-interface Props {
-  expertiseSubmenu: ISubmenu[];
-  expertiseMetadata: Post[];
-}
+// interface Props {
+//   expertiseSubmenu: ISubmenu[];
+//   expertiseMetadata: Post[];
+// }
 
-export const Header = ({
-  expertiseSubmenu = [],
-  expertiseMetadata = [],
-}: Props) => {
+export const Header = () => {
   // const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(false);
 
@@ -33,7 +30,7 @@ export const Header = ({
     setActiveSubmenu(isActive);
   };
 
-  const isMobile = useMediaQuery('<laptop-big');
+  // const isMobile = useMediaQuery('<laptop-big');
 
   // const handleOpen = () => {
   //   setIsOpen((prev) => !prev);
@@ -74,7 +71,7 @@ export const Header = ({
         )} */}
       </Container>
 
-      <div
+      {/* <div
         className={`scrollbar-thin relative z-[-1] mx-[auto] max-h-[600px] w-fit transform overflow-y-scroll bg-main-bg px-[20px] transition-all duration-300 ease-in-out ${
           activeSubmenu ? 'translate-y-0' : '-translate-y-full'
         } ${isMobile ? 'hidden' : 'visible'}`}
@@ -84,7 +81,7 @@ export const Header = ({
           expertiseSubMenu={expertiseSubmenu}
           expertiseMetadata={expertiseMetadata}
         />
-      </div>
+      </div> */}
     </header>
   );
 };

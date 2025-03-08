@@ -44,7 +44,7 @@ const findMarkdownFile = (dir: string, slug: string): string | null => {
 };
 
 const getPostContent = (slug: string) => {
-  const folder = 'src/playbook/expertise/';
+  const folder = 'src/hvac/expertise/';
   const file = findMarkdownFile(folder, slug);
 
   if (file) {
@@ -93,7 +93,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `${BASE_URL}/playbook/expertise/${slug}`,
+      canonical: `${BASE_URL}/hvac/expertise/${slug}`,
     },
     openGraph: {
       type: 'article',
@@ -102,7 +102,7 @@ export async function generateMetadata({
       ...openGraphImage,
       title,
       description,
-      url: `${BASE_URL}/playbook/expertise/${slug}`,
+      url: `${BASE_URL}/hvac/expertise/${slug}`,
       article: {
         publishedTime: publishedDateISO,
         modifiedTime: publishedDateISO,

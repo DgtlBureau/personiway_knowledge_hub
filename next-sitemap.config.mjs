@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 const config = {
-    siteUrl: 'https://thebrightbyte.com',
+    siteUrl: 'https://hub.personiway.com',
     generateSitemap: true,
     outDir: './out',
     generateIndexSitemap: false,
@@ -162,7 +162,7 @@ const config = {
             { userAgent: 'facebookexternalhit', allow: '/' }
         ],
         additionalSitemaps: [
-            'https://thebrightbyte.com/sitemap.xml',
+            'https://hub.personiway.com/sitemap.xml',
         ],
     },
 }
