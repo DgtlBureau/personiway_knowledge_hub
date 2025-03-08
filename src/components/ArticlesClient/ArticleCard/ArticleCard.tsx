@@ -19,9 +19,9 @@ export const ArticleCard = ({
   setCurrentPage,
 }: IArticleProps) => {
   const formatedDate = formattedDate(data.date);
-  const tags = data.tag;
-  // ? data.tag.split(',').filter((tag) => tag.trim() !== '')
-  // : [];
+  const tags = data.tag
+    ? data.tag.split(',').filter((tag) => tag.trim() !== '')
+    : [];
 
   return (
     <div className='group flex flex-col gap-[40px] laptop:flex-row'>

@@ -2,17 +2,11 @@
 title: 'Distech Controls ECLYPSE Connected System Controller'
 description: 'The ECLYPSE Connected System Controller is a modular and scalable platform designed to control a wide range of HVAC applications.'
 image: 'https://onesight.solutions/wp-content/uploads/2022/11/Eclypse.png'
-date: '2025-03-07'
+date: '07-03-2025'
 readingTime: ''
-category: 'general'
-subCategory: 'hvac'
-tags:
-  [
-    'Programmable Controller',
-    'BACnet/IP',
-    'HVAC Control',
-    'Building Automation',
-  ]
+category: 'HVAC'
+subCategory: 'HVAC Control System'
+tag: 'Programmable Controller,BACnet/IP,HVAC Control,Building Automation'
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---

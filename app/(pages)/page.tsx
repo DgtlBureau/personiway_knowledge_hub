@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL(`${BASE_URL}/hvac`),
+    canonical: new URL(`${BASE_URL}`),
   },
   openGraph: {
     type: 'article',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title,
     description,
-    url: `${BASE_URL}/hvac`,
+    url: `${BASE_URL}`,
   },
   keywords,
 };

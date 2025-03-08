@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 interface Props {
   title: string;
-  tag: string[];
+  tag: string | undefined;
   description: string;
   slug: string;
   subCategory: string | undefined | null;

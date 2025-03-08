@@ -6,7 +6,7 @@ export interface Post {
   category: string;
   subCategory: string | null | undefined;
   date: string;
-  tag: string[];
+  tag: string | undefined;
   readingTime: string | null | undefined;
   authorName: string;
   authorImage: string;

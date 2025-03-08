@@ -24,14 +24,14 @@ export const PlaybookCard = ({ data }: IArticleProps) => {
   const allSearchParams = `${subCategory ? `sub-category=${subCategory}&` : ''}`;
 
   const formatedDate = formattedDate(data.date);
-  const tags = data.tag;
-  // ? data.tag.split(',').filter((tag) => tag.trim() !== '')
-  // : [];
+  const tags = data.tag
+    ? data.tag.split(',').filter((tag) => tag.trim() !== '')
+    : [];
 
   return (
     <div className='group flex flex-col gap-[40px] laptop:flex-row'>
       <Link
-        href={`/hvac/${data.category.toLowerCase()}/${data.slug}`}
+        href={`/${data.category.toLowerCase()}/${data.slug}`}
         className='relative aspect-[16/9] min-w-[360px] flex-1 overflow-hidden duration-300 group-hover:shadow-2xl laptop-big:max-h-[210px]'
       >
         <Image
@@ -47,12 +47,12 @@ export const PlaybookCard = ({ data }: IArticleProps) => {
       </Link>
       <div className='flex w-full flex-col gap-[20px] laptop-big:w-[70%]'>
         <h2 className='w-full font-unbound text-[18px] font-bold leading-[1.2] text-text-dark duration-300 group-hover:underline laptop-big:text-[24px]'>
-          <Link href={`/hvac/${data.category.toLowerCase()}/${data.slug}`}>
+          <Link href={`/${data.category.toLowerCase()}/${data.slug}`}>
             {data.title}
           </Link>
         </h2>
         <p className='w-full font-proxima text-[16px] leading-[1.2] text-text-dark'>
-          <Link href={`/hvac/${data.category.toLowerCase()}/${data.slug}`}>
+          <Link href={`/${data.category.toLowerCase()}/${data.slug}`}>
             {data.description}
           </Link>
         </p>
@@ -60,7 +60,7 @@ export const PlaybookCard = ({ data }: IArticleProps) => {
           <span className='whitespace-nowrap font-proxima text-[14px] text-text-dark/60'>
             {formatedDate.toUpperCase()}
           </span>
-          {tags && !tags.length && (
+          {tags.length !== 0 && (
             <ul className='flex flex-wrap gap-[8px] desktop:gap-[24px]'>
               {tags.map((item) => (
                 <li key={item} className='h-fit w-fit'>

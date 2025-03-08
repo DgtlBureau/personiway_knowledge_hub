@@ -2,17 +2,11 @@
 title: 'Distech Controls ECB-600'
 description: 'Advanced BACnet MS/TP programmable controller with 16 universal inputs and 10 outputs for building automation and HVAC control applications, offering native BACnet communications and flexible programming options.'
 image: 'https://onesight.solutions/wp-content/uploads/2021/10/ecb-600-1.jpg'
-date: '2025-03-07'
+date: '07-03-2025'
 readingTime: '4 minutes'
-category: 'general'
-subCategory: 'hvac'
-tag:
-  [
-    'BACnet Controller',
-    'HVAC Controller',
-    'Building Automation',
-    'Programmable Controller',
-  ]
+category: 'HVAC'
+subCategory: 'Building Automation System'
+tag: 'BACnet Controller,HVAC Controller,Building Automation,Programmable Controller'
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
