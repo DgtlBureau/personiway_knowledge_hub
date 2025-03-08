@@ -1,18 +1,5 @@
 export const pageMetadata = {
   main: {
-    title:
-      'Bright Byte is a sports and entertainment investment studio in Miami, FL',
-    description:
-      'Bright Byte specialises in enterprise product development and investment in AI, entertainment and operational management products with new levels of innovation. We have a skilled team with strong technical and product expertise. We launch with purpose and ensure sustainable success',
-    keywords: [
-      'Portfolio Investments',
-      'Digital Strategy',
-      'Marketing & Administrative',
-      'Business Consulting',
-      'Startup software development & integration',
-    ],
-  },
-  playbook: {
     title: 'HVAC Controllers & Automation Knowledge Hub | PersoniWay',
     description:
       'Explore our extensive collection of HVAC controllers, automation solutions, and integration guides. The PersoniWay Knowledge Hub provides detailed insights into BACnet controllers, VAV systems, and smart building automation.',
@@ -46,21 +33,6 @@ export const pageMetadata = {
       'Miami development studio',
     ],
   },
-  solutions: {
-    title:
-      "Propel Your Business Forward with Bright Byte's Bespoke IT Solutions",
-    description:
-      "Elevate growth and operational efficiency with our tailored IT strategies, engineered to address your unique business challenges in today's fast-paced digital ecosystem.",
-    keywords: [
-      'IT solutions',
-      'Business processes',
-      'IT Strategy',
-      'Engineering',
-      'Innovations',
-      'Cases',
-      'University sport systems',
-    ],
-  },
   insights: {
     title:
       "Navigate the future: Bright Byte's cutting-edge insights on digital transformation",
@@ -73,45 +45,6 @@ export const pageMetadata = {
       'Digital Transformation',
       'Web Development',
       'Mobile development',
-    ],
-  },
-  career: {
-    title: "Shape Tomorrow's Technology: Exciting IT Careers at Bright Byte",
-    description:
-      'Embark on a rewarding journey in digital innovation. Join our dynamic team of tech visionaries and play a pivotal role in revolutionizing the IT landscape.',
-    keywords: [
-      'Career',
-      'Outsource development',
-      'PHP',
-      'Flutter',
-      'C#',
-      'Next.js',
-      'Javascript',
-      'Go',
-    ],
-  },
-  comparison: {
-    title: 'Bright Byte vs. The Rest: Unparalleled IT Solutions Comparison',
-    description:
-      'Discover why industry leaders choose Bright Byte. Compare our cutting-edge IT services and witness firsthand how our expertise translates into superior business results.',
-    keywords: [
-      'IT compare',
-      'Development Serbia',
-      'IT Solutions',
-      'IT Leadership',
-    ],
-  },
-  about: {
-    title: 'Bright Byte: Architects of Digital Transformation',
-    description:
-      "Dive into our story of relentless innovation. Learn how Bright Byte's visionary approach to IT solutions is redefining business success in the digital age.",
-    keywords: [
-      'IT solutions',
-      'Business processes',
-      'IT Strategy',
-      'Engineering',
-      'Innovations',
-      'Cases',
     ],
   },
   privacyPolicy: {
@@ -127,13 +60,5 @@ export const pageMetadata = {
       'Innovations',
       'Cases',
     ],
-  },
-  investments: {
-    title:
-      'Bright Byte invests in development, we invest in products, technology and organisation.',
-    description:
-      ' From Miami to Luxembourg and San Marino, our initiatives are driving progress and community growth.',
-    keywords:
-      'Investments, Sports Market, Miami Investments, Government Relations',
   },
 };
