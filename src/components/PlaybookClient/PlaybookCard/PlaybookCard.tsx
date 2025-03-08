@@ -31,7 +31,7 @@ export const PlaybookCard = ({ data }: IArticleProps) => {
   return (
     <div className='group flex flex-col gap-[40px] laptop:flex-row'>
       <Link
-        href={`/playbook/${data.category.toLowerCase()}/${data.slug}`}
+        href={`/hvac/${data.category.toLowerCase()}/${data.slug}`}
         className='relative aspect-[16/9] min-w-[360px] flex-1 overflow-hidden duration-300 group-hover:shadow-2xl laptop-big:max-h-[210px]'
       >
         <Image
@@ -47,12 +47,12 @@ export const PlaybookCard = ({ data }: IArticleProps) => {
       </Link>
       <div className='flex w-full flex-col gap-[20px] laptop-big:w-[70%]'>
         <h2 className='w-full font-unbound text-[18px] font-bold leading-[1.2] text-text-dark duration-300 group-hover:underline laptop-big:text-[24px]'>
-          <Link href={`/playbook/${data.category.toLowerCase()}/${data.slug}`}>
+          <Link href={`/hvac/${data.category.toLowerCase()}/${data.slug}`}>
             {data.title}
           </Link>
         </h2>
         <p className='w-full font-proxima text-[16px] leading-[1.2] text-text-dark'>
-          <Link href={`/playbook/${data.category.toLowerCase()}/${data.slug}`}>
+          <Link href={`/hvac/${data.category.toLowerCase()}/${data.slug}`}>
             {data.description}
           </Link>
         </p>

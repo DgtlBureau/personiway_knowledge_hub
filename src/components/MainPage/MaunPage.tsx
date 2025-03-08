@@ -12,5 +12,5 @@ import { redirect } from 'next/navigation';
 // const slideData = getMainBannerMetadata();
 
 export const MainPage = () => {
-  return redirect('/playbook');
+  return redirect('/hvac');
 };

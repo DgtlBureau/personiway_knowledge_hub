@@ -1,8 +1,8 @@
 'use client';
 
 import {
-    underscopeFormatter,
-    underscopeReverter
+  underscopeFormatter,
+  underscopeReverter,
 } from '@/src/utils/formatter/underscopeFormatter';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
@@ -83,10 +83,10 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
         >
           <li className={`relative`}>
             <Link
-              href='/playbook'
+              href='/hvac'
               className={`block w-full rounded-[8px] p-[12px_16px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${pathnameArr.length === 1 ? 'bg-[#f5f5f6] font-bold' : ''}`}
             >
-              playbook
+              hvac
             </Link>
             <span className='absolute bottom-[-5px] block h-[2px] w-full translate-y-[50%] bg-main-disabled' />
           </li>
@@ -96,7 +96,7 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
               className={`relative flex flex-col gap-[4px]`}
             >
               <Link
-                href={`/playbook/${item.category}${item.subCategory.length > 1 ? '' : `?sub-category=${underscopeFormatter(item.subCategory[0]).toLowerCase()}`}`}
+                href={`/hvac/${item.category}${item.subCategory.length > 1 ? '' : `?sub-category=${underscopeFormatter(item.subCategory[0]).toLowerCase()}`}`}
                 className={`relative w-full rounded-[8px] p-[12px_16px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${pathnameArr.includes(item.category.trim().toLowerCase()) ? 'bg-[#f5f5f6] font-bold' : ''} `}
               >
                 {item.category}
@@ -105,7 +105,7 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
                 {item.subCategory.map((el) => (
                   <li key={el} className={`flex flex-col gap-[2px]`}>
                     <Link
-                      href={`/playbook/${item.category}?sub-category=${underscopeFormatter(el).toLowerCase()}`}
+                      href={`/hvac/${item.category}?sub-category=${underscopeFormatter(el).toLowerCase()}`}
                       className={`w-full rounded-[8px] p-[12px_26px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${el && subCategory && underscopeReverter(subCategory).toLowerCase() === el.trim().toLowerCase() ? 'bg-[#f5f5f6] font-bold' : ''}`}
                     >
                       {el}

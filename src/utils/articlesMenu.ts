@@ -16,7 +16,7 @@ export const finalLink = (str: string) => {
 };
 
 export const getArticlesList = (articlePath: string) => {
-  const folder = `src/playbook/${articlePath}`;
+  const folder = `src/hvac/${articlePath}`;
   const directories = fs
     .readdirSync(folder, { withFileTypes: true })
     .filter((direct) => direct.isDirectory())

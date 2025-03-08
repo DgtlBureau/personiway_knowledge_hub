@@ -51,7 +51,7 @@ export const CategoryComponent = ({ category }: ICategory) => {
       return;
     }
     query.set('search-query', inputValue);
-    router.push(`/playbook?${query.toString()}`);
+    router.push(`/hvac?${query.toString()}`);
   }, [inputValue, router]);
 
   useEffect(() => {

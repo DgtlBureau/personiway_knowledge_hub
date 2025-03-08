@@ -25,7 +25,7 @@ export const MainList = ({
   const pathname = usePathname();
 
   return (
-    <ul className='hidden justify-center gap-[44px] laptop-big:flex'>
+    <ul className='justify-center gap-[44px] laptop-big:flex'>
       {list.map((item) => (
         <li
           // onMouseEnter={
