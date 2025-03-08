@@ -4,9 +4,15 @@ description: 'The EC-BOS-8 is a compact, embedded controller and server platform
 image: 'https://onesight.solutions/wp-content/uploads/2022/11/EC-BOS-8.png'
 date: '2025-03-07'
 readingTime: ''
-category: 'Building Automation'
+category: 'HVAC'
 subCategory: 'Building Management System'
-tags: ["Embedded Controller", "Niagara Framework", "Building Automation", "IoT Integration"]
+tags:
+  [
+    'Embedded Controller',
+    'Niagara Framework',
+    'Building Automation',
+    'IoT Integration',
+  ]
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
