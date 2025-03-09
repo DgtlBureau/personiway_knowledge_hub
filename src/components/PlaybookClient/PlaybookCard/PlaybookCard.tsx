@@ -39,7 +39,7 @@ export const PlaybookCard = ({ data }: IArticleProps) => {
           width={549}
           height={308}
           alt={data.title}
-          className='h-full w-full object-cover object-center duration-300'
+          className='absolute left-1/2 top-1/2 h-full w-auto -translate-x-1/2 -translate-y-1/2 object-cover duration-300'
           quality={80}
           priority
         />

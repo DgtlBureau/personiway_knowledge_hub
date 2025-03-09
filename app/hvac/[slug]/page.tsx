@@ -1,24 +1,18 @@
-// import { Featured } from '@/src/components/Featured/Featured';
-// import { SocialFollow } from '@/src/components/SocialFollow/SocialFollow';
 import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import { GoBackLink } from '@/src/ui-kit/GoBackLink/GoBackLink';
 import { BASE_URL } from '@/src/utils/alias';
-import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
 import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
-// import { postsSorting } from '@/src/utils/postsSorting';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
 import path from 'path';
 import styles from './Post.module.css';
-
-// const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 
 const findMarkdownFile = (dir: string, slug: string): string | null => {
   const files = fs.readdirSync(dir);
@@ -78,11 +72,11 @@ export async function generateMetadata({
     };
   }
 
-  const cleanTitle = cleanMetaTitle(post.data.title);
+  // const cleanTitle = cleanMetaTitle(post.data.title);
   const { tag } = post.data;
   const keywords = tag?.split(',') || [];
 
-  const title = contentTrimming(cleanTitle, 105);
+  const title = post.data.title;
   const description = contentTrimming(post.data.description, 155);
 
   const publishedDateISO = DateTime.fromFormat(
@@ -92,7 +86,7 @@ export async function generateMetadata({
 
   return {
     title,
-    description,
+    description: description,
     alternates: {
       canonical: `${BASE_URL}/hvac/${params.slug}`,
     },
@@ -166,7 +160,7 @@ export default function HvacPostPage(props: { params: { slug: string } }) {
     });
 
   return (
-    <div className='mainContainer w-full px-[10px] pb-[30px] tablet:px-[40px] tablet:pb-[40px] desktop:pb-[60px]'>
+    <div className='mainContainer relative w-full px-[10px] pb-[30px] tablet:px-[40px] tablet:pb-[40px] desktop:pb-[60px]'>
       <div
         className='absolute left-0 top-0 h-[150px] w-full bg-cover bg-center bg-no-repeat opacity-[40%] tablet:h-[302px] laptop:h-[342px]'
         style={{
@@ -175,7 +169,7 @@ export default function HvacPostPage(props: { params: { slug: string } }) {
         }}
       ></div>
       <GoBackLink />
-      <div className='mx-[auto] max-w-[896px] pb-[30px]'>
+      <div className='mx-[auto] max-w-[56rem] pb-[30px]'>
         <div className='relative flex w-full items-center justify-center'></div>
         <div className='mt-[60px]'>
           {readingTime && (
