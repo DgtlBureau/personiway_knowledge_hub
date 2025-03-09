@@ -77,6 +77,11 @@
   content: '#';
 }
 
+.markdown hr {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 @media (min-width: 768px) {
   .markdown h1 {
     font-size: 26px;
