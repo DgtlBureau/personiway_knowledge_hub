@@ -14,51 +14,26 @@ export const pageMetadata = {
       'Honeywell',
     ],
   },
-  expertise: {
+  hvac: {
     title:
-      'Bright Byte - Expertise in systems integration, mobile applications: Leading IT Expertise',
+      'Advanced HVAC Automation | PersoniWay',
     description:
-      "Unleash transformative digital solutions across sports, entertainment, fintech, and beyond with Bright Byte's proven track record of innovation.",
+      "PersoniWay is the first AI-powered support center for on-site HVAC technicians in the US. Get real-time troubleshooting, expert guidance, and quick resolutions for HVAC automation issues. Faster on-site solutions, powered by AI.",
     keywords: [
-      'IT Services',
-      'vCIO',
-      'Sport Management System',
-      'Entertainment web sites',
-      'IT Consultancy',
-      'IT Advisory',
-      'Development services',
-      'Custom software development',
-      'PHP Laravel',
-      'Flutter',
-      'Miami development studio',
-    ],
-  },
-  insights: {
-    title:
-      "Navigate the future: Bright Byte's cutting-edge insights on digital transformation",
-    description:
-      'Gain a competitive edge with our expert analysis, breaking industry news, and visionary thought leadership on emerging technology trends and digital innovation.',
-    keywords: [
-      'Blog',
-      'Digital Insights',
-      'IT Software',
-      'Digital Transformation',
-      'Web Development',
-      'Mobile development',
+      'HVAC Technician Support', 
+      'AI HVAC Assistant',
+      'Smart HVAC Solutions',
+      'Building Automation AI',
+      'HVAC Troubleshooting',
+      'PersoniWay Support',
     ],
   },
   privacyPolicy: {
     title:
-      "Safeguarding Your Digital Future: Bright Byte's Ironclad Privacy Policy",
+      "Personiway - Privacy Policy",
     description:
-      'Experience peace of mind with our unwavering commitment to data protection. Explore how we ensure your information remains secure while complying with global privacy standards.',
+      'Policy',
     keywords: [
-      'IT solutions',
-      'Business processes',
-      'IT Strategy',
-      'Engineering',
-      'Innovations',
-      'Cases',
     ],
   },
 };
