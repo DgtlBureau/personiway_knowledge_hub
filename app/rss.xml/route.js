@@ -7,7 +7,7 @@ const insights = getInsightsMetadata()
 
 const insightsData = insights.map((item) => {
   return {
-    dirName: 'insights',
+    dirName: 'posts',
     ...item,
   }
 })

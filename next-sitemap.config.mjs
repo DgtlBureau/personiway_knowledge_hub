@@ -14,18 +14,7 @@ const config = {
 
         const staticPages = [
             '/',
-            '/about',
-            '/career',
-            '/comparison',
-            '/playbook',
-            '/playbook/expertise',
-            '/playbook/insights',
-            '/solutions',
-            '/policy',
-            '/investments',
-            '/brief',
-            '/playbook/expertise/rss.xml',
-            '/playbook/insights/rss.xml',
+            '/hvac',
         ]
 
         const getAllMarkdownFiles = (dirPath, arrayOfFiles = []) => {
@@ -43,28 +32,12 @@ const config = {
             return arrayOfFiles
         }
 
-        const expertiseDir = path.join(process.cwd(), 'src/playbook/expertise')
-        const expertiseFiles = getAllMarkdownFiles(expertiseDir)
-
-        const dynamicExpertisePages = expertiseFiles.map((file) => {
-            const fileName = path.basename(file, '.md')
-            return `/playbook/expertise/${fileName}`
-        })
-
-        const blogDir = path.join(process.cwd(), 'src/playbook/insights')
+        const blogDir = path.join(process.cwd(), 'src/posts/hvac')
         const blogFiles = getAllMarkdownFiles(blogDir)
 
         const dynamicBlogPages = blogFiles.map((file) => {
             const fileName = path.basename(file, '.md')
-            return `/playbook/insights/${fileName}`
-        })
-
-        const solutionsDir = path.join(process.cwd(), 'src/cases')
-        const solutionsFiles = getAllMarkdownFiles(solutionsDir)
-
-        const dynamicSolutionsPages = solutionsFiles.map((file) => {
-            const fileName = path.basename(file, '.md')
-            return `/solutions/${fileName}`
+            return `/hvac/${fileName}`
         })
 
         const allPaths = [
@@ -73,17 +46,7 @@ const config = {
                 changefreq: 'daily',
                 priority: 1.0,
             })),
-            ...dynamicExpertisePages.map(loc => ({
-                loc,
-                changefreq: 'daily',
-                priority: 0.8,
-            })),
             ...dynamicBlogPages.map(loc => ({
-                loc,
-                changefreq: 'daily',
-                priority: 0.8,
-            })),
-            ...dynamicSolutionsPages.map(loc => ({
                 loc,
                 changefreq: 'daily',
                 priority: 0.8,
