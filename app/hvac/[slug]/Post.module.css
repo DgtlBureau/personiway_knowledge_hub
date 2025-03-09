@@ -39,13 +39,14 @@
 
 .markdown > p > img {
   opacity: 1;
-  width: 60%;
+  width: 90%;
   height: auto;
 }
 
 .markdown img {
-  max-width: 60%;
+  max-width: 90%;
   display: block;
+  margin: auto;
 }
 
 .markdown strong {
