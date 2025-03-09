@@ -5,7 +5,7 @@ image: 'https://honeywell.scene7.com/is/image/Honeywell65/hbt-bms-Spyder-Model7-
 date: '07-03-2025'
 readingTime: ''
 category: 'HVAC'
-subCategory: 'Variable Air Volume Control System'
+subCategory: 'Honeywell'
 tag: 'VAV Controller,Programmable Controller,BACnet,Honeywell'
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
