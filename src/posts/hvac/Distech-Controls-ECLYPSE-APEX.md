@@ -1,7 +1,7 @@
 ---
 title: 'Distech Controls ECLYPSE APEX'
 description: 'The ECLYPSE APEX is a powerful IoT Edge controller designed to enhance HVAC system maintenance, increase equipment efficiency, and optimize energy consumption by leveraging the latest available technology on-site and from the cloud.'
-image: 'https://honeywell.scene7.com/is/image/Honeywell65/hbt-bms-Spyder-Model7-VAV-IP-Front'
+image: 'https://img.acuitybrands.com/public-assets/catalog/947888/EC2-APEX_FRONT-24FEV2021_mid.jpg'
 date: '09-03-2025'
 readingTime: ''
 category: 'HVAC'
@@ -47,7 +47,7 @@ The **ECLYPSE APEX** offers enhanced performance with its **quad-core processor*
 - 📄 **Datasheet**: [Download PDF](https://docs.distech-controls.com/bundle/ECLYPSE-APEX_SP/resource/ECLYPSE%20APEX_SP.pdf)
 - 🏢 **Official Manufacturer**: [Distech Controls](https://www.distech-controls.com)
 - 📷 **Product Image**:
-  ![Distech Controls ECLYPSE APEX](https://honeywell.scene7.com/is/image/Honeywell65/hbt-bms-Spyder-Model7-VAV-IP-Front)
+  ![Distech Controls ECLYPSE APEX](https://img.acuitybrands.com/public-assets/catalog/947888/EC2-APEX_FRONT-24FEV2021_mid.jpg)
 
 ---
 
