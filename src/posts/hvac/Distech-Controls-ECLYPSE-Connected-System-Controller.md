@@ -11,8 +11,6 @@ authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
 
-# Distech Controls ECLYPSE Connected System Controller
-
 ## **Overview**
 
 The ECLYPSE Connected System Controller is a modular and scalable platform designed to control a wide range of HVAC applications. It supports BACnet/IP communication and is a listed BACnet Building Controller (B-BC). The controller consists of an automation and connectivity server, power supply, and I/O extension modules, providing advanced functionality such as customizable control logic, web-based design and visualization interface (ENVYSION embedded), logging, alarming, and scheduling.
