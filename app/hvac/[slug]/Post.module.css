@@ -13,6 +13,8 @@
   align-items: center;
   font-size: 18px;
   font-weight: 700;
+  margin-top: 1.6em;
+  margin-bottom: .6em;
 }
 
 .research.markdown h2::before {
