@@ -10,7 +10,7 @@ tag: 'I/O Expansion Module,Building Automation,HVAC Control,BACnet Compatible'
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
-# Distech Controls ECX-400
+
 ## **Overview**
 The ECX-400 expansion module offers additional inputs and outputs for enhanced flexibility in building automation systems. It works in conjunction with Distech Controls' programmable controllers to provide expanded control capabilities for HVAC and building automation applications.
 
