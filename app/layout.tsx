@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     types: {
       'application/rss+xml': [
         {
-          title: 'Bright Byte Expertise and Insights',
+          title: 'PersoniWay - HVAC Controllers & Automation Knowledge Hub',
           url: `${BASE_URL}/rss`,
         },
       ],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'BrightByte.com',
+    siteName: 'Personiway.com',
     ...openGraphImage,
     title,
     description,
