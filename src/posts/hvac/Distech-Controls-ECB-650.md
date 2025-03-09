@@ -5,7 +5,7 @@ image: 'https://www.cochranesupply.com/media/catalog/product/cache/f6904101c3845
 date: '07-03-2025'
 readingTime: ''
 category: 'HVAC'
-subCategory: 'Building Automation & Controls'
+subCategory: 'Distech Controls'
 tag: 'Distech Controls,ECB-650,BACnet Controller,Programmable Controller,HVAC Control'
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
