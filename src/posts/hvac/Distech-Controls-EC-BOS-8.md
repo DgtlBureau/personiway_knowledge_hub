@@ -11,8 +11,6 @@ authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
 
-# Distech Controls EC-BOS-8
-
 ## **Overview**
 
 The EC-BOS-8 is a compact, embedded controller and server platform designed to connect multiple and diverse devices and sub-systems. It provides integrated control, supervision, data logging, alarming, scheduling, and network management. With internet connectivity and web-serving capability, the EC-BOS-8 streams data and graphical displays to standard web browsers via Ethernet or wireless LAN, or remotely over the internet. It operates with the EC-Net 4 web-based building management platform powered by the Niagara Framework.
