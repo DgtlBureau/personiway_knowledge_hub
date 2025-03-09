@@ -11,8 +11,6 @@ authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
 
-# **Distech Controls ECx-Light Series**
-
 ## **Overview**
 Distech Controls' ECx-Light Series consists of powerful programmable controllers specifically engineered for lighting management in commercial and institutional buildings. These controllers are designed to reduce energy consumption while optimizing user comfort through precise control of lighting systems. With support for multiple communication protocols and extensive I/O capabilities, the ECx-Light Series provides a flexible and scalable solution for lighting automation within a comprehensive building management ecosystem.
 
