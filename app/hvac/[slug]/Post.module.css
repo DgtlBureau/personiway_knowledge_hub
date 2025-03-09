@@ -68,11 +68,10 @@
 
 @media (min-width: 768px) {
   .markdown h1 {
-    font-size: 36px;
+    font-size: 30px; /* Reduce from 36px */
   }
-
   .markdown h2 {
-    font-size: 26px;
+    font-size: 22px; /* Reduce from 26px */
   }
 
   .research.markdown h2::before {
@@ -80,28 +79,27 @@
   }
 
   .authorImg {
-    width: 80px;
+    width: 60px; /* Reduce from 80px */
   }
 
   .markdown li,
   .markdown p,
   .markdown strong {
-    font-size: 21px;
+    font-size: 18px; /* Reduce from 21px */
   }
 
   .tag {
     padding: 8px 12px;
-    font-size: 18px;
+    font-size: 14px; /* Reduce from 18px */
   }
 }
 
 @media (min-width: 1440px) {
   .markdown h1 {
-    font-size: 40px;
+    font-size: 34px; /* Reduce from 40px */
   }
-
   .markdown h2 {
-    font-size: 36px;
+    font-size: 28px; /* Reduce from 36px */
   }
 
   .research.markdown h2::before {
@@ -112,6 +110,6 @@
   .markdown li,
   .markdown p,
   .markdown strong {
-    font-size: 24px;
+    font-size: 20px; /* Reduce from 24px */
   }
 }
