@@ -6,7 +6,7 @@ date: '09-03-2025'
 readingTime: ''
 category: 'HVAC'
 subCategory: 'Distech Controls'
-tag: ['Distech Controls', 'ECLYPSE APEX', 'IoT Edge Controller', 'HVAC Control', 'Building Automation', 'BACnet', 'AI Capabilities']
+tag: 'Distech Controls,ECLYPSE APEX,IoT Edge Controller,HVAC Control,Building Automation,BACnet,AI Capabilities'
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
