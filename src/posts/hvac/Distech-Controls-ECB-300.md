@@ -11,8 +11,6 @@ authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
 
-# Distech Controls ECB-300
-
 ## **Overview**
 
 The ECB-300 Series controllers are microprocessor-based programmable controllers designed to control various building automation applications, including HVAC systems like air handling units, chillers, boilers, cooling towers, and pumps. They also support lighting control and power measurement applications. The controllers utilize the BACnet MS/TP LAN communication protocol and are BTL-Listed as BACnet Advanced Application Controllers (B-AAC).
