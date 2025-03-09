@@ -11,8 +11,6 @@ authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
 
-# Distech Controls ECB-600 Overview
-
 The **Distech Controls ECB-600** is a **BACnet MS/TP programmable controller** designed for **medium to large-sized HVAC applications and building automation systems**. This advanced controller offers **16 universal inputs and 10 outputs (6 universal and 4 digital)**, ensuring exceptional flexibility for controlling various HVAC equipment and building functions.
 
 As a **BACnet Advanced Application Controller (B-AAC)**, it supports **seamless integration** into **building automation systems (BAS)** and enables sophisticated control sequences. The ECB-600 represents a powerful solution for applications requiring extensive I/O capacity and advanced programming capabilities.
