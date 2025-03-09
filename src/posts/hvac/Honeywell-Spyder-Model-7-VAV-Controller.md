@@ -11,8 +11,6 @@ authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
 
-# Honeywell Spyder Model 7 VAV Controller
-
 ## **Overview**
 
 The Honeywell Spyder Model 7 VAV Controller is designed to provide advanced control for Variable Air Volume (VAV) applications. Its integration capabilities and programmable nature make it suitable for modern building management systems, ensuring efficient and reliable HVAC operations.

@@ -10,9 +10,6 @@ tag: 'Programmable Controller,BACnet MS/TP,Terminal Unit Control,Building Automa
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
-
-# Distech Controls ECB-203
-
 ## **Overview**
 
 The ECB-203 Series controllers are versatile devices designed for controlling various terminal units in HVAC systems. With 6 universal inputs, 5 digital outputs (TRIAC), and 3 universal outputs, they provide flexibility in system design. The controllers support BACnet MS/TP communication and are BTL-Listed as B-ASC, ensuring interoperability in building automation systems. Some models offer environmental protection with a conformal coating, making them suitable for humid regions.

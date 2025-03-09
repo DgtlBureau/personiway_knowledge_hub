@@ -11,8 +11,6 @@ authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
 
-# Distech Controls ECB-VAV
-
 ## **Overview**
 
 The ECB-VAV Series controllers are designed to meet the requirements of diverse VAV zone applications. They improve energy efficiency when combined with motion detectors to adjust a zone's occupancy mode from standby to occupied upon detecting presence, and with CO₂ sensors to regulate the amount of fresh air supplied to the zone, thereby enhancing occupant comfort.

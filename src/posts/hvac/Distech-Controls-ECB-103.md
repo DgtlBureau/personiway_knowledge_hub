@@ -10,9 +10,6 @@ tag: 'BACnet Controller,Building Automation,HVAC Controller,Programmable Control
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
-
-# **Distech Controls ECB-103**
-
 ## **Overview**
 The Distech Controls ECB-103 is a microprocessor-based programmable controller designed for building automation applications. Part of the ECB Series, this BACnet MS/TP controller is ideal for controlling various HVAC equipment and can be easily integrated into building management systems. Its robust design and versatile programming capabilities make it suitable for both simple and complex control applications.
 
