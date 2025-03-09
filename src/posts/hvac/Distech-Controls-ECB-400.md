@@ -2,7 +2,7 @@
 title: 'Distech Controls ECB-400'
 description: 'The ECB-400 Series are microprocessor-based controllers designed for HVAC and building automation applications.'
 image: 'https://onesight.solutions/wp-content/uploads/2022/11/ECB-400.png'
-date: '2025-03-07'
+date: '07-03-2025'
 readingTime: ''
 category: 'HVAC'
 subCategory: 'Distech Controls'
