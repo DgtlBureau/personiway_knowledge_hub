@@ -15,11 +15,11 @@ const allData = [...insightsData]
 
 export async function GET() {
   const feed = new RSS({
-    title: 'Bright Byte Expertise and Insights',
-    description: 'Latest expertise and insights from Bright Byte',
+    title: 'Personiway',
+    description: 'The PersoniWay Knowledge Hub provides detailed insights into BACnet controllers, VAV systems, and smart building automation',
     site_url: 'https://hub.personiway.com/',
     feed_url: 'https://hub.personiway.com/rss',
-    copyright: `${new Date().getFullYear()} Bright Byte Expertise`,
+    copyright: `${new Date().getFullYear()} Personiway`,
     language: 'en-us',
     pubDate: new Date().toUTCString(),
   })
