@@ -11,8 +11,6 @@ authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
 
-# Distech Controls ECB-650
-
 The **Distech Controls ECB-650** is a **BACnet MS/TP programmable controller** designed for **large-sized Air Handling Units (AHUs) and plant applications**. This advanced controller offers **16 universal inputs (UIs) and 12 universal outputs (UOs)**, ensuring flexibility for HVAC automation.
 
 As a **BACnet Advanced Application Controller (B-AAC)**, it supports **seamless integration** into **building automation systems (BAS)** and **smart HVAC networks**.
