@@ -11,8 +11,6 @@ authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
 
-# Distech Controls ECB-400
-
 ## **Overview**
 
 The ECB-400 Series controllers offer versatile control for medium-to-large HVAC applications. With flexible inputs and outputs, onboard scheduling, alarming, and energy monitoring, they provide efficient system automation. Optional features include HOA switches and display modules, enabling local control and diagnostics. The controllers support Open-to-Wireless™ technology, allowing wireless sensors and switches to be integrated easily.
