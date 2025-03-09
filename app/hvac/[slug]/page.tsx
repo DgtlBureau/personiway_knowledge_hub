@@ -80,7 +80,7 @@ export async function generateMetadata({
 
   const cleanTitle = cleanMetaTitle(post.data.title);
   const { tag } = post.data;
-  const keywords = tag;
+  const keywords = tag?.split(',') || [];
 
   const title = contentTrimming(cleanTitle, 105);
   const description = contentTrimming(post.data.description, 155);
