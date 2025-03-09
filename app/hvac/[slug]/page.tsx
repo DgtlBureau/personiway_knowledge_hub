@@ -80,7 +80,7 @@ export async function generateMetadata({
 
   const cleanTitle = cleanMetaTitle(post.data.title);
   const { tag } = post.data;
-  const keywords = tag?.split(',') || [];
+  const keywords = tag;
 
   const title = contentTrimming(cleanTitle, 105);
   const description = contentTrimming(post.data.description, 155);
@@ -99,7 +99,7 @@ export async function generateMetadata({
     openGraph: {
       type: 'article',
       locale: 'en_US',
-      siteName: 'BrightByte.com',
+      siteName: 'Personiway.com',
       ...openGraphImage,
       title,
       description,
