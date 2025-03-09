@@ -19,9 +19,12 @@ export const postsSorting = (posts: Post[]) => {
   const sortedPosts = posts.sort((a, b) => {
     const dateA = DateTime.fromFormat(a.date, 'dd-MM-yyyy');
     const dateB = DateTime.fromFormat(b.date, 'dd-MM-yyyy');
-    if (dateA > dateB) return -1;
-    if (dateA < dateB) return 1;
-    return 0;
+
+    if (!dateA.isValid && !dateB.isValid) return 0;
+    if (!dateA.isValid) return 1;
+    if (!dateB.isValid) return -1;
+
+    return dateB.toMillis() - dateA.toMillis();
   });
 
   return sortedPosts;

@@ -23,6 +23,7 @@ export const MainList = ({
   // onMenuItemHover,
 }: Props) => {
   const pathname = usePathname();
+  const pathnameLength = pathname.split('/').filter((item) => item !== '');
 
   return (
     <ul className='justify-center gap-[44px] laptop-big:flex'>
@@ -44,9 +45,7 @@ export const MainList = ({
                 ? 'text-[16px] text-white desktop:text-[16px]'
                 : 'text-[16px] text-[black]',
               {
-                'border-b-[2px] !border-main-blue': pathname.startsWith(
-                  item.link,
-                ),
+                'border-b-[2px] !border-main-blue': !pathnameLength.length,
               },
             )}
           >

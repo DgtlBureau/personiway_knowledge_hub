@@ -15,12 +15,11 @@ export const pageMetadata = {
     ],
   },
   hvac: {
-    title:
-      'Advanced HVAC Automation | PersoniWay',
+    title: 'Advanced HVAC Automation | PersoniWay',
     description:
-      "PersoniWay is the first AI-powered support center for on-site HVAC technicians in the US. Get real-time troubleshooting, expert guidance, and quick resolutions for HVAC automation issues. Faster on-site solutions, powered by AI.",
+      'PersoniWay is the first AI-powered support center for on-site HVAC technicians in the US. Get real-time troubleshooting, expert guidance, and quick resolutions for HVAC automation issues. Faster on-site solutions, powered by AI.',
     keywords: [
-      'HVAC Technician Support', 
+      'HVAC Technician Support',
       'AI HVAC Assistant',
       'Smart HVAC Solutions',
       'Building Automation AI',
@@ -29,11 +28,8 @@ export const pageMetadata = {
     ],
   },
   privacyPolicy: {
-    title:
-      "Personiway - Privacy Policy",
-    description:
-      'Policy',
-    keywords: [
-    ],
+    title: 'Personiway - Privacy Policy',
+    description: 'Policy',
+    keywords: [],
   },
 };
