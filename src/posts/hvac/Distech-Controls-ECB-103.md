@@ -1,11 +1,11 @@
 ---
-title: 'ECB-103'
+title: 'Distech Controls ECB-103'
 description: 'The ECB-103 is a high-performance BACnet MS/TP programmable controller with 10 inputs and 8 outputs, designed for building automation and HVAC control applications.'
 image: 'https://onesight.solutions/wp-content/uploads/2022/11/ECB-103.png'
 date: '07-03-2025'
 readingTime: '5 minutes'
 category: 'HVAC'
-subCategory: 'Building Automation System'
+subCategory: 'Distech Controls'
 tag: 'BACnet Controller,Building Automation,HVAC Controller,Programmable Controller'
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
