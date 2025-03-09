@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     locale: 'en_US',
-    siteName: 'BrightByte.com',
+    siteName: 'hub.personiway.com',
     ...openGraphImage,
     title,
     description,
