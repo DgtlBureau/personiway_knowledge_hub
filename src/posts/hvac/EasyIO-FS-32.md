@@ -4,7 +4,7 @@ description: 'The EasyIO FS-32 is a high-performance network controller featurin
 image: 'https://onesight.solutions/wp-content/uploads/2025/02/EasyIO-FS32.png'
 date: '10-03-2025'
 readingTime: ''
-category: 'Building Automation'
+category: 'HVAC'
 subCategory: 'EasyIO'
 tag: 'network controller, building automation, BACnet, Modbus, IoT'
 authorName: 'PersoniWay'
