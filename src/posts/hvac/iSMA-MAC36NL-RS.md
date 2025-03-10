@@ -4,7 +4,7 @@ description: 'The iSMA MAC36NL-RS is a compact Master Application Controller wit
 image: 'https://onesight.solutions/wp-content/uploads/2022/11/MAC36-NL-RS.png'
 date: '10-03-2025'
 readingTime: ''
-category: 'Building Automation'
+category: 'HVAC'
 subCategory: 'iSMA CONTROLLI'
 tag: 'Building automation controller, Niagara Framework, Modbus, BACnet, I/O module'
 authorName: 'PersoniWay'
