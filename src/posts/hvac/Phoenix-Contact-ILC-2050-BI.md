@@ -4,7 +4,7 @@ description: 'The Phoenix Contact ILC 2050 BI is a modular Inline controller des
 image: 'https://onesight.solutions/wp-content/uploads/2022/11/Size-template.png'
 date: '10-03-2025'
 readingTime: ''
-category: 'Building Automation'
+category: 'HVAC'
 subCategory: 'Phoenix Contact'
 tag: 'building automation controller, modular I/O, BACnet/IP, Modbus/TCP, infrastructure automation'
 authorName: 'PersoniWay'
