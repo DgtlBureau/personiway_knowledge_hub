@@ -4,7 +4,7 @@ description: 'The iSMA MIX-38 is a versatile I/O module designed for building au
 image: 'https://onesight.solutions/wp-content/uploads/2022/08/MIX-38.png'
 date: '10-03-2025'
 readingTime: ''
-category: 'Building Automation'
+category: 'HVAC'
 subCategory: 'iSMA CONTROLLI'
 tag: 'I/O module, building automation, Modbus, BACnet, universal inputs'
 authorName: 'PersoniWay'
