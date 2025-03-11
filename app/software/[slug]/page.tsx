@@ -70,6 +70,8 @@ export const generateStaticParams = async () => {
   return posts.map((post) => ({ slug: post.slug }));
 };
 
+export const dynamic = 'error';
+
 export async function generateMetadata({
   params,
 }: {
