@@ -1,21 +1,13 @@
-import { BASE_URL, seoSiteName } from '@/src/utils/alias';
+import {
+    BASE_URL,
+    defaultSeoAlternatesTitle,
+    seoSiteName
+} from '@/src/utils/alias';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { Metadata } from 'next';
 import { pageMetadata } from '../pageMetadata';
 
-type IOgType =
-  | 'website'
-  | 'article'
-  | 'book'
-  | 'profile'
-  | 'music.song'
-  | 'music.album'
-  | 'music.playlist'
-  | 'music.radio_station'
-  | 'video.movie'
-  | 'video.episode'
-  | 'video.tv_show'
-  | 'video.other';
+type IOgType = 'website' | 'article' | 'book' | 'profile';
 
 interface ISeo {
   title: string;
@@ -59,7 +51,7 @@ export function Seo({
         ? {
             'application/rss+xml': [
               {
-                title: alternatesTitle,
+                title: alternatesTitle || defaultSeoAlternatesTitle,
                 url: `${BASE_URL}/${rssPath || 'rss'}`,
               },
             ],

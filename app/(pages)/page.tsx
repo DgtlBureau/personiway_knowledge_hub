@@ -12,7 +12,6 @@ const keywords = pageMetadata.main.keywords;
 export const metadata = Seo({
   title,
   description,
-  alternatesTitle: 'PersoniWay - HVAC Controllers & Automation Knowledge Hub',
   ogSiteName: 'Personiway.com',
   ogType: 'article',
   keywords,

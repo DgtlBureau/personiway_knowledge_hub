@@ -9,7 +9,7 @@ export async function GET() {
     title: 'Bright Byte Insights',
     description: 'Latest insights from Bright Byte',
     site_url: 'https://hub.personiway.com',
-    feed_url: `https://hub.personiway.com/hvac/insights/rss.xml`,
+    feed_url: `https://hub.personiway.com/hvac/rss.xml`,
     copyright: `${new Date().getFullYear()} Bright Byte Insights`,
     language: 'en-us',
     pubDate: new Date().toUTCString(),
@@ -22,8 +22,8 @@ export async function GET() {
     feed.item({
       title: String(insight.title),
       description: String(insight.description),
-      guid: `https://hub.personiway.com/hvac/insights/${insight.slug}`,
-      url: `https://hub.personiway.com/hvac/insights/${insight.slug}`,
+      guid: `https://hub.personiway.com/hvac/${insight.slug}`,
+      url: `https://hub.personiway.com/hvac/${insight.slug}`,
       date: formattedDate,
     });
   });

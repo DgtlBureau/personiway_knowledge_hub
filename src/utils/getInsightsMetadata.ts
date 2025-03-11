@@ -3,20 +3,6 @@ import matter from 'gray-matter';
 import path from 'path';
 import { Post } from './types';
 
-export interface Case {
-  title: string;
-  description: string;
-  readingTime: string | null | undefined;
-  date: string | null | undefined;
-  category: string;
-  subCategory: string | undefined | null;
-  tag: string | undefined;
-  slug: string;
-  image: string;
-  authorName: string;
-  authorImage: string;
-}
-
 const getMarkdownFiles = (dir: string): string[] => {
   let results: string[] = [];
   const list = fs.readdirSync(dir);
@@ -32,8 +18,11 @@ const getMarkdownFiles = (dir: string): string[] => {
   return results;
 };
 
-export const getInsightsMetadata = (): Post[] => {
-  const markdownFiles = getMarkdownFiles('src/posts');
+export const getInsightsMetadata = (folder: string): Post[] => {
+  // const markdownFiles = getMarkdownFiles(`src/posts/${folder}`);
+  const markdownFiles = getMarkdownFiles(
+    folder ? `src/posts/${folder}` : 'src/posts',
+  );
 
   const posts = markdownFiles.map((filePath: string): Post => {
     const fileContent = fs.readFileSync(filePath, 'utf8');

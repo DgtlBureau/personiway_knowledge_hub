@@ -19,7 +19,6 @@ export const metadata = Seo({
   description,
   keywords,
   ogSiteName: 'Personiway.com',
-  alternatesTitle: 'PersoniWay - HVAC Controllers & Automation Knowledge Hub',
   ogType: 'website',
 });
 
@@ -70,8 +69,6 @@ export default function RootLayout({
   const bodyClassname = classNames(Unbound.variable, Proxima.variable);
   return (
     <html lang='en'>
-      <Script src='/static/js/main.js' strategy='lazyOnload' />
-      <Script src='/static/js/vendor.js' strategy='lazyOnload' />
       <Script
         async
         src='https://www.googletagmanager.com/gtag/js?id=G-0PFJQ22253'

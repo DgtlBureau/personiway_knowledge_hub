@@ -14,17 +14,17 @@ export const metadata = Seo({
   title,
   description,
   keywords,
-  alternatesTitle: 'Personiway HVAC',
-  canonicalPath: 'hvac',
+  alternatesTitle: 'Personiway Software',
+  canonicalPath: 'software',
   ogType: 'article',
   ogSiteName: 'hub.personiway.com',
-  ogUrlPath: 'hvac',
+  ogUrlPath: 'software',
 });
 
-const insightsArticles = getInsightsMetadata('hvac');
+const insightsArticles = getInsightsMetadata('software');
 const sortedInsightsArticles = postsSorting(insightsArticles);
 
-export default function InsightsPage() {
+export default function SoftwarePage() {
   return (
     <div className='h-full w-full'>
       <Suspense fallback={<div className='h-screen w-full bg-white'></div>}>
