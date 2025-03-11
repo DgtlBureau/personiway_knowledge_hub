@@ -31,6 +31,12 @@ const findMarkdownFile = (dir: string, slug: string): string | null => {
 
 const getPostContent = (slug: string) => {
   const folder = 'src/posts/software';
+
+  if (!fs.existsSync(folder)) {
+    console.error(`Error: Directory "${folder}" does not exist.`);
+    return null;
+  }
+
   const file = findMarkdownFile(folder, slug);
 
   if (file) {
@@ -43,7 +49,7 @@ const getPostContent = (slug: string) => {
       return null;
     }
   } else {
-    console.error('File not found');
+    console.error('File not found:', slug);
     return null;
   }
 };
