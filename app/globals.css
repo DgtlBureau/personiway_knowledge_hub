@@ -34,243 +34,6 @@
   font-display: swap;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #ffffff;
-  transition: background-color 5000s ease-in-out 0s;
-  box-shadow: inset 0 0 20px 20px #23232329;
-}
-
-@layer utilities {
-  .white-stroke {
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px var(--main-white);
-  }
-
-  .text-stroke {
-    color: var(--primary);
-    text-shadow:
-      -1px -1px 0 #ffffff,
-      1px -1px 0 #ffffff,
-      -1px 1px 0 #ffffff,
-      1px 1px 0 #ffffff;
-  }
-
-  .brief-stroke {
-    text-shadow:
-      -1px -1px 0 rgba(0, 0, 0, 0.2),
-      1px -1px 0 rgba(0, 0, 0, 0.2),
-      -1px 1px 0 rgba(0, 0, 0, 0.2),
-      1px 1px 0 rgba(0, 0, 0, 0.2);
-  }
-
-  .hide-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .no-scroll {
-    overflow: hidden;
-  }
-
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .scrollbar-thin {
-    scrollbar-width: thin;
-    /* Firefox */
-    scrollbar-color: #ccc transparent;
-    /* Firefox */
-  }
-
-  .scrollbar-thin::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 4px;
-  }
-
-  .scrollbar-thin::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .gradient-box {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .gradient-box::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 1) 10%,
-      rgba(255, 255, 255, 0) 50%
-    );
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .gradient-box::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    width: 50%;
-    height: 100%;
-    filter: blur(80px);
-    background: radial-gradient(
-      rgba(255, 204, 71, 0.8) 5%,
-      rgba(211, 25, 0, 0.8) 60%,
-      rgba(151, 71, 255, 0.8) 30%
-    );
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  .lineadBg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 1) 200px,
-      rgba(255, 255, 255, 0)
-    );
-    pointer-events: none;
-  }
-
-  .radialBg {
-    position: absolute;
-    content: '';
-    width: 50%;
-    height: 100%;
-    filter: blur(80px);
-    background: radial-gradient(
-      rgba(255, 204, 71, 0.8),
-      rgba(211, 25, 0, 0.8),
-      rgba(151, 71, 255, 0.8)
-    );
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .gradientR,
-  .gradientL {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    @apply duration-500;
-  }
-
-  .gradientR::after {
-    position: absolute;
-    content: '';
-    background: linear-gradient(
-      to right,
-      rgba(248, 174, 60, 0.2),
-      rgba(211, 25, 0, 0.2)
-    );
-    @apply left-0 top-0 -z-10 h-[45px] w-full duration-500;
-  }
-
-  .gradientL::after {
-    position: absolute;
-    content: '';
-    background: linear-gradient(
-      to left,
-      rgba(248, 174, 60, 0.2),
-      rgba(211, 25, 0, 0.2)
-    );
-    @apply left-0 top-0 -z-10 h-[45px] w-full duration-500;
-  }
-
-  .gradientR:hover::after,
-  .gradientL:hover::after {
-    @apply h-full duration-500;
-  }
-
-  .expertise-item {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .expertise-item::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to right, #ffcc47, #d31900, #9747ff);
-    z-index: 0;
-  }
-
-  .expertise-item::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.4)
-    );
-    z-index: 1;
-  }
-
-  .video-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    z-index: 0;
-  }
-
-  .video-container::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    z-index: 1;
-    opacity: 80%;
-  }
-
-  .image-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .image-container::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
-    z-index: 1;
-  }
-}
-
 @layer components {
   body {
     --primary: #00030c;
@@ -287,6 +50,265 @@ input:-webkit-autofill:active {
     --light-blue: #00248b;
     --blue-hover: #1858fd;
     --pagination-col: #eceffa;
+
+    font-size: 14px;
+    scroll-behavior: smooth;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol,
+    li,
+    p,
+    a {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232329;
+  }
+
+  @layer utilities {
+    .white-stroke {
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 2px var(--main-white);
+    }
+
+    .text-stroke {
+      color: var(--primary);
+      text-shadow:
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
+    }
+
+    .brief-stroke {
+      text-shadow:
+        -1px -1px 0 rgba(0, 0, 0, 0.2),
+        1px -1px 0 rgba(0, 0, 0, 0.2),
+        -1px 1px 0 rgba(0, 0, 0, 0.2),
+        1px 1px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .no-scroll {
+      overflow: hidden;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-thin {
+      scrollbar-width: thin;
+      /* Firefox */
+      scrollbar-color: #ccc transparent;
+      /* Firefox */
+    }
+
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 4px;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .gradient-box {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gradient-box::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 1) 10%,
+        rgba(255, 255, 255, 0) 50%
+      );
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .gradient-box::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      width: 50%;
+      height: 100%;
+      filter: blur(80px);
+      background: radial-gradient(
+        rgba(255, 204, 71, 0.8) 5%,
+        rgba(211, 25, 0, 0.8) 60%,
+        rgba(151, 71, 255, 0.8) 30%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .lineadBg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 1) 200px,
+        rgba(255, 255, 255, 0)
+      );
+      pointer-events: none;
+    }
+
+    .radialBg {
+      position: absolute;
+      content: '';
+      width: 50%;
+      height: 100%;
+      filter: blur(80px);
+      background: radial-gradient(
+        rgba(255, 204, 71, 0.8),
+        rgba(211, 25, 0, 0.8),
+        rgba(151, 71, 255, 0.8)
+      );
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .gradientR,
+    .gradientL {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      @apply duration-500;
+    }
+
+    .gradientR::after {
+      position: absolute;
+      content: '';
+      background: linear-gradient(
+        to right,
+        rgba(248, 174, 60, 0.2),
+        rgba(211, 25, 0, 0.2)
+      );
+      @apply left-0 top-0 -z-10 h-[45px] w-full duration-500;
+    }
+
+    .gradientL::after {
+      position: absolute;
+      content: '';
+      background: linear-gradient(
+        to left,
+        rgba(248, 174, 60, 0.2),
+        rgba(211, 25, 0, 0.2)
+      );
+      @apply left-0 top-0 -z-10 h-[45px] w-full duration-500;
+    }
+
+    .gradientR:hover::after,
+    .gradientL:hover::after {
+      @apply h-full duration-500;
+    }
+
+    .expertise-item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expertise-item::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to right, #ffcc47, #d31900, #9747ff);
+      z-index: 0;
+    }
+
+    .expertise-item::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.4)
+      );
+      z-index: 1;
+    }
+
+    .video-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      z-index: 0;
+    }
+
+    .video-container::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      z-index: 1;
+      opacity: 80%;
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .image-container::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #ffffff;
+      z-index: 1;
+    }
   }
 
   .backImage {

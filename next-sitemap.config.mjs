@@ -31,10 +31,10 @@ const config = {
             return arrayOfFiles
         }
 
-        const blogDir = path.join(process.cwd(), 'src/posts/hvac')
-        const blogFiles = getAllMarkdownFiles(blogDir)
+        const hvacDir = path.join(process.cwd(), 'src/posts/hvac')
+        const hvacFiles = getAllMarkdownFiles(hvacDir)
 
-        const dynamicBlogPages = blogFiles.map((file) => {
+        const dynamicHvacPages = hvacFiles.map((file) => {
             const fileName = path.basename(file, '.md')
             return `/hvac/${fileName}`
         })
@@ -45,7 +45,7 @@ const config = {
                 changefreq: 'daily',
                 priority: 1.0,
             })),
-            ...dynamicBlogPages.map(loc => ({
+            ...dynamicHvacPages.map(loc => ({
                 loc,
                 changefreq: 'daily',
                 priority: 0.8,

@@ -30,7 +30,7 @@ const findMarkdownFile = (dir: string, slug: string): string | null => {
 };
 
 const getPostContent = (slug: string) => {
-  const folder = 'src/posts/hvac';
+  const folder = 'src/posts/software';
   const file = findMarkdownFile(folder, slug);
 
   if (file) {
@@ -54,7 +54,7 @@ const getPostContent = (slug: string) => {
 // };
 
 export const generateStaticParams = async () => {
-  const posts = getInsightsMetadata('hvac');
+  const posts = getInsightsMetadata('software');
   return posts.map((post) => ({ slug: post.slug }));
 };
 
@@ -87,7 +87,7 @@ export async function generateMetadata({
     title,
     description: description,
     alternates: {
-      canonical: `${BASE_URL}/hvac/${params.slug}`,
+      canonical: `${BASE_URL}/software/${params.slug}`,
     },
     openGraph: {
       type: 'article',
@@ -96,7 +96,7 @@ export async function generateMetadata({
       ...openGraphImage(),
       title,
       description,
-      url: `${BASE_URL}/hvac/${params.slug}`,
+      url: `${BASE_URL}/software/${params.slug}`,
       article: {
         publishedTime: publishedDateISO,
         modifiedTime: publishedDateISO,
@@ -107,7 +107,7 @@ export async function generateMetadata({
   };
 }
 
-export default function HvacPostPage(props: { params: { slug: string } }) {
+export default function SoftwarePostPage(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const post = getPostContent(slug);
 

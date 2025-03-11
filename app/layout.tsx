@@ -1,10 +1,9 @@
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
-import { BASE_URL } from '@/src/utils/alias';
-import { openGraphImage } from '@/src/utils/openGraphParams';
+import { Container } from '@/src/components/shared/Container/Container';
 import { pageMetadata } from '@/src/utils/pageMetadata';
+import { Seo } from '@/src/utils/Seo/Seo';
 import classNames from 'classnames';
-import { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Script from 'next/script';
 import React from 'react';
@@ -15,35 +14,13 @@ const title = pageMetadata.main.title;
 const description = pageMetadata.main.description;
 const keywords = pageMetadata.main.keywords;
 
-export const metadata: Metadata = {
+export const metadata = Seo({
   title,
   description,
-  metadataBase: new URL(BASE_URL),
-  icons: {
-    icon: '/assets/images/info/main_meta.png',
-  },
-  alternates: {
-    canonical: new URL(BASE_URL),
-    types: {
-      'application/rss+xml': [
-        {
-          title: 'PersoniWay - HVAC Controllers & Automation Knowledge Hub',
-          url: `${BASE_URL}/rss`,
-        },
-      ],
-    },
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Personiway.com',
-    ...openGraphImage,
-    title,
-    description,
-    url: BASE_URL,
-  },
   keywords,
-};
+  ogSiteName: 'Personiway.com',
+  ogType: 'website',
+});
 
 const Unbound = localFont({
   src: [
@@ -92,48 +69,24 @@ export default function RootLayout({
   const bodyClassname = classNames(Unbound.variable, Proxima.variable);
   return (
     <html lang='en'>
-      <head>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <link
-          rel='icon'
-          href='/assets/images/favicon/favicon.png'
-          sizes='any'
-        />
-        <style>
-          {`* {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-              }
-
-            :root {
-              --bg-color: #090215;
-              font-size: 14px;
-              scroll-behavior: smooth;
-            }
-  
-            h1,h2,h3,h4,h5,h6,ul,ol,li,p,a {
-              margin: 0;
-              padding: 0;
-        }`}
-        </style>
-        <Script
-          async
-          src='https://www.googletagmanager.com/gtag/js?id=G-0PFJQ22253'
-        ></Script>
-        <Script id='google-analytics' strategy='afterInteractive'>
-          {`
+      <Script
+        async
+        src='https://www.googletagmanager.com/gtag/js?id=G-0PFJQ22253'
+      />
+      <Script id='google-analytics' strategy='afterInteractive'>
+        {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-0PFJQ22253');
           `}
-        </Script>
-      </head>
-      <body className={`flex flex-col bg-main-bg text-white ${bodyClassname}`}>
+      </Script>
+      <body
+        className={`flex flex-col bg-white text-text-dark ${bodyClassname}`}
+      >
         <Header />
         <main className='flex flex-col gap-[60px] overflow-hidden'>
-          {children}
+          <Container>{children}</Container>
         </main>
         <Footer />
       </body>

@@ -16,8 +16,8 @@ const getUniqueArticlesSubCategory = (array: Post[], word: string) => {
   );
 
   return {
-    category: word,
-    subCategory: uniqueSubCategory,
+    category: uniqueSubCategory.length > 0 ? word : '',
+    subCategory: uniqueSubCategory.length > 0 ? uniqueSubCategory : [],
   };
 };
 
@@ -37,8 +37,12 @@ export const CategoryComponent = ({ category }: ICategory) => {
     () => getUniqueArticlesSubCategory(category, 'hvac'),
     [category],
   );
+  const softwaresoftwareCategory = useMemo(
+    () => getUniqueArticlesSubCategory(category, 'software'),
+    [category],
+  );
 
-  const articlesCategory = [insightsCategory];
+  const articlesCategory = [insightsCategory, softwaresoftwareCategory];
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
