@@ -1,4 +1,11 @@
-export const openGraphImage = {
-  images: [{ url: '/assets/images/info/default-image.jpg' }],
-  alt: 'Bright Byte - Consulting Agency',
+export const openGraphImage = (
+  imafePath: string | undefined,
+  alt: string | undefined,
+) => {
+  return {
+    images: [
+      { url: imafePath ? imafePath : '/assets/images/info/default-image.jpg' },
+    ],
+    alt: alt ? alt : 'PersonyWai',
+  };
 };

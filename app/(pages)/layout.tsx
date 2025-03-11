@@ -15,7 +15,7 @@ export default function PlaybookLayout({
     <Section
       id='playbook'
       light
-      className='w-full px-[10px] py-[30px] tablet:px-[40px] laptop-big:py-[60px] desktop:px-[75px]'
+      className='mx-auto w-full py-[30px] laptop-big:py-[60px]'
     >
       <div className='flex flex-col'>
         <Suspense>

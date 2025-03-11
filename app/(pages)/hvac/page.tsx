@@ -1,46 +1,25 @@
 import { PlaybookClient } from '@/src/components/PlaybookClient/PlaybookClient';
-import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
-import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { postsSorting } from '@/src/utils/postsSorting';
-import { Metadata } from 'next';
+import { Seo } from '@/src/utils/Seo/Seo';
 import { Suspense } from 'react';
 
 const title = pageMetadata.main.title;
 const description = contentTrimming(pageMetadata.main.description, 155);
 const keywords = pageMetadata.main.keywords;
 
-export const metadata: Metadata = {
+export const metadata = Seo({
   title,
   description,
-  metadataBase: new URL(BASE_URL),
-  icons: {
-    icon: '/assets/images/info/main_meta.png',
-  },
-  alternates: {
-    canonical: new URL(`${BASE_URL}/hvac/general`),
-    types: {
-      'application/rss+xml': [
-        {
-          title: 'Personiway HVAC',
-          url: `${BASE_URL}/hvac/general/rss`,
-        },
-      ],
-    },
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'hub.personiway.com',
-    ...openGraphImage,
-    title,
-    description,
-    url: `${BASE_URL}/hvac/general`,
-  },
   keywords,
-};
+  alternatesTitle: 'Personiway HVAC',
+  canonicalPath: 'hvac',
+  ogType: 'article',
+  ogSiteName: 'hub.personiway.com',
+  ogUrlPath: 'hvac',
+});
 
 const insightsArticles = getInsightsMetadata();
 const sortedInsightsArticles = postsSorting(insightsArticles);
