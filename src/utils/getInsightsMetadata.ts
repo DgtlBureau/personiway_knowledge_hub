@@ -5,7 +5,19 @@ import { Post } from './types';
 
 const getMarkdownFiles = (dir: string): string[] => {
   let results: string[] = [];
+
+  if (!fs.existsSync(dir)) {
+    console.warn(`Warning: Directory "${dir}" does not exist.`);
+    return results;
+  }
+
   const list = fs.readdirSync(dir);
+
+  if (list.length === 0) {
+    console.warn(`Warning: Directory "${dir}" is empty.`);
+    return results;
+  }
+
   list.forEach((file) => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
@@ -15,11 +27,11 @@ const getMarkdownFiles = (dir: string): string[] => {
       results.push(filePath);
     }
   });
+
   return results;
 };
 
 export const getInsightsMetadata = (folder: string): Post[] => {
-  // const markdownFiles = getMarkdownFiles(`src/posts/${folder}`);
   const markdownFiles = getMarkdownFiles(
     folder ? `src/posts/${folder}` : 'src/posts',
   );
