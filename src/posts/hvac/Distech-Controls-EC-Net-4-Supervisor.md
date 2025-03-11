@@ -1,7 +1,7 @@
 ---
-title: 'EC-Net 4 Supervisor'
+title: 'Distech Controls EC-Net 4 Supervisor'
 description: 'The EC-Net 4 Supervisor by Distech Controls is a server-class software platform designed for centralized management of building automation systems, integrating multiple Niagara-based controllers and IP devices.'
-image: 'https://www.distech-controls.com/ec-net-4-supervisor-image.jpg'
+image: '[https://www.distech-controls.com/ec-net-4-supervisor-image.jpg](https://img.acuitybrands.com/public-assets/catalog/947839/launch_screen_PC_mid.png?abl_version=01%2f01%2f0001+00%3a00%3a00)'
 date: '11-03-2025'
 readingTime: ''
 category: 'HVAC'
