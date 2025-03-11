@@ -19,29 +19,6 @@ const nextConfig = {
     },
   },
   images: {
-    // remotePatterns: [
-    //   {
-    //     protocol: 'https',
-    //     hostname: 'i.imgur.com',
-    //     port: '',
-    //     pathname: '/*',
-    //   },
-    //   {
-    //     protocol: 'https',
-    //     hostname: 'onesight.solutions',
-    //     pathname: '/wp-content/uploads/**',
-    //   },
-    //   {
-    //     protocol: 'https',
-    //     hostname: 'www.cochranesupply.com',
-    //     pathname: '/media/catalog/product/**',
-    //   },
-    //   {
-    //     protocol: 'https',
-    //     hostname: 'honeywell.scene7.com',
-    //     pathname: '/is/image/Honeywell65/**',
-    //   },
-    // ],
     unoptimized: true,
   },
   async rewrites() {
