@@ -61,6 +61,12 @@ const getPostContent = (slug: string) => {
 
 export const generateStaticParams = async () => {
   const posts = getInsightsMetadata('software');
+
+  if (posts.length === 0) {
+    console.warn('No posts found for software, skipping static generation.');
+    return [];
+  }
+
   return posts.map((post) => ({ slug: post.slug }));
 };
 
