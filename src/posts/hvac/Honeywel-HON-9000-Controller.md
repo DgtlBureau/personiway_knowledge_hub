@@ -1,5 +1,5 @@
 ---
-title: 'HON-9000 Controller'
+title: 'Honeywell HON-9000 Controller'
 description: 'The Honeywell HON-9000 is a compact IoT controller and server platform optimized for the Niagara 4 Framework, designed to integrate multiple devices across various protocols for comprehensive building automation.'
 image: 'https://honeywell.scene7.com/is/image/Honeywell65/hbt-bms-WEB-9000'
 date: '11-03-2025'
