@@ -84,6 +84,7 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
           <li className={`relative`}>
             <Link
               href='/'
+              onClick={() => setIsCategoryOpen(false)}
               className={`block w-full rounded-[8px] p-[12px_16px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${pathnameArr.length === 1 ? 'bg-[#f5f5f6] font-bold' : ''}`}
             >
               All
@@ -97,6 +98,7 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
             >
               <Link
                 href={`/${item.category}${item.subCategory.length > 1 ? '' : `?sub-category=${underscopeFormatter(item.subCategory[0]).toLowerCase()}`}`}
+                onClick={() => setIsCategoryOpen(false)}
                 className={`relative w-full rounded-[8px] p-[12px_16px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${pathnameArr.includes(item.category.trim().toLowerCase()) ? 'bg-[#f5f5f6] font-bold' : ''} `}
               >
                 {item.category}
