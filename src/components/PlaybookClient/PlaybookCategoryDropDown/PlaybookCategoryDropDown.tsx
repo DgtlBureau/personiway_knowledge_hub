@@ -56,13 +56,13 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
         className='flex appearance-none items-center gap-[8px] font-proxima text-[12px] leading-[1.6] outline-none'
       >
         Categories:{' '}
-        {pathname && pathnameArr.length === 1 ? (
+        {pathname && pathnameArr.length === 0 ? (
           <span className='font-bold capitalize leading-[1.3] text-main-blue'>
             all
           </span>
-        ) : pathnameArr.length === 2 && !subCategory ? (
+        ) : pathnameArr.length === 1 && !subCategory ? (
           <span className='font-bold capitalize leading-[1.3] text-main-blue'>
-            {pathnameArr[1]}
+            {pathnameArr[0]}
           </span>
         ) : (
           <span className='font-bold capitalize leading-[1.3] text-main-blue'>
@@ -71,7 +71,7 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
         )}
       </button>
       <div
-        className={`absolute left-[70px] z-[20] min-w-[171px] overflow-hidden rounded-[12px] bg-white transition-all duration-300 ease-in-out tablet:left-[auto] tablet:right-0`}
+        className={`absolute left-[70px] z-[20] min-w-[171px] overflow-y-scroll rounded-[12px] bg-white transition-all duration-300 ease-in-out tablet:left-[auto] tablet:right-0`}
         style={{
           boxShadow: '0px 11.11px 44.46px 0px rgba(12, 16, 24, 0.12)',
           top: `${categoryContainer.current ? categoryContainer.current.offsetHeight + 11 + 'px' : '0'}`,
@@ -79,7 +79,7 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
         }}
       >
         <ul
-          className={`flex flex-col gap-[10px] overflow-hidden overflow-scroll p-[4px] font-proxima capitalize`}
+          className={`flex flex-col gap-[10px] p-[4px] font-proxima capitalize`}
         >
           <li className={`relative`}>
             <Link
@@ -105,6 +105,7 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
                 {item.subCategory.map((el) => (
                   <li key={el} className={`flex flex-col gap-[2px]`}>
                     <Link
+                      onClick={() => setIsCategoryOpen(false)}
                       href={`/${item.category}?sub-category=${underscopeFormatter(el).toLowerCase()}`}
                       className={`w-full rounded-[8px] p-[12px_26px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${el && subCategory && underscopeReverter(subCategory).toLowerCase() === el.trim().toLowerCase() ? 'bg-[#f5f5f6] font-bold' : ''}`}
                     >

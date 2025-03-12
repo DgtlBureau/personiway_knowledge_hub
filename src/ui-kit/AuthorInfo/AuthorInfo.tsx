@@ -14,7 +14,7 @@ export const AuthorInfo = ({ image, name, date }: Props) => {
         width={49}
         height={49}
         alt={name}
-        className='w-[49px] rounded-full tablet:h-[80px] tablet:w-[80px]'
+        className='h-[32px] w-[auto] rounded-full tablet:h-[60px] '
       />
       <div className='flex w-full flex-col '>
         <span className='font-proxima text-[18px] font-bold leading-[1.33] text-text-dark tablet:min-w-[309px] tablet:max-w-[309px]'>
