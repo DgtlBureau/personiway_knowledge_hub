@@ -56,13 +56,13 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
         className='flex appearance-none items-center gap-[8px] font-proxima text-[12px] leading-[1.6] outline-none'
       >
         Categories:{' '}
-        {pathname && pathnameArr.length === 1 ? (
+        {pathname && pathnameArr.length === 0 ? (
           <span className='font-bold capitalize leading-[1.3] text-main-blue'>
-            playbook
+            all
           </span>
-        ) : pathnameArr.length === 2 && !subCategory ? (
+        ) : pathnameArr.length === 1 && !subCategory ? (
           <span className='font-bold capitalize leading-[1.3] text-main-blue'>
-            {pathnameArr[1]}
+            {pathnameArr[0]}
           </span>
         ) : (
           <span className='font-bold capitalize leading-[1.3] text-main-blue'>
@@ -71,7 +71,7 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
         )}
       </button>
       <div
-        className={`absolute left-[70px] z-[20] min-w-[171px] overflow-hidden rounded-[12px] bg-white transition-all duration-300 ease-in-out tablet:left-[auto] tablet:right-0`}
+        className={`absolute left-[70px] z-[20] min-w-[171px] overflow-y-scroll rounded-[12px] bg-white transition-all duration-300 ease-in-out tablet:left-[auto] tablet:right-0`}
         style={{
           boxShadow: '0px 11.11px 44.46px 0px rgba(12, 16, 24, 0.12)',
           top: `${categoryContainer.current ? categoryContainer.current.offsetHeight + 11 + 'px' : '0'}`,
@@ -79,14 +79,15 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
         }}
       >
         <ul
-          className={`flex flex-col gap-[10px] overflow-hidden p-[4px] font-proxima capitalize`}
+          className={`flex flex-col gap-[10px] p-[4px] font-proxima capitalize`}
         >
           <li className={`relative`}>
             <Link
-              href='/hvac'
+              href='/'
+              onClick={() => setIsCategoryOpen(false)}
               className={`block w-full rounded-[8px] p-[12px_16px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${pathnameArr.length === 1 ? 'bg-[#f5f5f6] font-bold' : ''}`}
             >
-              hvac
+              All
             </Link>
             <span className='absolute bottom-[-5px] block h-[2px] w-full translate-y-[50%] bg-main-disabled' />
           </li>
@@ -96,7 +97,8 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
               className={`relative flex flex-col gap-[4px]`}
             >
               <Link
-                href={`/hvac/${item.category}${item.subCategory.length > 1 ? '' : `?sub-category=${underscopeFormatter(item.subCategory[0]).toLowerCase()}`}`}
+                href={`/${item.category}${item.subCategory.length > 1 ? '' : `?sub-category=${underscopeFormatter(item.subCategory[0]).toLowerCase()}`}`}
+                onClick={() => setIsCategoryOpen(false)}
                 className={`relative w-full rounded-[8px] p-[12px_16px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${pathnameArr.includes(item.category.trim().toLowerCase()) ? 'bg-[#f5f5f6] font-bold' : ''} `}
               >
                 {item.category}
@@ -105,7 +107,8 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
                 {item.subCategory.map((el) => (
                   <li key={el} className={`flex flex-col gap-[2px]`}>
                     <Link
-                      href={`/hvac/${item.category}?sub-category=${underscopeFormatter(el).toLowerCase()}`}
+                      onClick={() => setIsCategoryOpen(false)}
+                      href={`/${item.category}?sub-category=${underscopeFormatter(el).toLowerCase()}`}
                       className={`w-full rounded-[8px] p-[12px_26px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${el && subCategory && underscopeReverter(subCategory).toLowerCase() === el.trim().toLowerCase() ? 'bg-[#f5f5f6] font-bold' : ''}`}
                     >
                       {el}
