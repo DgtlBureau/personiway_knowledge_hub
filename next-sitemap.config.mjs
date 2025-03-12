@@ -14,6 +14,7 @@ const config = {
         const staticPages = [
             '/',
             '/hvac',
+            '/software',
         ]
 
         const getAllMarkdownFiles = (dirPath, arrayOfFiles = []) => {
@@ -39,6 +40,14 @@ const config = {
             return `/hvac/${fileName}`
         })
 
+        const softwareDir = path.join(process.cwd(), 'src/posts/software')
+        const softwareFiles = getAllMarkdownFiles(softwareDir)
+
+        const dynamicSoftwarePages = softwareFiles.map((file) => {
+            const fileName = path.basename(file, '.md')
+            return `/software/${fileName}`
+        })
+
         const allPaths = [
             ...staticPages.map(loc => ({
                 loc,
@@ -46,6 +55,11 @@ const config = {
                 priority: 1.0,
             })),
             ...dynamicHvacPages.map(loc => ({
+                loc,
+                changefreq: 'daily',
+                priority: 0.8,
+            })),
+            ...dynamicSoftwarePages.map(loc => ({
                 loc,
                 changefreq: 'daily',
                 priority: 0.8,
