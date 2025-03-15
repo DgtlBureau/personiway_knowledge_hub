@@ -13,6 +13,8 @@ import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
 import path from 'path';
 import styles from './Post.module.css';
+import { Featured } from '@/src/components/Featured/Featured';
+import { postsSorting } from '@/src/utils/postsSorting';
 
 const findMarkdownFile = (dir: string, slug: string): string | null => {
   const files = fs.readdirSync(dir);
@@ -54,10 +56,10 @@ const getPostContent = (slug: string) => {
   }
 };
 
-// const getAllPosts = () => {
-//   const postMetadata = getInsightsMetadata();
-//   return postsSorting(postMetadata);
-// };
+const getAllPosts = () => {
+  const postMetadata = getInsightsMetadata('software');
+  return postsSorting(postMetadata);
+};
 
 export const generateStaticParams = async () => {
   const posts = getInsightsMetadata('software');
@@ -212,9 +214,9 @@ export default function SoftwarePostPage(props: { params: { slug: string } }) {
           </Markdown>
         </article>
         {/* <SocialFollow /> */}
-        {/* <div className='desktop:bp-0 relative z-[5] mt-[60px] pb-[20px]'>
+        <div className='desktop:bp-0 relative z-[5] mt-[60px] pb-[20px]'>
           <Featured slug={slug} posts={getAllPosts()} />
-        </div> */}
+        </div>
       </div>
     </div>
   );

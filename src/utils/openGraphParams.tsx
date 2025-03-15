@@ -3,7 +3,7 @@ export const openGraphImage = (
   alt?: string | undefined,
 ) => {
   return {
-    images: [{ url: imagePath || '/assets/images/info/default-image.jpg' }],
+    images: [{ url: imagePath || '/assets/images/info/default-image.png' }],
     alt: alt || 'PersoniWay image',
   };
 };
