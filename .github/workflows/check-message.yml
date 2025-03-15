@@ -2,7 +2,7 @@ name: Check Commit Message Format
 
 on:
   push:
-    branches: [ '*' ]
+    branches: ['*']
 
 jobs:
   check-commit-message:
