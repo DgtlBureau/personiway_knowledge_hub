@@ -18,6 +18,8 @@ export const Featured = ({ slug, posts }: Props) => {
 
   const isMobile = useMediaQuery('<tablet');
 
+  const filteredPost = posts.filter((post) => post.slug !== slug);
+
   return (
     <div className='flex flex-col gap-[40px] border-t-[1px] border-text-dark'>
       <div className='relative flex items-center justify-between border-text-dark pt-[20px] before:absolute before:left-0 before:top-0 before:h-[1px] before:w-full before:bg-text-gray'>
@@ -45,28 +47,26 @@ export const Featured = ({ slug, posts }: Props) => {
       </div>
       <Swiper
         onSwiper={setSwiper}
-        slidesPerView={isMobile ? 1 : 2}
+        slidesPerView={isMobile || filteredPost.length < 2 ? 1 : 2}
         spaceBetween={40}
         className='max-w-full'
         wrapperClass='items-stretch'
       >
-        {posts
-          .filter((post) => post.slug !== slug)
-          .map((item) => (
-            <SwiperSlide key={item.slug} className='!h-auto'>
-              <Link
-                href={`/insights/${item.slug}`}
-                className='flex h-full flex-1'
-              >
-                <SmallBlogCard
-                  tag={item.tag}
-                  title={item.title}
-                  description={item.description}
-                  date={item.date}
-                />
-              </Link>
-            </SwiperSlide>
-          ))}
+        {filteredPost.map((item) => (
+          <SwiperSlide key={item.slug} className='!h-auto'>
+            <Link
+              href={`/insights/${item.slug}`}
+              className='flex h-full flex-1'
+            >
+              <SmallBlogCard
+                tag={item.tag}
+                title={item.title}
+                description={item.description}
+                date={item.date}
+              />
+            </Link>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
