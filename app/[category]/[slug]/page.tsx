@@ -32,13 +32,7 @@ const findMarkdownFile = (dir: string, slug: string): string | null => {
 };
 
 const getPostContent = (slug: string) => {
-  const folder = 'src/posts/software';
-
-  if (!fs.existsSync(folder)) {
-    console.error(`Error: Directory "${folder}" does not exist.`);
-    return null;
-  }
-
+  const folder = 'src/posts/hvac';
   const file = findMarkdownFile(folder, slug);
 
   if (file) {
@@ -51,24 +45,18 @@ const getPostContent = (slug: string) => {
       return null;
     }
   } else {
-    console.error('File not found:', slug);
+    console.error('File not found');
     return null;
   }
 };
 
 const getAllPosts = () => {
-  const postMetadata = getInsightsMetadata('software');
+  const postMetadata = getInsightsMetadata('hvac');
   return postsSorting(postMetadata);
 };
 
 export const generateStaticParams = async () => {
-  const posts = getInsightsMetadata('software');
-
-  if (posts.length === 0) {
-    console.warn('No posts found for software, skipping static generation.');
-    return [];
-  }
-
+  const posts = getInsightsMetadata('hvac');
   return posts.map((post) => ({ slug: post.slug }));
 };
 
@@ -101,7 +89,7 @@ export async function generateMetadata({
     title,
     description: description,
     alternates: {
-      canonical: `${BASE_URL}/software/${params.slug}`,
+      canonical: `${BASE_URL}/hvac/${params.slug}`,
     },
     openGraph: {
       type: 'article',
@@ -110,7 +98,7 @@ export async function generateMetadata({
       ...openGraphImage(),
       title,
       description,
-      url: `${BASE_URL}/software/${params.slug}`,
+      url: `${BASE_URL}/hvac/${params.slug}`,
       article: {
         publishedTime: publishedDateISO,
         modifiedTime: publishedDateISO,
@@ -121,7 +109,7 @@ export async function generateMetadata({
   };
 }
 
-export default function SoftwarePostPage(props: { params: { slug: string } }) {
+export default function CategorySlugPage(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const post = getPostContent(slug);
 
