@@ -11,9 +11,10 @@ import { SmallBlogCard } from '../BlogCard/SmallBlogCard';
 interface Props {
   slug?: string;
   posts: Post[];
+  path: string;
 }
 
-export const Featured = ({ slug, posts }: Props) => {
+export const Featured = ({ slug, posts, path }: Props) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
 
   const isMobile = useMediaQuery('<tablet');
@@ -54,10 +55,7 @@ export const Featured = ({ slug, posts }: Props) => {
       >
         {filteredPost.map((item) => (
           <SwiperSlide key={item.slug} className='!h-auto'>
-            <Link
-              href={`/insights/${item.slug}`}
-              className='flex h-full flex-1'
-            >
+            <Link href={`/${path}/${item.slug}`} className='flex h-full flex-1'>
               <SmallBlogCard
                 tag={item.tag}
                 title={item.title}

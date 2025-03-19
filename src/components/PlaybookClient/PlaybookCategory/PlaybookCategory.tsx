@@ -24,6 +24,11 @@ export const PlaybookCategory = ({ category }: ICategoryProps) => {
   const searchParams = useSearchParams();
   const subCategory = searchParams.get('sub-category');
 
+  const ctegoryPath = pathname
+    .split('/')
+    .filter((item) => item !== '')
+    .join('');
+
   return (
     <div className='mt-[10px]'>
       {category && category.length !== 0 && (
@@ -52,7 +57,7 @@ export const PlaybookCategory = ({ category }: ICategoryProps) => {
                   item.subCategory.map((el) => (
                     <li
                       key={el}
-                      className={`font-proxima text-[16px] leading-[1.8] duration-300 ${el && subCategory && subCategory === underscopeFormatter(el.trim().toLowerCase()) ? 'font-bold' : ''}`}
+                      className={`font-proxima text-[16px] leading-[1.8] duration-300 ${el && subCategory && subCategory === underscopeFormatter(el.trim().toLowerCase()) && item.category.trim().toLowerCase() === ctegoryPath.toLowerCase() ? 'font-bold' : ''}`}
                     >
                       <Link
                         href={`/${item.category}?sub-category=${encodeURIComponent(underscopeFormatter(el).toLowerCase())}`}
@@ -60,7 +65,7 @@ export const PlaybookCategory = ({ category }: ICategoryProps) => {
                       >
                         {el}
                         <span
-                          className={`absolute bottom-0 left-0 block h-[1px] w-full duration-300 ${el && underscopeFormatter(subCategory).toLowerCase() === underscopeFormatter(el.trim().toLowerCase()) ? 'bg-main-blue' : ''}`}
+                          className={`absolute bottom-0 left-0 block h-[1px] w-full duration-300 ${el && underscopeFormatter(subCategory).toLowerCase() === underscopeFormatter(el.trim().toLowerCase()) && item.category.trim().toLowerCase() === ctegoryPath.toLowerCase() ? 'bg-main-blue' : ''}`}
                         />
                       </Link>
                     </li>

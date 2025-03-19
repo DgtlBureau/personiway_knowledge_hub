@@ -215,7 +215,7 @@ export default function SoftwarePostPage(props: { params: { slug: string } }) {
         </article>
         {/* <SocialFollow /> */}
         <div className='desktop:bp-0 relative z-[5] mt-[60px] pb-[20px]'>
-          <Featured slug={slug} posts={getAllPosts()} />
+          <Featured slug={slug} path={'software'} posts={getAllPosts()} />
         </div>
       </div>
     </div>
