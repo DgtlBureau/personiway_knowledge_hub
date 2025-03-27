@@ -1,10 +1,10 @@
 ---
-title: 'Johnson Controls FX-SC8DL50-0'
+title: 'Johnson Controls FX-SC8DL50-0 Metasys'
 description: 'The Johnson Controls FX-SC8DL50-0 is an advanced System Controller designed for building automation and HVAC systems. It features 8 digital inputs and provides comprehensive control capabilities for managing multiple zones and equipment simultaneously. The controller offers extensive BACnet compatibility, an integrated web server for remote access, and supports various communication protocols. It can be configured to control temperature, humidity, ventilation, and energy management functions across small to medium-sized commercial buildings.'
 image: 'https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/fxsc8dl500/fx-sc8dl50-0.webp'
 date: '27-03-2025'
 readingTime: '4 min'
-category: 'HVAC'
+category: 'software'
 subCategory: 'Johnson Controls'
 family: 'Multiprotocol I/O Modules'
 tag: 'System Controller, BACnet, Building Management, Integration Controller'
@@ -55,7 +55,7 @@ The Johnson Controls FX-SC8DL50-0 is an advanced System Controller designed for 
 - **Healthcare Facilities**
 
 ## **Resources**
-- 📄 **Datasheet**:
+- 📄 **Datasheet**: [Johnson Controls](https://www.cochranesupply.com/media/assets/product/documents/Johnson/FX-SC8%20Spec.pdf)
 - 🏢 **Official Manufacturer**: [Johnson Controls](https://www.johnsoncontrols.com)
 - 📷 **Product Image**:
   ![Johnson Controls FX-SC8DL50-0](https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/fxsc8dl500/fx-sc8dl50-0.webp)
