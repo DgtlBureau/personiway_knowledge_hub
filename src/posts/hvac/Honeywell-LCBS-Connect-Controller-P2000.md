@@ -55,10 +55,10 @@ The Honeywell LCBYP2000 TrueZONE is a static pressure regulating bypass damper d
 - **Advanced Residential Airflow Management**
 
 ## **Resources**
-- 📄 **Datasheet**: ![Honeywell datasheet](https://cdn.lsicloud.net/gothermals/Resources/Honeywell-LGW1000-Product-Overview.pdf)
+- 📄 **Datasheet**: [Honeywell datasheet](https://cdn.lsicloud.net/gothermals/Resources/Honeywell-LGW1000-Product-Overview.pdf)
 - 🏢 **Official Manufacturer**: [Honeywell](https://www.resideo.com)
 - 📷 **Product Image**:
-  ![Honeywell LCBYP2000]([https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/lcbyp2000/lcbyp2000.webp](https://honeywell.scene7.com/is/image/Honeywell65/HBT-BMS-Product-Image-YCRL6438SR-c1))
+  ![Honeywell LCBYP2000](https://honeywell.scene7.com/is/image/Honeywell65/HBT-BMS-Product-Image-YCRL6438SR-c1)
 
 ---
 
