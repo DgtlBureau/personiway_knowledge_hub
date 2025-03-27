@@ -1,7 +1,7 @@
 ---
-title: 'Honeywell LCBYP2000'
+title: 'Honeywell LCBS Connect Controller P2000'
 description: 'The Honeywell LCBYP2000 TrueZONE is a static pressure regulating bypass damper designed for zoned HVAC systems. It automatically relieves excess pressure in the ductwork when zone dampers close, maintaining proper system airflow and preventing noise issues. The unit features a spring-loaded barometric design that responds to pressure differentials without requiring electrical connections or power. Available in various sizes to accommodate different duct dimensions, the LCBYP2000 helps protect the HVAC equipment while improving overall system efficiency and performance.'
-image: 'https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/lcbyp2000/lcbyp2000.webp'
+image: 'https://honeywell.scene7.com/is/image/Honeywell65/HBT-BMS-Product-Image-YCRL6438SR-c1'
 date: '27-03-2025'
 readingTime: '3 min'
 category: 'HVAC'
@@ -55,10 +55,10 @@ The Honeywell LCBYP2000 TrueZONE is a static pressure regulating bypass damper d
 - **Advanced Residential Airflow Management**
 
 ## **Resources**
-- 📄 **Datasheet**:
+- 📄 **Datasheet**: ![Honeywell datasheet](https://cdn.lsicloud.net/gothermals/Resources/Honeywell-LGW1000-Product-Overview.pdf)
 - 🏢 **Official Manufacturer**: [Honeywell](https://www.resideo.com)
 - 📷 **Product Image**:
-  ![Honeywell LCBYP2000](https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/lcbyp2000/lcbyp2000.webp)
+  ![Honeywell LCBYP2000]([https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/lcbyp2000/lcbyp2000.webp](https://honeywell.scene7.com/is/image/Honeywell65/HBT-BMS-Product-Image-YCRL6438SR-c1))
 
 ---
 
