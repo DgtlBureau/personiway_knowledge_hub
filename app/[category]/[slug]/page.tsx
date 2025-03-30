@@ -1,3 +1,4 @@
+import { Featured } from '@/src/components/Featured/Featured';
 import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import { GoBackLink } from '@/src/ui-kit/GoBackLink/GoBackLink';
@@ -5,16 +6,17 @@ import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
 import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
+import { getPostDirectories } from '@/src/utils/getPostsDirectoriesName';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
+import { postsSorting } from '@/src/utils/postsSorting';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
+import { redirect } from 'next/navigation';
 import path from 'path';
 import styles from './Post.module.css';
-import { Featured } from '@/src/components/Featured/Featured';
-import { postsSorting } from '@/src/utils/postsSorting';
 
 const findMarkdownFile = (dir: string, slug: string): string | null => {
   const files = fs.readdirSync(dir);
@@ -32,7 +34,7 @@ const findMarkdownFile = (dir: string, slug: string): string | null => {
 };
 
 const getPostContent = (slug: string) => {
-  const folder = 'src/posts/hvac';
+  const folder = 'src/posts';
   const file = findMarkdownFile(folder, slug);
 
   if (file) {
@@ -50,20 +52,25 @@ const getPostContent = (slug: string) => {
   }
 };
 
+const dierctories = getPostDirectories();
+
 const getAllPosts = () => {
-  const postMetadata = getInsightsMetadata('hvac');
-  return postsSorting(postMetadata);
+  const postMetadata = getInsightsMetadata('');
+  const sortedPosts = postsSorting(postMetadata);
+  return sortedPosts;
 };
 
+const allPots = getAllPosts();
+
 export const generateStaticParams = async () => {
-  const posts = getInsightsMetadata('hvac');
+  const posts = getInsightsMetadata('');
   return posts.map((post) => ({ slug: post.slug }));
 };
 
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: { category: string; slug: string };
 }) {
   const post = getPostContent(params.slug);
 
@@ -109,12 +116,18 @@ export async function generateMetadata({
   };
 }
 
-export default function CategorySlugPage(props: { params: { slug: string } }) {
+export default function CategorySlugPage(props: {
+  params: { category: string; slug: string };
+}) {
   const slug = props.params.slug;
   const post = getPostContent(slug);
 
-  if (!post) {
-    return null;
+  const hasDirectory = dierctories.includes(
+    props.params.category.toLowerCase(),
+  );
+
+  if (!post || !hasDirectory) {
+    return redirect(`/`);
   }
 
   const date = formattedDate(post.data.date);
@@ -203,7 +216,7 @@ export default function CategorySlugPage(props: { params: { slug: string } }) {
         </article>
         {/* <SocialFollow /> */}
         <div className='desktop:bp-0 relative z-[5] mt-[60px] pb-[20px]'>
-          <Featured slug={slug} posts={getAllPosts()} />
+          {!allPots.length && <Featured slug={slug} posts={allPots} />}
         </div>
       </div>
     </div>

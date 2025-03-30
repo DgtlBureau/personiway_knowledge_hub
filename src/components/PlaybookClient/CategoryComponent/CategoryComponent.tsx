@@ -5,36 +5,27 @@ import { Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { Suspense, useEffect, useMemo, useState } from 'react';
+import Spinner from 'react-bootstrap/Spinner';
 import { PlaybookCategory } from '../PlaybookCategory/PlaybookCategory';
 import { PlaybookCategoryDropDown } from '../PlaybookCategoryDropDown/PlaybookCategoryDropDown';
 
-// const getUniqueArticlesSubCategory = (array: Post[], word: string) => {
-//   const category = array.filter((item) => item.category.toLowerCase() === word);
-//   const subCategory = category.map((item) => item.subCategory);
-//   const uniqueSubCategory = subCategory.filter(
-//     (value, idx, arr) => arr.indexOf(value) === idx,
-//   );
-
-//   return {
-//     category: uniqueSubCategory.length > 0 ? word : '',
-//     subCategory: uniqueSubCategory.length > 0 ? uniqueSubCategory : [],
-//   };
-// };
-
 const getUniqueArticlesSubCategory = (array: Post[], word: string) => {
-  const category = array.map((item) => item.category.toLowerCase());
-  const subCategory = array.map((item) => item.subCategory);
+  const category = array.map((item) => item.category);
   const uniqueCategory = category.filter(
     (value, idx, arr) => arr.indexOf(value) === idx,
   );
-  const uniqueSubCategory = subCategory.filter(
-    (value, idx, arr) => arr.indexOf(value) === idx,
-  );
 
-  return {
-    category: uniqueCategory,
-    subCategory: uniqueSubCategory.length > 0 ? uniqueSubCategory : [],
-  };
+  return uniqueCategory.map((item) => {
+    const subCategory = array
+      .filter((el) => el.category.trim().toLowerCase() === item.toLowerCase())
+      .map((sub) => sub.subCategory)
+      .filter((value, idx, arr) => arr.indexOf(value) === idx);
+
+    return {
+      category: item,
+      subCategory,
+    };
+  });
 };
 
 interface ICategory {
@@ -50,24 +41,11 @@ export const CategoryComponent = ({ category, path }: ICategory) => {
   const searchParams = useSearchParams();
   const searchQuery = searchParams.get('search-query');
 
-  console.log('array', category);
-
-  // const insightsCategory = useMemo(
-  //   () => getUniqueArticlesSubCategory(category, 'hvac'),
-  //   [category],
-  // );
-  // const softwaresoftwareCategory = useMemo(
-  //   () => getUniqueArticlesSubCategory(category, 'software'),
-  //   [category],
-  // );
   const allCategory = useMemo(
     () => getUniqueArticlesSubCategory(category, path),
     [category],
   );
 
-  console.log('allCategory', allCategory);
-
-  // const articlesCategory = [insightsCategory, softwaresoftwareCategory];
   const articlesCategory = [allCategory];
 
   useEffect(() => {
@@ -79,7 +57,6 @@ export const CategoryComponent = ({ category, path }: ICategory) => {
       query.set('search-query', inputValue);
     }
 
-    // router.push(`/?${query.toString()}`, { scroll: false });
     router.push(`/${path}?${query.toString()}`, { scroll: false });
   }, [inputValue, router]);
 
@@ -107,13 +84,17 @@ export const CategoryComponent = ({ category, path }: ICategory) => {
           <>
             {isLaptop ? (
               <div>
-                <Suspense fallback={<div>Loading category....</div>}>
-                  <PlaybookCategory category={articlesCategory} />
+                <Suspense
+                  fallback={<Spinner animation='border' variant='primary' />}
+                >
+                  <PlaybookCategory category={allCategory} />
                 </Suspense>
               </div>
             ) : (
-              <Suspense fallback={<div>Loading category....</div>}>
-                {/* <PlaybookCategoryDropDown categories={articlesCategory} /> */}
+              <Suspense
+                fallback={<Spinner animation='border' variant='primary' />}
+              >
+                <PlaybookCategoryDropDown categories={allCategory} />
               </Suspense>
             )}
           </>

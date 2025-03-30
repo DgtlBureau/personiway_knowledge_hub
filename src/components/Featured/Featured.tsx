@@ -4,6 +4,7 @@ import Arrow from '@/public/assets/images/icons/arrow.svg';
 import { Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { SmallBlogCard } from '../BlogCard/SmallBlogCard';
@@ -15,10 +16,17 @@ interface Props {
 
 export const Featured = ({ slug, posts }: Props) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
+  const path = usePathname();
+
+  const catigory = path.split('/').filter((item) => item !== '');
 
   const isMobile = useMediaQuery('<tablet');
 
-  const filteredPost = posts.filter((post) => post.slug !== slug);
+  const filteredPost = posts.filter(
+    (post) =>
+      post.slug !== slug &&
+      post.category.trim().toLowerCase() === catigory[0].trim().toLowerCase(),
+  );
 
   return (
     <div className='flex flex-col gap-[40px] border-t-[1px] border-text-dark'>
@@ -55,7 +63,7 @@ export const Featured = ({ slug, posts }: Props) => {
         {filteredPost.map((item) => (
           <SwiperSlide key={item.slug} className='!h-auto'>
             <Link
-              href={`/insights/${item.slug}`}
+              href={`/${catigory[0]}/${item.slug}`}
               className='flex h-full flex-1'
             >
               <SmallBlogCard
