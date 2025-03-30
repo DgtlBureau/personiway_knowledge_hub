@@ -69,21 +69,26 @@ export default function RootLayout({
   const bodyClassname = classNames(Unbound.variable, Proxima.variable);
   return (
     <html lang='en'>
-      <Script
-        async
-        src='https://www.googletagmanager.com/gtag/js?id=G-0PFJQ22253'
-      />
-      <Script id='google-analytics' strategy='afterInteractive'>
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-0PFJQ22253');
-          `}
-      </Script>
       <body
         className={`flex flex-col bg-white text-text-dark ${bodyClassname}`}
       >
+        <Script id='gtm-script' strategy='afterInteractive'>
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-K5GHTXPD');
+          `}
+        </Script>
+        <noscript>
+          <iframe
+            src='https://www.googletagmanager.com/ns.html?id=GTM-K5GHTXPD'
+            height='0'
+            width='0'
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
         <Header />
         <main className='flex flex-col gap-[60px] overflow-hidden'>
           <Container>{children}</Container>
