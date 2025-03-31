@@ -48,7 +48,7 @@ export const PlaybookCategory = ({ category }: ICategoryProps) => {
             >
               <Link
                 href={`/${item.category.toLowerCase()}${item.subCategory.length > 1 ? '?' : `?sub-category=${paramsCorrect(item.subCategory[0]).toLowerCase()}`}`}
-                className={`font-proxima text-[16px] uppercase duration-300 ${pathname.includes(item.category.trim().toLowerCase()) ? 'font-bold' : ''}`}
+                className={`font-proxima text-[16px] duration-300 ${pathname.includes(item.category.trim().toLowerCase()) ? 'font-bold' : ''}`}
               >
                 {item.category}
               </Link>
