@@ -9,6 +9,7 @@ import Script from 'next/script';
 import React from 'react';
 import 'swiper/css';
 import './globals.css';
+import { GTM_Number } from '@/src/utils/alias';
 
 const title = pageMetadata.main.title;
 const description = pageMetadata.main.description;
@@ -78,12 +79,12 @@ export default function RootLayout({
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-K5GHTXPD');
+            })(window,document,'script','dataLayer','GTM-${GTM_Number}');
           `}
         </Script>
         <noscript>
           <iframe
-            src='https://www.googletagmanager.com/ns.html?id=GTM-K5GHTXPD'
+            src={`https://www.googletagmanager.com/ns.html?id=GTM-${GTM_Number}`}
             height='0'
             width='0'
             style={{ display: 'none', visibility: 'hidden' }}

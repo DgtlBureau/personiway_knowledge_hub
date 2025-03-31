@@ -1,6 +1,7 @@
 import { CategoryComponent } from '@/src/components/PlaybookClient/CategoryComponent/CategoryComponent';
 import { PlaybookClient } from '@/src/components/PlaybookClient/PlaybookClient';
 import { PlaybookHeading } from '@/src/components/PlaybookClient/PlaybookHeading/PlaybookHeading';
+import { seoSiteName } from '@/src/utils/alias';
 import { getAllArticles } from '@/src/utils/getAllArticles';
 import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
 import { getPostDirectories } from '@/src/utils/getPostsDirectoriesName';
@@ -27,9 +28,9 @@ export async function generateMetadata({
       title,
       description,
       keywords,
-      ogSiteName: 'Personiway.com',
+      ogSiteName: seoSiteName,
       canonicalPath: params.category,
-      ogType: 'website',
+      ogType: 'article',
     });
   } else {
     console.warn(

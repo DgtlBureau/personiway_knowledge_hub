@@ -9,7 +9,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import { PlaybookCategory } from '../PlaybookCategory/PlaybookCategory';
 import { PlaybookCategoryDropDown } from '../PlaybookCategoryDropDown/PlaybookCategoryDropDown';
 
-const getUniqueArticlesSubCategory = (array: Post[], word: string) => {
+const getUniqueArticlesSubCategory = (array: Post[]) => {
   const category = array.map((item) => item.category);
   const uniqueCategory = category.filter(
     (value, idx, arr) => arr.indexOf(value) === idx,
@@ -42,7 +42,7 @@ export const CategoryComponent = ({ category, path }: ICategory) => {
   const searchQuery = searchParams.get('search-query');
 
   const allCategory = useMemo(
-    () => getUniqueArticlesSubCategory(category, path),
+    () => getUniqueArticlesSubCategory(category),
     [category],
   );
 

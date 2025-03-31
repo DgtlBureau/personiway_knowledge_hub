@@ -2,6 +2,7 @@ import { CategoryComponent } from '@/src/components/PlaybookClient/CategoryCompo
 import { PlaybookClient } from '@/src/components/PlaybookClient/PlaybookClient';
 import { PlaybookHeading } from '@/src/components/PlaybookClient/PlaybookHeading/PlaybookHeading';
 import { Section } from '@/src/components/shared/Section/Section';
+import { maxSeoDescriptionSize, seoSiteName } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { getAllArticles } from '@/src/utils/getAllArticles';
 import { pageMetadata } from '@/src/utils/pageMetadata';
@@ -9,13 +10,16 @@ import { Seo } from '@/src/utils/Seo/Seo';
 import { Suspense } from 'react';
 
 const title = pageMetadata.main.title;
-const description = contentTrimming(pageMetadata.main.description, 155);
+const description = contentTrimming(
+  pageMetadata.main.description,
+  maxSeoDescriptionSize,
+);
 const keywords = pageMetadata.main.keywords;
 
 export const metadata = Seo({
   title,
   description,
-  ogSiteName: 'Personiway.com',
+  ogSiteName: seoSiteName,
   ogType: 'article',
   keywords,
 });

@@ -2,7 +2,7 @@ import { Featured } from '@/src/components/Featured/Featured';
 import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import { GoBackLink } from '@/src/ui-kit/GoBackLink/GoBackLink';
-import { BASE_URL } from '@/src/utils/alias';
+import { BASE_URL, posrFolderPath } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
 import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
@@ -34,8 +34,7 @@ const findMarkdownFile = (dir: string, slug: string): string | null => {
 };
 
 const getPostContent = (slug: string) => {
-  const folder = 'src/posts';
-  const file = findMarkdownFile(folder, slug);
+  const file = findMarkdownFile(posrFolderPath, slug);
 
   if (file) {
     try {
@@ -96,7 +95,7 @@ export async function generateMetadata({
     title,
     description: description,
     alternates: {
-      canonical: `${BASE_URL}/hvac/${params.slug}`,
+      canonical: `${BASE_URL}/${params.category}/${params.slug}`,
     },
     openGraph: {
       type: 'article',
