@@ -215,7 +215,7 @@ export default function CategorySlugPage(props: {
         </article>
         {/* <SocialFollow /> */}
         <div className='desktop:bp-0 relative z-[5] mt-[60px] pb-[20px]'>
-          {!allPots.length && <Featured slug={slug} posts={allPots} />}
+          {allPots.length !== 0 && <Featured slug={slug} posts={allPots} />}
         </div>
       </div>
     </div>

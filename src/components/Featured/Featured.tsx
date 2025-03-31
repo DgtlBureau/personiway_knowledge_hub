@@ -12,7 +12,6 @@ import { SmallBlogCard } from '../BlogCard/SmallBlogCard';
 interface Props {
   slug?: string;
   posts: Post[];
-  path: string;
 }
 
 export const Featured = ({ slug, posts }: Props) => {
