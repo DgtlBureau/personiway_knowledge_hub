@@ -1,6 +1,7 @@
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
 import { Container } from '@/src/components/shared/Container/Container';
+import { GTM_Number } from '@/src/utils/alias';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Seo } from '@/src/utils/Seo/Seo';
 import classNames from 'classnames';
@@ -9,7 +10,6 @@ import Script from 'next/script';
 import React from 'react';
 import 'swiper/css';
 import './globals.css';
-import { GTM_Number } from '@/src/utils/alias';
 
 const title = pageMetadata.main.title;
 const description = pageMetadata.main.description;

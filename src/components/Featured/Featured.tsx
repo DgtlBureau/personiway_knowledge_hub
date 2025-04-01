@@ -18,14 +18,14 @@ export const Featured = ({ slug, posts }: Props) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
   const path = usePathname();
 
-  const catigory = path.split('/').filter((item) => item !== '');
+  const category = path.split('/').filter((item) => item !== '');
 
   const isMobile = useMediaQuery('<tablet');
 
   const filteredPost = posts.filter(
     (post) =>
       post.slug !== slug &&
-      post.category.trim().toLowerCase() === catigory[0].trim().toLowerCase(),
+      post.category.trim().toLowerCase() === category[0].trim().toLowerCase(),
   );
 
   return (
@@ -63,7 +63,7 @@ export const Featured = ({ slug, posts }: Props) => {
         {filteredPost.map((item) => (
           <SwiperSlide key={item.slug} className='!h-auto'>
             <Link
-              href={`/${catigory[0]}/${item.slug}`}
+              href={`/${category[0]}/${item.slug}`}
               className='flex h-full flex-1'
             >
               <SmallBlogCard

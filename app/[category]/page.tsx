@@ -33,10 +33,7 @@ export async function generateMetadata({
       ogType: 'article',
     });
   } else {
-    console.warn(
-      '⚠️ Ошибка: метаданные не найдены для категории',
-      params.category,
-    );
+    console.warn('⚠️ Error: Metadata not found for category', params.category);
     return undefined;
   }
 }
