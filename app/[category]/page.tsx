@@ -44,7 +44,7 @@ export const generateStaticParams = async () => {
   const categories = [...new Set(posts.map((post) => post.category))];
 
   return categories.map((category) => ({
-    category,
+    category: category.toLowerCase(),
   }));
 };
 
