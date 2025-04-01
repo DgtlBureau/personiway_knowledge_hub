@@ -4,13 +4,13 @@ import { underscopeFormatter } from '@/src/utils/formatter/underscopeFormatter';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 
-interface ICategoryProps {
-  category: ICategory[];
-}
-
 interface ICategory {
   category: string;
   subCategory: (string | null | undefined)[];
+}
+
+interface ICategoryProps {
+  category: ICategory[];
 }
 
 const paramsCorrect = (word: string | null | undefined) => {
@@ -47,8 +47,8 @@ export const PlaybookCategory = ({ category }: ICategoryProps) => {
               className='flex flex-col items-start gap-[2px]'
             >
               <Link
-                href={`/${item.category}${item.subCategory.length > 1 ? '?' : `?sub-category=${paramsCorrect(item.subCategory[0]).toLowerCase()}`}`}
-                className={`font-proxima text-[16px] uppercase duration-300 ${pathname.includes(item.category.trim().toLowerCase()) ? 'font-bold' : ''}`}
+                href={`/${item.category.toLowerCase()}${item.subCategory.length > 1 ? '?' : `?sub-category=${paramsCorrect(item.subCategory[0]).toLowerCase()}`}`}
+                className={`font-proxima text-[16px] duration-300 ${pathname.includes(item.category.trim().toLowerCase()) ? 'font-bold' : ''}`}
               >
                 {item.category}
               </Link>
@@ -60,7 +60,7 @@ export const PlaybookCategory = ({ category }: ICategoryProps) => {
                       className={`font-proxima text-[16px] leading-[1.8] duration-300 ${el && subCategory && subCategory === underscopeFormatter(el.trim().toLowerCase()) && item.category.trim().toLowerCase() === ctegoryPath.toLowerCase() ? 'font-bold' : ''}`}
                     >
                       <Link
-                        href={`/${item.category}?sub-category=${encodeURIComponent(underscopeFormatter(el).toLowerCase())}`}
+                        href={`/${item.category.toLowerCase()}?sub-category=${encodeURIComponent(underscopeFormatter(el).toLowerCase())}`}
                         className='relative'
                       >
                         {el}
