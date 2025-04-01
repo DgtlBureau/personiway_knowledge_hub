@@ -63,7 +63,7 @@ const allPots = getAllPosts();
 
 export const generateStaticParams = async () => {
   const posts = getInsightsMetadata('');
-  return posts.map((post) => ({ slug: post.slug }));
+  return posts.map((post) => ({ category: post.category, slug: post.slug }));
 };
 
 export async function generateMetadata({
