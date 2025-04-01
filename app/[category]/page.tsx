@@ -38,6 +38,16 @@ export async function generateMetadata({
   }
 }
 
+export const generateStaticParams = async () => {
+  const posts = getInsightsMetadata('');
+
+  const categories = [...new Set(posts.map((post) => post.category))];
+
+  return categories.map((category) => ({
+    category,
+  }));
+};
+
 const data = getAllArticles();
 
 export default function CategorySlug({
