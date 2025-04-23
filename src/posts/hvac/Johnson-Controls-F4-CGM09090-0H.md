@@ -12,7 +12,7 @@ authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
 
-The F4-CGM09090-0H is a powerful and flexible field controller from Johnson Controls' Field Equipment Controller (FEC) series. It's designed to provide precise environmental control in commercial buildings with an emphasis on energy efficiency and occupant comfort. With its comprehensive I/O configuration and advanced control capabilities, this controller is suited for a wide range of HVAC applications.
+The F4-CGM is a powerful and flexible field controller from Johnson Controls' Field Equipment Controller (FEC) series. It's designed to provide precise environmental control in commercial buildings with an emphasis on energy efficiency and occupant comfort. With its comprehensive I/O configuration and advanced control capabilities, this controller is suited for a wide range of HVAC applications.
 ## **Description**
 The Johnson Controls F4-CGM is an advanced Field Controller designed for building automation and HVAC systems. It features 9 inputs and 9 outputs in a compact form factor. The controller supports BACnet MS/TP protocol and includes configurable inputs for temperature, humidity, CO2, and other environmental sensors. With its versatile output options, it can control various HVAC equipment including fans, dampers, valves, and heating/cooling elements.
 
