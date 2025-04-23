@@ -1,6 +1,6 @@
 ---
-title: 'Johnson Controls F4-CGM09090-0H'
-description: 'The Johnson Controls F4-CGM09090-0H is an advanced Field Controller designed for building automation and HVAC systems. It features 9 inputs and 9 outputs in a compact form factor. The controller supports BACnet MS/TP protocol and includes configurable inputs for temperature, humidity, CO2, and other environmental sensors. With its versatile output options, it can control various HVAC equipment including fans, dampers, valves, and heating/cooling elements.'
+title: 'Johnson Controls F4-CGM'
+description: 'The Johnson Controls F4-CGM is an advanced Field Controller designed for building automation and HVAC systems. It features 9 inputs and 9 outputs in a compact form factor. The controller supports BACnet MS/TP protocol and includes configurable inputs for temperature, humidity, CO2, and other environmental sensors. With its versatile output options, it can control various HVAC equipment including fans, dampers, valves, and heating/cooling elements.'
 image: 'https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/f4cgm090900h/f4-cgm09090-0h.webp'
 date: '27-03-2025'
 readingTime: '5 min'
@@ -14,7 +14,7 @@ authorImage: '/assets/images/author/personiway.webp'
 
 The F4-CGM09090-0H is a powerful and flexible field controller from Johnson Controls' Field Equipment Controller (FEC) series. It's designed to provide precise environmental control in commercial buildings with an emphasis on energy efficiency and occupant comfort. With its comprehensive I/O configuration and advanced control capabilities, this controller is suited for a wide range of HVAC applications.
 ## **Description**
-The Johnson Controls F4-CGM09090-0H is an advanced Field Controller designed for building automation and HVAC systems. It features 9 inputs and 9 outputs in a compact form factor. The controller supports BACnet MS/TP protocol and includes configurable inputs for temperature, humidity, CO2, and other environmental sensors. With its versatile output options, it can control various HVAC equipment including fans, dampers, valves, and heating/cooling elements.
+The Johnson Controls F4-CGM is an advanced Field Controller designed for building automation and HVAC systems. It features 9 inputs and 9 outputs in a compact form factor. The controller supports BACnet MS/TP protocol and includes configurable inputs for temperature, humidity, CO2, and other environmental sensors. With its versatile output options, it can control various HVAC equipment including fans, dampers, valves, and heating/cooling elements.
 
 ---
 
@@ -56,7 +56,7 @@ The Johnson Controls F4-CGM09090-0H is an advanced Field Controller designed for
 - 📄 **Datasheet**:
 - 🏢 **Official Manufacturer**: [Johnson Controls](https://www.johnsoncontrols.com)
 - 📷 **Product Image**:
-  ![Johnson Controls F4-CGM09090-0H](https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/f4cgm090900h/f4-cgm09090-0h.webp)
+  ![Johnson Controls F4-CGM](https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/f4cgm090900h/f4-cgm09090-0h.webp)
 
 ---
 
@@ -72,4 +72,4 @@ The Johnson Controls F4-CGM09090-0H is an advanced Field Controller designed for
 ---
 
 ## **Conclusion**
-The F4-CGM09090-0H is a versatile and reliable controller suitable for a wide range of HVAC applications. Its comprehensive I/O configuration and BACnet support make it an excellent choice for integrating into building automation systems. For further details about the F4-CGM09090-0H controller or to inquire about pricing and availability, please contact Johnson Controls or an authorized distributor.
+The F4-CGM is a versatile and reliable controller suitable for a wide range of HVAC applications. Its comprehensive I/O configuration and BACnet support make it an excellent choice for integrating into building automation systems. For further details about the F4-CGM controller or to inquire about pricing and availability, please contact Johnson Controls or an authorized distributor.
