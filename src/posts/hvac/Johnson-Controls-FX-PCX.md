@@ -1,6 +1,6 @@
 ---
-title: 'Johnson Controls FX-PCX4711-0'
-description: 'The Johnson Controls FX-PCX4711-0 is a programmable controller designed for HVAC systems. It supports up to 4 inputs and 7 outputs with flexible configuration options for digital and analog signals. The controller operates with BACnet MS/TP or N2 communication protocols and is compatible with Facility Explorer systems. This compact controller is ideal for small to medium-sized control applications where versatility and reliable performance are required.'
+title: 'Johnson Controls FX-PCX'
+description: 'The Johnson Controls FX-PCX is a programmable controller designed for HVAC systems. It supports up to 4 inputs and 7 outputs with flexible configuration options for digital and analog signals. The controller operates with BACnet MS/TP or N2 communication protocols and is compatible with Facility Explorer systems. This compact controller is ideal for small to medium-sized control applications where versatility and reliable performance are required.'
 image: 'https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/fxpcx47110/fxpcx47110.webp'
 date: '27-03-2025'
 readingTime: '3 min'
@@ -12,9 +12,9 @@ authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
 
-The FX-PCX4711-0 is a versatile programmable controller from Johnson Controls designed for building automation systems. It features multiple input/output capabilities and flexible configuration options for controlling various HVAC equipment and building systems.
+The FX-PCX is a versatile programmable controller from Johnson Controls designed for building automation systems. It features multiple input/output capabilities and flexible configuration options for controlling various HVAC equipment and building systems.
 ## **Description**
-TThe Johnson Controls FX-PCX4711-0 is a programmable controller designed for HVAC systems. It supports up to 4 inputs and 7 outputs with flexible configuration options for digital and analog signals. The controller operates with BACnet MS/TP or N2 communication protocols and is compatible with Facility Explorer systems. This compact controller is ideal for small to medium-sized control applications where versatility and reliable performance are required.
+TThe Johnson Controls FX-PCX is a programmable controller designed for HVAC systems. It supports up to 4 inputs and 7 outputs with flexible configuration options for digital and analog signals. The controller operates with BACnet MS/TP or N2 communication protocols and is compatible with Facility Explorer systems. This compact controller is ideal for small to medium-sized control applications where versatility and reliable performance are required.
 
 ---
 
@@ -53,7 +53,7 @@ TThe Johnson Controls FX-PCX4711-0 is a programmable controller designed for HVA
 - 📄 **Datasheet**:
 - 🏢 **Official Manufacturer**: [Johnson Controls](https://www.johnsoncontrols.com/)
 - 📷 **Product Image**:
-  ![Johnson Controls FX-PCX4711-0](https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/fxpcx47110/fxpcx47110.webp)
+  ![Johnson Controls FX-PCX](https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/fxpcx47110/fxpcx47110.webp)
 
 ---
 
