@@ -1,6 +1,6 @@
 ---
-title: 'Johnson Controls FX-SC8DL50-0 Metasys'
-description: 'The Johnson Controls FX-SC8DL50-0 is an advanced System Controller designed for building automation and HVAC systems. It features 8 digital inputs and provides comprehensive control capabilities for managing multiple zones and equipment simultaneously. The controller offers extensive BACnet compatibility, an integrated web server for remote access, and supports various communication protocols. It can be configured to control temperature, humidity, ventilation, and energy management functions across small to medium-sized commercial buildings.'
+title: 'Johnson Controls FX-SC Metasys'
+description: 'The Johnson Controls FX-SC is an advanced System Controller designed for building automation and HVAC systems. It features 8 digital inputs and provides comprehensive control capabilities for managing multiple zones and equipment simultaneously. The controller offers extensive BACnet compatibility, an integrated web server for remote access, and supports various communication protocols. It can be configured to control temperature, humidity, ventilation, and energy management functions across small to medium-sized commercial buildings.'
 image: 'https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/fxsc8dl500/fx-sc8dl50-0.webp'
 date: '27-03-2025'
 readingTime: '4 min'
@@ -12,11 +12,11 @@ authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
 
-The FX-SC8DL50-0 is a powerful system controller from Johnson Controls that serves as a central integration point for building automation systems. With its robust processing capabilities, multiple communication options, and flexible application support, it provides comprehensive management for HVAC systems, lighting, access control, and energy management.
+The FX-SC is a powerful system controller from Johnson Controls that serves as a central integration point for building automation systems. With its robust processing capabilities, multiple communication options, and flexible application support, it provides comprehensive management for HVAC systems, lighting, access control, and energy management.
 
 ## **Description**
 
-The Johnson Controls FX-SC8DL50-0 is an advanced System Controller designed for building automation and HVAC systems. It features 8 digital inputs and provides comprehensive control capabilities for managing multiple zones and equipment simultaneously. The controller offers extensive BACnet compatibility, an integrated web server for remote access, and supports various communication protocols. It can be configured to control temperature, humidity, ventilation, and energy management functions across small to medium-sized commercial buildings.
+The Johnson Controls FX-SC is an advanced System Controller designed for building automation and HVAC systems. It features 8 digital inputs and provides comprehensive control capabilities for managing multiple zones and equipment simultaneously. The controller offers extensive BACnet compatibility, an integrated web server for remote access, and supports various communication protocols. It can be configured to control temperature, humidity, ventilation, and energy management functions across small to medium-sized commercial buildings.
 
 ---
 
@@ -64,7 +64,7 @@ The Johnson Controls FX-SC8DL50-0 is an advanced System Controller designed for 
 - 📄 **Datasheet**: [Johnson Controls](https://www.cochranesupply.com/media/assets/product/documents/Johnson/FX-SC8%20Spec.pdf)
 - 🏢 **Official Manufacturer**: [Johnson Controls](https://www.johnsoncontrols.com)
 - 📷 **Product Image**:
-  ![Johnson Controls FX-SC8DL50-0](https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/fxsc8dl500/fx-sc8dl50-0.webp)
+  ![Johnson Controls FX-SC](https://buildingcontrols-delta-store.s3.amazonaws.com/public/ultracommerce/product/transform/images/byUrlTitle/fxsc8dl500/fx-sc8dl50-0.webp)
 
 ---
 
@@ -82,4 +82,4 @@ The Johnson Controls FX-SC8DL50-0 is an advanced System Controller designed for 
 
 ## **Conclusion**
 
-The FX-SC8DL50-0 is a versatile and powerful system controller suitable for a wide range of building automation applications. Its extensive communication capabilities and robust processing power make it an excellent choice for integrating multiple building systems. For further details about the FX-SC8DL50-0 controller or to inquire about pricing and availability, please contact Johnson Controls or an authorized distributor.
+The FX-SC is a versatile and powerful system controller suitable for a wide range of building automation applications. Its extensive communication capabilities and robust processing power make it an excellent choice for integrating multiple building systems. For further details about the FX-SC controller or to inquire about pricing and availability, please contact Johnson Controls or an authorized distributor.
