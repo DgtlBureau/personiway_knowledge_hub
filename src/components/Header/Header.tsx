@@ -4,9 +4,9 @@ import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
 import { menuListLayer } from '@/src/utils/menuListLayer';
 import { useState } from 'react';
 
+import Link from 'next/link';
 import { MainList } from '../NavList/MainList';
 import { Container } from '../shared/Container/Container';
-import Link from 'next/link';
 
 export const Header = () => {
   const [activeSubmenu, setActiveSubmenu] = useState(false);
