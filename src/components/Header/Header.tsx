@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 import { MainList } from '../NavList/MainList';
 import { Container } from '../shared/Container/Container';
+import Link from 'next/link';
 
 export const Header = () => {
   const [activeSubmenu, setActiveSubmenu] = useState(false);
@@ -27,6 +28,12 @@ export const Header = () => {
             onMenuItemHover={handleChangeActiveMenu}
           />
         </nav>
+        <Link
+          href='https://tech.personiway.com'
+          className={`hidden w-fit items-center justify-center rounded-[6px] border-[1px] border-main-blue p-[14px_32px] font-proxima text-[18px] font-bold leading-[1] text-white duration-300 hover:bg-main-blue laptop-big:flex desktop:text-[20px]`}
+        >
+          Try PersoniWay
+        </Link>
       </Container>
     </header>
   );

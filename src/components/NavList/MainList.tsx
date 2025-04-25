@@ -16,12 +16,7 @@ interface List {
   link: string;
 }
 
-export const MainList = ({
-  list,
-  dark = true,
-  activeSubmenu,
-  // onMenuItemHover,
-}: Props) => {
+export const MainList = ({ list, dark = true, activeSubmenu }: Props) => {
   const pathname = usePathname();
   const pathnameLength = pathname.split('/').filter((item) => item !== '');
 
@@ -29,11 +24,6 @@ export const MainList = ({
     <ul className='justify-center gap-[44px] laptop-big:flex'>
       {list.map((item) => (
         <li
-          // onMouseEnter={
-          //   item.name.toLowerCase() === 'playbook'
-          //     ? () => onMenuItemHover(true)
-          //     : () => onMenuItemHover(false)
-          // }
           key={item.id}
           className='flex items-center justify-center gap-[10px]'
         >
