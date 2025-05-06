@@ -1,5 +1,5 @@
 ---
-title: 'FieldOps Automation Checklist: When Is It Time to Automate?'
+title: 'When to automate ticketing in HVAC field service'
 description: 'A practical guide and checklist to help HVAC, BMS, and FieldOps teams decide when it’s time to automate their field service operations and what features to look for in a smart dispatching and ticketing system.'
 image: 'https://cdn-doamp.nitrocdn.com/FNzkmycmLOsKtovqIVRyKtjtEILzLDKX/assets/images/optimized/rev-13fe792/fieldcomplete.com/wp-content/uploads/2023/09/HVAC-Safety.-Risks-and-Technician-Protection.jpg'
 date: '05-05-2025'
@@ -11,7 +11,7 @@ authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
 
-# 🧰 FieldOps Automation Checklist: When Is It Time to Automate?
+# 🧰 Field Operations Automation Checklist
 
 Managing field service operations — whether in HVAC, BMS, or commercial building maintenance — can feel like spinning plates. When you're stuck in endless spreadsheets, radio calls, or lost work orders, it may be time to stop firefighting and start automating.
 
