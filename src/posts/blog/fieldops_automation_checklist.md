@@ -6,7 +6,7 @@ date: '05-05-2025'
 readingTime: '6 min'
 category: 'Blog'
 subCategory: 'Insights'
-tags: 'FieldOps, HVAC, BMS, automation, PersoniWay'
+tags: 'HVAC,BMS,PersoniWay'
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
