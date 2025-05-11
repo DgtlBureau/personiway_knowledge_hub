@@ -1,146 +1,150 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'fs';
+import path from 'path';
 
 const config = {
-    siteUrl: 'https://hub.personiway.com',
-    generateSitemap: true,
-    generateIndexSitemap: false,
-    generateRobotsTxt: true,
-    changefreq: 'daily',
-    priority: 1.0,
-    sitemapSize: 5000,
-    additionalPaths: async () => {
+  siteUrl: 'https://hub.personiway.com',
+  generateSitemap: true,
+  outDir: './out',
+  generateIndexSitemap: false,
+  generateRobotsTxt: true,
+  changefreq: 'daily',
+  priority: 1.0,
+  sitemapSize: 5000,
 
-        const staticPages = [
-            '/',
-            '/hvac',
-            '/software',
-        ]
+  additionalPaths: async () => {
+    const postsDir = path.join(process.cwd(), 'src/posts');
 
-        const getAllMarkdownFiles = (dirPath, arrayOfFiles = []) => {
-            const files = fs.readdirSync(dirPath)
+    const subDirs = fs.readdirSync(postsDir).filter((file) => {
+      const fullPath = path.join(postsDir, file);
+      return fs.statSync(fullPath).isDirectory();
+    });
 
-            files.forEach((file) => {
-                const filePath = path.join(dirPath, file)
-                if (fs.statSync(filePath).isDirectory()) {
-                    arrayOfFiles = getAllMarkdownFiles(filePath, arrayOfFiles)
-                } else if (file.endsWith('.md')) {
-                    arrayOfFiles.push(filePath)
-                }
-            })
+    const staticPages = ['/', ...subDirs.map((dir) => `/${dir}`)];
 
-            return arrayOfFiles
+    const getAllMarkdownFiles = (dirPath, arrayOfFiles = []) => {
+      const files = fs.readdirSync(dirPath);
+
+      files.forEach((file) => {
+        const filePath = path.join(dirPath, file);
+        if (fs.statSync(filePath).isDirectory()) {
+          arrayOfFiles = getAllMarkdownFiles(filePath, arrayOfFiles);
+        } else if (file.endsWith('.md')) {
+          arrayOfFiles.push(filePath);
         }
+      });
 
-        const hvacDir = path.join(process.cwd(), 'src/posts/hvac')
-        const hvacFiles = getAllMarkdownFiles(hvacDir)
+      return arrayOfFiles;
+    };
 
-        const dynamicHvacPages = hvacFiles.map((file) => {
-            const fileName = path.basename(file, '.md')
-            return `/hvac/${fileName}`
-        })
+    const dynamicCategoryPages = subDirs.flatMap((category) => {
+      const categoryPath = path.join(postsDir, category);
+      const files = getAllMarkdownFiles(categoryPath);
 
-        const softwareDir = path.join(process.cwd(), 'src/posts/software')
-        const softwareFiles = getAllMarkdownFiles(softwareDir)
+      return files.map((file) => {
+        const fileName = path.basename(file, '.md');
+        return `/${category}/${fileName}`;
+      });
+    });
 
-        const dynamicSoftwarePages = softwareFiles.map((file) => {
-            const fileName = path.basename(file, '.md')
-            return `/software/${fileName}`
-        })
+    const allPaths = [
+      ...staticPages.map((loc) => ({
+        loc,
+        changefreq: 'daily',
+        priority: 1.0,
+      })),
+      ...dynamicCategoryPages.map((loc) => ({
+        loc,
+        changefreq: 'daily',
+        priority: 0.8,
+      })),
+    ];
 
-        const allPaths = [
-            ...staticPages.map(loc => ({
-                loc,
-                changefreq: 'daily',
-                priority: 1.0,
-            })),
-            ...dynamicHvacPages.map(loc => ({
-                loc,
-                changefreq: 'daily',
-                priority: 0.8,
-            })),
-            ...dynamicSoftwarePages.map(loc => ({
-                loc,
-                changefreq: 'daily',
-                priority: 0.8,
-            })),
-        ]
+    return allPaths;
+  },
 
-        return allPaths
-    },
-
-    exclude: ['/assets/*', '/_next/*', '/tpost/*', '/products/*', '/services/*', '/search/*', '/lander/*', '/collections/*', '/expertise*', '/insights*'],
-    robotsTxtOptions: {
-        policies: [
-            {
-                userAgent: '*',
-                allow: [
-                    '/',
-                    '/*.js',
-                    '/*.css',
-                    '/*.gif',
-                    '/*.jpg',
-                    '/*.png',
-                    '/*.webp',
-                    '/*.md',
-                    '/assets/images/**/*.webp'
-                ],
-                disallow: [
-                    '/assets/*',
-                    '/_next/*',
-                    '/tpost/*',
-                    '/products/*',
-                    '/services/*',
-                    '/search/*',
-                    '/lander/*',
-                    '/collections/*',
-                    '*/&',
-                    '/*?',
-                    '*?pr_prod_strat=',
-                    '*?target_origin=',
-                    '/account/',
-                    '!/assets/**/*.webp'
-                ]
-            },
-            {
-                userAgent: 'Googlebot',
-                allow: [
-                    '/',
-                    '/*.js',
-                    '/*.css',
-                    '/*.gif',
-                    '/*.jpg',
-                    '/*.png',
-                    '/*.webp',
-                    '/*.md',
-                    '/assets/images/**/*.webp'
-                ],
-                disallow: [
-                    '/assets/*',
-                    '/_next/*',
-                    '/tpost/*',
-                    '/products/*',
-                    '/services/*',
-                    '/search/*',
-                    '/lander/*',
-                    '/collections/*',
-                    '*/&',
-                    '/*?',
-                    '*?pr_prod_strat=',
-                    '*?target_origin=',
-                    '/account/',
-                    '!/assets/**/*.webp'
-                ]
-            },
-            { userAgent: 'RookeeBot', disallow: '/' },
-            { userAgent: 'Twitterbot', allow: '/' },
-            { userAgent: 'Facebot', allow: '/' },
-            { userAgent: 'facebookexternalhit', allow: '/' }
+  exclude: [
+    '/assets/*',
+    '/_next/*',
+    '/tpost/*',
+    '/products/*',
+    '/services/*',
+    '/search/*',
+    '/lander/*',
+    '/collections/*',
+    '/expertise*',
+    '/insights*',
+  ],
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: [
+          '/',
+          '/*.js',
+          '/*.css',
+          '/*.gif',
+          '/*.jpg',
+          '/*.png',
+          '/*.webp',
+          '/*.md',
+          '/assets/images/**/*.webp',
+          '*tag=*',
         ],
-        additionalSitemaps: [
-            'https://hub.personiway.com/sitemap.xml',
+        disallow: [
+          '/assets/*',
+          '/_next/*',
+          '/tpost/*',
+          '/products/*',
+          '/services/*',
+          '/search/*',
+          '/lander/*',
+          '/collections/*',
+          '*/&',
+          '/*?',
+          '*?pr_prod_strat=',
+          '*?target_origin=',
+          '/account/',
+          '!/assets/**/*.webp',
         ],
-    },
-}
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: [
+          '/',
+          '/*.js',
+          '/*.css',
+          '/*.gif',
+          '/*.jpg',
+          '/*.png',
+          '/*.webp',
+          '/*.md',
+          '/assets/images/**/*.webp',
+          '*tag=*',
+        ],
+        disallow: [
+          '/assets/*',
+          '/_next/*',
+          '/tpost/*',
+          '/products/*',
+          '/services/*',
+          '/search/*',
+          '/lander/*',
+          '/collections/*',
+          '*/&',
+          '/*?',
+          '*?pr_prod_strat=',
+          '*?target_origin=',
+          '/account/',
+          '!/assets/**/*.webp',
+        ],
+      },
+      { userAgent: 'RookeeBot', disallow: '/' },
+      { userAgent: 'Twitterbot', allow: '/' },
+      { userAgent: 'Facebot', allow: '/' },
+      { userAgent: 'facebookexternalhit', allow: '/' },
+    ],
+    additionalSitemaps: ['https://hub.personiway.com/sitemap.xml'],
+  },
+};
 
-export default config
+export default config;

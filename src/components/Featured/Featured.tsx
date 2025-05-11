@@ -71,6 +71,7 @@ export const Featured = ({ slug, posts }: Props) => {
                 title={item.title}
                 description={item.description}
                 date={item.date}
+                image={item.image}
               />
             </Link>
           </SwiperSlide>

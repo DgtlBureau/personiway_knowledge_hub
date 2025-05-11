@@ -83,7 +83,7 @@ export async function generateMetadata({
     };
   }
 
-  const { tag } = post.data;
+  const { tag, image } = post.data;
   const keywords = tag?.split(',') || [];
 
   const title = post.data.title;
@@ -104,10 +104,10 @@ export async function generateMetadata({
       type: 'article',
       locale: 'en_US',
       siteName: 'Personiway.com',
-      ...openGraphImage(),
+      ...openGraphImage(image, title),
       title,
       description,
-      url: `${BASE_URL}/hvac/${params.slug}`,
+      url: `${BASE_URL}/${params.category}/${params.slug}`,
       article: {
         publishedTime: publishedDateISO,
         modifiedTime: publishedDateISO,
@@ -217,8 +217,11 @@ export default function CategorySlugPage(props: {
           </Markdown>
         </article>
         {/* <SocialFollow /> */}
-        <div className='desktop:bp-0 relative z-[5] mt-[60px] pb-[20px]'>
+        {/* <div className='desktop:bp-0 relative z-[5] mt-[60px] pb-[20px]'>
           {allPots.length !== 0 && <Featured slug={slug} posts={allPots} />}
+        </div> */}
+        <div className='desktop:bp-0 relative z-[5] mt-[60px] pb-[20px]'>
+          <Featured slug={slug} posts={getAllPosts()} />
         </div>
       </div>
     </div>

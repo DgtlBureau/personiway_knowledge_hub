@@ -5,5 +5,9 @@ export default function CategoryLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <Section id='categoty'>{children}</Section>;
+  return (
+    <Section id='categoty' className='pb-[0] pt-[0] tablet:p-0 desktop:p-0'>
+      {children}
+    </Section>
+  );
 }
