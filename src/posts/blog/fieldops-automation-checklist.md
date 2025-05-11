@@ -6,7 +6,7 @@ date: '05-05-2025'
 readingTime: '6 min'
 category: 'Blog'
 subCategory: 'Insights'
-tags: 'HVAC,BMS,PersoniWay'
+tag: 'HVAC,BMS,PersoniWay'
 authorName: 'PersoniWay'
 authorImage: '/assets/images/author/personiway.webp'
 ---
@@ -21,13 +21,13 @@ This guide will help you understand when your team needs a smarter system — an
 
 Here are the most common signs:
 
-| Symptom | What It Means |
-|--------|----------------|
-| 🧾 Lost or delayed tickets | Your team lacks a structured ticketing system. |
-| 📞 Constant calls/texts | Dispatch relies on manual coordination. |
-| 🔄 Repeating the same fixes | There's no feedback loop or data history. |
-| 📉 No clarity on team performance | You can’t coach or analyze effectively. |
-| 🤯 New techs take forever to train | Your system is too complex or undocumented. |
+| Symptom                               | What It Means                                  |
+| ------------------------------------- | ---------------------------------------------- |
+| 🧾 Lost or delayed tickets            | Your team lacks a structured ticketing system. |
+| 📞 Constant calls/texts               | Dispatch relies on manual coordination.        |
+| 🔄 Repeating the same fixes           | There's no feedback loop or data history.      |
+| 📉 No clarity on team performance     | You can’t coach or analyze effectively.        |
+| 🤯 New techs take forever to train    | Your system is too complex or undocumented.    |
 | 📂 Drawings live in someone’s Dropbox | You’re missing structured asset and site data. |
 
 If two or more of these are happening — you're overdue for automation.

@@ -5,6 +5,7 @@ import { seoSiteName } from '@/src/utils/alias';
 import { getAllArticles } from '@/src/utils/getAllArticles';
 import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
 import { getPostDirectories } from '@/src/utils/getPostsDirectoriesName';
+import { getStaticSitemapPages } from '@/src/utils/getStaticSitemapPages';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { postsSorting } from '@/src/utils/postsSorting';
 import { Seo } from '@/src/utils/Seo/Seo';
@@ -57,6 +58,8 @@ export default function CategorySlug({
 }) {
   const insightsArticles = getInsightsMetadata(params.category);
   const sortedInsightsArticles = postsSorting(insightsArticles);
+
+  console.log('pages', getStaticSitemapPages());
 
   return (
     <div className='flex flex-col'>
