@@ -216,12 +216,8 @@ export default function CategorySlugPage(props: {
             {allPosts}
           </Markdown>
         </article>
-        {/* <SocialFollow /> */}
-        {/* <div className='desktop:bp-0 relative z-[5] mt-[60px] pb-[20px]'>
-          {allPots.length !== 0 && <Featured slug={slug} posts={allPots} />}
-        </div> */}
         <div className='desktop:bp-0 relative z-[5] mt-[60px] pb-[20px]'>
-          <Featured slug={slug} posts={getAllPosts()} />
+          <Featured slug={slug} posts={allPots} />
         </div>
       </div>
     </div>

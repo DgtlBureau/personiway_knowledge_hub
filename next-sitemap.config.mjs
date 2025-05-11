@@ -89,6 +89,7 @@ const config = {
           '/*.md',
           '/assets/images/**/*.webp',
           '*tag=*',
+          '*sub-category=*',
         ],
         disallow: [
           '/assets/*',
@@ -99,8 +100,6 @@ const config = {
           '/search/*',
           '/lander/*',
           '/collections/*',
-          '*/&',
-          '/*?',
           '*?pr_prod_strat=',
           '*?target_origin=',
           '/account/',
@@ -120,6 +119,7 @@ const config = {
           '/*.md',
           '/assets/images/**/*.webp',
           '*tag=*',
+          '*sub-category=*',
         ],
         disallow: [
           '/assets/*',
@@ -130,8 +130,6 @@ const config = {
           '/search/*',
           '/lander/*',
           '/collections/*',
-          '*/&',
-          '/*?',
           '*?pr_prod_strat=',
           '*?target_origin=',
           '/account/',

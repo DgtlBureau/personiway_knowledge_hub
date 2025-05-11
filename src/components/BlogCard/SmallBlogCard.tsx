@@ -31,7 +31,7 @@ export const SmallBlogCard = ({
               alt={title}
               width={450}
               height={250}
-              className='absolute h-full w-full object-cover object-center'
+              className='absolute h-full w-full object-contain object-center'
               quality={80}
             />
           ) : (
