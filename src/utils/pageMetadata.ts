@@ -1,29 +1,24 @@
 export const pageMetadata = {
   main: {
-    title: 'HVAC Controllers & Automation Knowledge Hub | Knowledge Hub PersoniWay',
+    title: 'HVAC & BMS Knowledge Hub – Diagrams, Controllers & AI Support | PersoniWay',
     description:
-      'Explore our extensive collection of HVAC controllers, automation solutions, and integration guides. The PersoniWay Knowledge Hub provides detailed insights into BACnet controllers, VAV systems, and smart building automation.',
+      'Explore technical guides, controller manuals, wiring diagrams, and AI-powered support tools for HVAC, BMS, and automation professionals. Fast ticketing, smart workflows, and field team insights.',
     keywords: [
-      'HVAC Controllers',
-      'Building Automation',
-      'BACnet Solutions',
-      'VAV Control',
-      'Programmable Controllers',
-      'PersoniWay Knowledge Hub',
-      'Distech controls',
-      'Honeywell',
+        'HVAC Knowledge Base', 'BMS Support Tools', 'HVAC Wiring Diagrams',
+  'Controller Manuals', 'BACnet Troubleshooting', 
+  'Distech Controls', 'Honeywell BMS', 'HVAC Dispatching', 
+  'AI Ticketing System', 'Field Tech Support'
     ],
   },
   hvac: {
-    title: 'Advanced HVAC Automation | Knowledge Hub PersoniWay',
+    title: 'HVAC Automation, Diagrams & Support | PersoniWay Docs',
     description:
-      'PersoniWay is the first AI-powered support center for on-site HVAC technicians in the US. Get real-time troubleshooting, expert guidance, and quick resolutions for HVAC automation issues. Faster on-site solutions, powered by AI.',
+      'Detailed guide for HVAC and BMS systems. Includes diagrams, programming examples, and technician support workflows.',
     keywords: [
+      'HVAC Docs', 'BMS Manuals', 'Controller Setup', 'PersoniWay Help',
       'HVAC Technician Support',
       'AI HVAC Assistant',
       'Smart HVAC Solutions',
-      'Building Automation AI',
-      'HVAC Troubleshooting',
       'PersoniWay Support',
     ],
   },
