@@ -13,7 +13,7 @@ export const PlaybookHeading = () => {
   const pathTitle = pathnameArr.length < 1 ? 'all' : pathnameArr[0];
 
   return (
-    <div>
+    <div className='pt-[20px] tablet:pt-[40px] desktop:pt-[60px]'>
       <h2 className='w-full text-center font-unbound text-[24px] uppercase leading-[1.16] tablet:text-[45px] tablet:leading-[1] laptop-big:text-start laptop-big:text-[45px]'>
         {pathTitle}{' '}
         <span className='text-[18px] leading-[1.3] text-main-blue tablet:text-[20px] tablet:leading-[1.2]'>
