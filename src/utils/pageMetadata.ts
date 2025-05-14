@@ -22,9 +22,19 @@ export const pageMetadata = {
       'PersoniWay Support',
     ],
   },
+  software: {
+    title: 'Software title',
+    description: 'Software description:',
+  },
   privacyPolicy: {
     title: 'Personiway - Privacy Policy',
     description: 'Policy',
+    keywords: [],
+  },
+  category: {
+    title: 'HVAC Automation, Diagrams & Support | PersoniWay Docs',
+    description:
+      'Detailed guide for HVAC and BMS systems. Includes diagrams, programming examples, and technician support workflows',
     keywords: [],
   },
 };

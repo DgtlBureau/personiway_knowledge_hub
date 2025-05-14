@@ -28,11 +28,7 @@ const data = getAllArticles();
 
 export default function PlaybookPage() {
   return (
-    <Section
-      id='playbook'
-      light
-      className='mx-auto w-full py-[30px] laptop-big:py-[60px]'
-    >
+    <Section id='all' light className='pb-[0] pt-[0] tablet:p-0 desktop:p-0'>
       <div className='flex flex-col'>
         <Suspense>
           <PlaybookHeading />

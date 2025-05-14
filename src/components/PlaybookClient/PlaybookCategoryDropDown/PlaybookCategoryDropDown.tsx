@@ -97,7 +97,7 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
               className={`relative flex flex-col gap-[4px]`}
             >
               <Link
-                href={`/${item.category}${item.subCategory.length > 1 ? '' : `?sub-category=${underscopeFormatter(item.subCategory[0]).toLowerCase()}`}`}
+                href={`/${item.category.toLowerCase()}${item.subCategory.length > 1 ? '' : `?sub-category=${underscopeFormatter(item.subCategory[0]).toLowerCase()}`}`}
                 onClick={() => setIsCategoryOpen(false)}
                 className={`relative w-full rounded-[8px] p-[12px_16px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${pathnameArr.includes(item.category.trim().toLowerCase()) ? 'bg-[#f5f5f6] font-bold' : ''} `}
               >
@@ -108,7 +108,7 @@ export const PlaybookCategoryDropDown = ({ categories }: ICategoryProps) => {
                   <li key={el} className={`flex flex-col gap-[2px]`}>
                     <Link
                       onClick={() => setIsCategoryOpen(false)}
-                      href={`/${item.category}?sub-category=${underscopeFormatter(el).toLowerCase()}`}
+                      href={`/${item.category.toLowerCase()}?sub-category=${underscopeFormatter(el).toLowerCase()}`}
                       className={`w-full rounded-[8px] p-[12px_26px] text-left text-[14px] capitalize leading-[1.4] text-[#525760] hover:bg-[#f5f5f6] ${el && subCategory && underscopeReverter(subCategory).toLowerCase() === el.trim().toLowerCase() ? 'bg-[#f5f5f6] font-bold' : ''}`}
                     >
                       {el}
