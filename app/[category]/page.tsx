@@ -4,21 +4,16 @@ import { PlaybookHeading } from '@/src/components/PlaybookClient/PlaybookHeading
 import { seoSiteName } from '@/src/utils/alias';
 import { getAllArticles } from '@/src/utils/getAllArticles';
 import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
-import { getPostDirectories } from '@/src/utils/getPostsDirectoriesName';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { postsSorting } from '@/src/utils/postsSorting';
 import { Seo } from '@/src/utils/Seo/Seo';
 import { Suspense } from 'react';
-
-const directories = getPostDirectories();
 
 export async function generateMetadata({
   params,
 }: {
   params: { category: string; slug: string };
 }) {
-  const isHasDirectory = directories.includes(params.category.toLowerCase());
-
   const { title, description, keywords } = pageMetadata['category'];
 
   return Seo({
