@@ -95,8 +95,8 @@ export async function generateMetadata({
   ).toISO();
 
   return {
-    title,
-    description: description,
+    title: `${title} | hub.personiway.com`,
+    description: `${description} | hub.personiway.com`,
     alternates: {
       canonical: `${BASE_URL}/${params.category}/${params.slug}`,
     },

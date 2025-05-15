@@ -17,8 +17,8 @@ export async function generateMetadata({
   const { title, description, keywords } = pageMetadata['category'];
 
   return Seo({
-    title,
-    description,
+    title: `${title} | hub.personiway`,
+    description: `${description} | hub.personiway`,
     keywords,
     ogSiteName: seoSiteName,
     canonicalPath: params.category,

@@ -32,10 +32,6 @@ export const pageMetadata = {
       'PersoniWay Support',
     ],
   },
-  software: {
-    title: 'Software title',
-    description: 'Software description:',
-  },
   privacyPolicy: {
     title: 'Personiway - Privacy Policy',
     description: 'Policy',

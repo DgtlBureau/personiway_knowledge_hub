@@ -28,6 +28,8 @@ export const Featured = ({ slug, posts }: Props) => {
       post.category.trim().toLowerCase() === category[0].trim().toLowerCase(),
   );
 
+  if (!filteredPost.length) return null;
+
   return (
     <div className='flex flex-col gap-[40px] border-t-[1px] border-text-dark'>
       <div className='relative flex items-center justify-between border-text-dark pt-[20px] before:absolute before:left-0 before:top-0 before:h-[1px] before:w-full before:bg-text-gray'>
