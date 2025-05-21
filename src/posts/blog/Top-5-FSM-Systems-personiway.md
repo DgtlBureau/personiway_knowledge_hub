@@ -1,7 +1,7 @@
 ---
 title: 'Top 5 FSM Systems for Controls and HVAC Field Teams'
 description: 'A deep comparison of FSM platforms for building automation, controls, and HVAC service teams. Learn how PersoniWay compares to Fieldwire, Procore, and others.'
-image: 'https://i.imgur.com/KU6Rq1l.png'
+image: 'https://i.imgur.com/EnCrX6V.png'
 date: '05-20-2025'
 readingTime: '8 min'
 category: 'Blog'
