@@ -32,13 +32,15 @@ export async function GET() {
     feed.item({
       title: item.title,
       description: item.description,
-      url: `https://hub.personiway.com/hvac/${item.dirName}/${item.slug}`,
-      guid: `https://hub.personiway.com/hvac/${item.dirName}/${item.slug}`,
+      url: `https://hub.personiway.com/${item.category.toLowerCase()}/${item.slug}`,
       date: formattedDate,
     });
   });
 
   return new NextResponse(feed.xml({ indent: true }), {
-    headers: { 'Content-Type': 'application/rss+xml; charset=utf-8' },
+    headers: {
+      'Content-Type': 'application/rss+xml; charset=utf-8',
+      'X-Robots-Tag': 'noindex, follow',
+    },
   });
 }
